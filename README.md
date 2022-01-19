@@ -1,8 +1,8 @@
-# Getting Started with Create React App
+# shipmate Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The site is created using react.  This website is primary source of information and sales for the Shipmate company.   
 
-## Available Scripts
+## Purpose
 
 In the project directory, you can run:
 
