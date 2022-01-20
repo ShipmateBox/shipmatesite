@@ -10,6 +10,7 @@ export default {
     SECONDARY_T: '#DDD2CD',
     ACTION_DARK: '#fa8d25',
     ACTION_LIGHT: '#fba757',
+    BLACK_MAIN_THEME: '#282C34',
     BLACK_DARK: '#333333',
     BLACK_MID: '#444444',
     BLACK_LIGHT: '#666666',

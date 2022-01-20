@@ -4,8 +4,54 @@
   --theme-main-white: #FFFBF0;
   --theme-main-blue: #3D85C5;
   --theme-main-black: #282C34;
+
+  --timer-arrow1: 0.5s;
+
+  --timer-arrow2: 2s;
+  --delay-arrow2: 0.5s;
+
+  --timer-arrow3: 3s;
+  --delay-arrow3: 2.5s;
 }
 
 .App {
   background-color: #ffffff
+}
+
+#arrow1 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: dash var(--timer-arrow1) linear forwards;
+}
+
+
+#arrow2 {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: dash var(--timer-arrow2) linear forwards;
+  animation-delay: var(--delay-arrow2);
+}
+
+#arrow3 {
+  stroke-dasharray: 0,100;
+  animation: dash2 var(--timer-arrow2) linear forwards;
+  animation-delay: var(--delay-arrow3);
+}
+
+#arrow4 {
+  stroke-dasharray: 0,100;
+  animation: dash2 var(--timer-arrow2) linear forwards;
+  animation-delay: var(--delay-arrow3);
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash2 {
+  to {
+    stroke-dasharray: 20,20;
+  }
 }

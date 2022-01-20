@@ -5,16 +5,22 @@ import BoxSecure from './images/result.svg';
 
 import {MenuBar} from './components/menu-bar';
 import {Banner} from './components/banner';
-import {Section, SectionFetures} from './components/sections';
+import {
+  SectionAffordances,
+  SectionTech,
+  SectionTimeline,
+  SectionFunding
+} from './components/sections';
 
 function App() {
   return (
     <div className="App">
       <MenuBar/>
       <Banner/>
-      <Section/>
-      <SectionFetures/>
-        <div>end</div>
+      <SectionAffordances/>
+      <SectionTech/>
+      <SectionFunding/>
+      <SectionTimeline/>
       <footer>
       </footer>
     </div>

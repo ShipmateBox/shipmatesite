@@ -1,15 +1,26 @@
 import React from 'react';
 
+import {Timeline} from './timeline';
 
 function Section(props) {
   return (
-    <div style={styles.mainContainer}>
+    <div style={props.theme=='light'?stylesLight.mainContainer:styles.mainContainer}>
       <header style={styles.header}>
-        <p>
-          AI Managing Your Deliveries!
-        </p>
+        <p>{props.title}</p>
       </header>
-      <p>-Our package lockbox is a full shipping and recieving robot for the home-</p>
+      {props.note && <p>{props.note}</p>}
+      {props.children}
+    </div>
+  )
+}
+
+
+function SectionAffordances(props) {
+  return (
+    <Section
+      title="AI Managing Your Deliveries!"
+      note="-Our package lockbox is a full shipping and recieving robot for the home-"
+      theme="dark">
       <div style={styles.cardContainer}>
           <div style={styles.card}>
             <h2>Secured</h2>
@@ -25,7 +36,7 @@ function Section(props) {
           <div style={styles.card}>
             <h2>Private</h2>
             <p>Your packages are concealed.  No one needs to know if you have  package, where its from, what size it is or anything else.</p>
-            <p>No cameras</p>
+            <p>No cameras watch you and your family coming and going from your home.</p>
           </div>
 
         <div style={styles.card}>
@@ -35,19 +46,16 @@ function Section(props) {
         </div>
 
       </div>
-    </div>
+    </Section>
   )
 }
 
-function SectionFetures(props) {
+function SectionTech(props) {
   return (
-    <div style={stylesLight.mainContainer}>
-      <header style={styles.header}>
-        <p>
-          Design Makes Us Better.
-        </p>
-      </header>
-      <p>-The right technology delivers superior products.-</p>
+    <Section
+      title="Design Makes Us Better."
+      note="-The right technology delivers superior products.-"
+      theme="light">
       <div style={styles.cardContainer}>
 
         <div style={styles.card}>
@@ -68,14 +76,34 @@ function SectionFetures(props) {
 
         <div style={styles.card}>
           <h2>Adaptive</h2>
-          <p>Your lockbox evolves with the shipping industry.</p>
+          <p>Your lockbox evolves with the shipping industry at not cost to you.</p>
           <p>Updates will be made to your product, adapting to droid and drone deliveries, carrier access, new forms of package tracking, and anything else the industry throws at us.</p>
         </div>
       </div>
-    </div>
+    </Section>
   )
 }
 
+function SectionTimeline(props) {
+  return (
+    <Section
+      title= "The Journey"
+      note="-Where we have been and where we are going-"
+      theme="light">
+        <Timeline/>
+    </Section>
+  )
+}
+
+function SectionFunding(props) {
+  return (
+    <Section
+      title="Funding"
+      note="-Every great product requires capital-"
+      theme="dark">
+    </Section>
+  )
+}
 
 const styles = {
   mainContainer: {
@@ -135,4 +163,8 @@ const stylesLight = {
 
   }
 }
-export {Section, SectionFetures};
+export {
+  SectionAffordances,
+  SectionTech,
+  SectionTimeline,
+  SectionFunding};
