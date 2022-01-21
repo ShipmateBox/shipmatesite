@@ -1,10 +1,9 @@
-import React, {useEffect, useState} from 'react'
-import Xarrow, {useXarrow, Xwrapper} from 'react-xarrows';
+import React, {useState, useEffect} from 'react'
+import Xarrow from 'react-xarrows';
 
 import COLORS from '../constants/theme';
-import TIMERS from '../constants/timers';
 
-
+import {GetDistanceToTop} from './window';
 
 
 function TimeElement(props) {
@@ -30,6 +29,7 @@ function Timeline(props) {
     arrow2: false,
     arrow3: false,
     arrow4: false});
+  const distanceMet = GetDistanceToTop('milestone1', window.innerHeight/2);
 
   const handleSetArrow = () => {
       setShowArrow ({
@@ -53,19 +53,26 @@ function Timeline(props) {
     )
   }
 
+  useEffect(() => {
+    console.log(distanceMet);
+    if(distanceMet === true) {
+      handleSetArrow();
+    }
+  }, [distanceMet])
+
   return (
     <div style={styles.mainContainer}>
-      <button onClick={handleSetArrow}>click</button>
-      <TimeElement id='milestone1'>
-        <h2>Problem Analysis</h2>
-        <p>We spent time understanding the currently delivery system, and solving its problems.</p>
-      </TimeElement>
-      <TimeElement id='milestone2'>
-        <h2>Prototype / MVP</h2>
-        <p>We have built our prototype, gathered customer feedback, analysed the results, and completed the initial product.</p>
-      </TimeElement>
-      <Arrow id='arrow1' start='milestone1' end='milestone2' condition={showArrow.arrow1}/>
-
+      <div style={styles.timeElementContainer1}>
+        <TimeElement id='milestone1'>
+          <h2>Problem Analysis</h2>
+          <p>We spent time understanding the currently delivery system, and solving its problems.</p>
+        </TimeElement>
+        <TimeElement id='milestone2'>
+          <h2>Prototype / MVP</h2>
+          <p>We have built our prototype, gathered customer feedback, analysed the results, and completed the initial product.</p>
+        </TimeElement>
+        <Arrow id='arrow1' start='milestone1' end='milestone2' condition={showArrow.arrow1}/>
+      </div>
 
       <TimeElement id='milestone3'>
         <h2>Presales / Funding / NFT</h2>
@@ -77,11 +84,12 @@ function Timeline(props) {
 
       <TimeElement id='milestone4'>
         <h2>Products Ship</h2>
-        <p>We deliver preorders and begin delivering product as orders come in.</p>
+        <p>We will deliver preorders and begin delivering product as orders come in.</p>
       </TimeElement>
       <Arrow id="arrow3" start='milestone3' end='milestone4' condition={showArrow.arrow3}/>
 
       <div style={styles.goalContainer} id='goals'>
+        <div style={styles.goalHeader}><h2>First product updates</h2></div>
         <GoalElement>
           <p>AI Development</p>
         </GoalElement>
@@ -89,7 +97,7 @@ function Timeline(props) {
           <p>Carrier Access</p>
         </GoalElement>
         <GoalElement>
-          <p>Managing Shipping</p>
+          <p>Shipping</p>
         </GoalElement>
         <GoalElement>
           <p>Flawless Tracking</p>
@@ -121,7 +129,12 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     borderTop: '4px solid #282C34',
-    margin: '4vw'
+    margin: '5vw',
+    paddingTop: '3vh'
+  },
+  timeElementContainer1: {
+    display: 'flex',
+    flexDirection: 'column'
   },
   timeElement: {
     border: '1px solid ' + COLORS.COLORS.BLACK_MAIN_THEME,
@@ -135,6 +148,10 @@ const styles = {
     color: 'white',
     width: '20vw'
   },
+  goalHeader: {
+    width: '100%',
+    textAlign: 'center'
+  },
   goalElement: {
     border: '4px solid ' + COLORS.COLORS.BLACK_MAIN_THEME,
     borderRadius: 2,
@@ -142,10 +159,11 @@ const styles = {
     paddingBottom: '1vh',
     paddingLeft: '1vw',
     paddingRight: '1vw',
-    margin: '2vh',
+    margin: '3vh',
     backgroundColor: 'white',
     color: '#282C34',
-    width: '10vw'
+    width: '10vw',
+    textAlign: 'center'
   }
 }
 

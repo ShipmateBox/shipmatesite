@@ -14,7 +14,6 @@ function Section(props) {
   )
 }
 
-
 function SectionAffordances(props) {
   return (
     <Section
@@ -54,7 +53,7 @@ function SectionTech(props) {
   return (
     <Section
       title="Design Makes Us Better."
-      note="-The right technology delivers superior products.-"
+      note="-The right technology delivers superior products-"
       theme="light">
       <div style={styles.cardContainer}>
 
