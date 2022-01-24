@@ -1,46 +1,58 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import COLORS from '../constants/theme';
+import {Link, Outlet} from 'react-router-dom';
 
 import {GetWindowDimensions} from './window';
 
 import logoIcon from '../images/LogoNoElectrodesLightMini.svg';
 
 
-function MenuBar(props) {
-  const {width, height} = GetWindowDimensions();
+function LargeMenu(props) {
+  return (
+    <div style={styles.linkContainer}>
+      <Link to="/product">
+        <p style={styles.firstLink}>Product</p>
+      </Link>
+      <p style={styles.middleLink}>About</p>
+      <p style={styles.lastLink}>Journey</p>
+    </div>
+  )
+}
+
+function SmallMenu(props) {
+
   const [menuActive, setMenuActive] = useState(false);
 
   const handleMenuActivate = () => {
     setMenuActive(!menuActive);
   };
 
-  const SmallMenu = () => {
-    return(
-      <div style={styles.linkContainer}>
-        <i style={styles.menuIcon} className="fa fa-bars" onClick={handleMenuActivate}/>
-        {menuActive && (
-          <ul style={styles.listHolder}>
-          <li style={styles.listItem}>product</li>
-          </ul>
-          )}
-      </div>
-    )
-  }
+  return (
+    <div style={styles.linkContainer}>
+      <i style={styles.menuIcon} className="fa fa-bars" onClick={handleMenuActivate}/>
+      {menuActive && (
+        <ul style={styles.listHolder}>
+        <li style={styles.listItem}>product</li>
+        </ul>
+        )}
+    </div>
+  )
+}
 
+export default function MenuBar(props) {
+  const {width, height} = GetWindowDimensions();
 
   return (
     <div style={styles.menuContainer}>
-      <div style={styles.logo}>
-        <img src={logoIcon} style={styles.logoIcon}/>
-      </div>
+      <Link to="/">
+        <div style={styles.logo}>
+          <img src={logoIcon} style={styles.logoIcon}/>
+        </div>
+      </Link>
       <div style={styles.padding}></div>
       { width > 500?(
-      <div style={styles.linkContainer}>
-        <p style={styles.firstLink}>Product</p>
-        <p style={styles.middleLink}>About</p>
-        <p style={styles.lastLink}>Journey</p>
-      </div>
+        <LargeMenu/>
       ):(
         <SmallMenu/>
       )
@@ -97,5 +109,3 @@ const styles = {
     backgroundColor: 'white'
   }
 }
-
-export { MenuBar };

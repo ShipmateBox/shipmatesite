@@ -1,31 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
 
-import BoxSecure from './images/result.svg';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import {MenuBar} from './components/menu-bar';
-import {Banner} from './components/banner';
-import {
-  SectionAffordances,
-  SectionTech,
-  SectionTimeline,
-  SectionFunding
-} from './components/sections';
+import Layout from './components/layout';
+import Home from './pages/home';
+import Product from './pages/product';
 
-function App() {
+
+export default function App() {
   return (
-    <div className="App">
-      <MenuBar/>
-      <Banner/>
-      <SectionAffordances/>
-      <SectionTech/>
-      <SectionFunding/>
-      <SectionTimeline/>
-      <footer>
-      </footer>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout/>} >
+            <Route index element={<Home/>} />
+            <Route path="/product" element={<Product/>} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
-  );
+  )
 }
-
-
-export default App;

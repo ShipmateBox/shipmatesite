@@ -18,6 +18,11 @@
   background-color: #ffffff
 }
 
+a {
+  color: var(--theme-main-black);
+  text-decoration: none
+}
+
 #arrow1 {
   stroke-dasharray: 400;
   stroke-dashoffset: 400;

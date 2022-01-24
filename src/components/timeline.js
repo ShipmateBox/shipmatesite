@@ -54,7 +54,6 @@ function Timeline(props) {
   }
 
   useEffect(() => {
-    console.log(distanceMet);
     if(distanceMet === true) {
       handleSetArrow();
     }
@@ -89,7 +88,7 @@ function Timeline(props) {
       <Arrow id="arrow3" start='milestone3' end='milestone4' condition={showArrow.arrow3}/>
 
       <div style={styles.goalContainer} id='goals'>
-        <div style={styles.goalHeader}><h2>First product updates</h2></div>
+        <div style={styles.goalHeader}><h2>First Product Updates</h2></div>
         <GoalElement>
           <p>AI Development</p>
         </GoalElement>
@@ -139,10 +138,10 @@ const styles = {
   timeElement: {
     border: '1px solid ' + COLORS.COLORS.BLACK_MAIN_THEME,
     borderRadius: 5,
-    paddingTop: '5vh',
+    paddingTop: '3vh',
     paddingBottom: '5vh',
-    paddingLeft: '5vw',
-    paddingRight: '5vw',
+    paddingLeft: '3vw',
+    paddingRight: '3vw',
     margin: '5vh',
     backgroundColor: COLORS.COLORS.BLACK_MAIN_THEME,
     color: 'white',

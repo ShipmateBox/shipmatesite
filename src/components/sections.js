@@ -1,6 +1,9 @@
 import React from 'react';
 
 import {Timeline} from './timeline';
+import Sales from './funding';
+import Footer from './footer';
+import COLORS from '../constants/theme';
 
 function Section(props) {
   return (
@@ -94,19 +97,28 @@ function SectionTimeline(props) {
   )
 }
 
-function SectionFunding(props) {
+function SectionSales(props) {
   return (
     <Section
-      title="Funding"
+      title="Sales / Support"
       note="-Every great product requires capital-"
       theme="dark">
+        <Sales/>
     </Section>
+  )
+}
+
+function SectionFooter(props) {
+  return (
+    <div style={stylesFooter.mainContainer}>
+      <Footer/>
+    </div>
   )
 }
 
 const styles = {
   mainContainer: {
-    backgroundColor: '#282C34',
+    backgroundColor: COLORS.COLORS.BLACK_MAIN_THEME,
     paddingTop: '20vh',
     paddingBottom: '20vh',
     paddingLeft: '10vw',
@@ -116,7 +128,7 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'start',
-    color: 'white'
+    color: COLORS.COLORS.WHITE
   },
   header: {
     fontSize: 'calc(14px + 3vmin)',
@@ -135,7 +147,7 @@ const styles = {
 }
 const stylesLight = {
   mainContainer: {
-    backgroundColor: '#ffffff',
+    backgroundColor: COLORS.COLORS.WHITE,
     paddingTop: '20vh',
     paddingBottom: '20vh',
     paddingLeft: '10vw',
@@ -145,7 +157,7 @@ const stylesLight = {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'start',
-    color: '#282C34'
+    color: COLORS.COLORS.BLACK_MAIN_THEME
   },
   header: {
     fontSize: 'calc(14px + 3vmin)',
@@ -162,8 +174,22 @@ const stylesLight = {
 
   }
 }
+const stylesFooter = {
+  mainContainer: {
+    mainContainer: {
+      backgroundColor: COLORS.COLORS.BLACK_MAIN_THEME,
+      paddingTop: '10vh',
+      paddingBottom: '10vh',
+      paddingLeft: '10vw',
+      paddingRight: '10vw',
+      minHeight: '20vh',
+      color: COLORS.COLORS.WHITE
+    },
+  }
+}
 export {
   SectionAffordances,
   SectionTech,
   SectionTimeline,
-  SectionFunding};
+  SectionSales,
+  SectionFooter};
