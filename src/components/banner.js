@@ -1,7 +1,10 @@
 import React, {useState, useEffect} from 'react';
 
 import COLORS from '../constants/theme';
-
+import {
+  PreorderCard,
+  DonateCard,
+  } from './preorder';
 import {GetWindowDimensions} from './window';
 import boxSecure from '../images/result.svg';
 import boxPrivate from '../images/result1.svg';
@@ -53,6 +56,10 @@ function Banner(props) {
 
   return(
     <div style={width > 500?styles.mainContainer:stylesSmall.mainContainer}>
+      <div style={width>500?styles.promoContainer:stylesSmall.promoContainer}>
+        <PreorderCard/>
+        <DonateCard/>
+      </div>
       <div style={width > 500?styles.imageContainer:stylesSmall.imageContainer}>
         <img src={image} style={width > 500?styles.image:stylesSmall.image}/>
       </div>
@@ -91,15 +98,24 @@ const styles = {
     margin: 3
   },
   imageTextContainer: {
-    flex: 3,
+    flex: 1,
     display: 'flex',
     flexDirection: 'column',
   },
   imageContainer: {
-    flex: 4,
+    flex: 1,
     display: 'flex',
     justifyContent: 'end',
     minWidth: '200px',
+  },
+  promoContainer: {
+    display: 'flex',
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'start',
+    height: '100%',
+    paddingTop: '10vh'
   }
 };
 
@@ -135,11 +151,19 @@ const stylesSmall = {
     flexDirection: 'column',
   },
   imageContainer: {
-    flex: 3,
+    flex: 1,
     display: 'flex',
     minWidth: '200px',
     alignItems: 'flex-end',
     justifyContent: 'center'
+  },
+  promoContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100%'
   }
 }
 

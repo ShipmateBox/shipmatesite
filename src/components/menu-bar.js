@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import COLORS from '../constants/theme';
-import {Link, Outlet} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 import {GetWindowDimensions} from './window';
 
@@ -11,11 +11,15 @@ import logoIcon from '../images/LogoNoElectrodesLightMini.svg';
 function LargeMenu(props) {
   return (
     <div style={styles.linkContainer}>
-      <Link to="/product">
-        <p style={styles.firstLink}>Product</p>
+      <Link to="/product" style={styles.firstLink}>
+        <p>Product</p>
       </Link>
-      <p style={styles.middleLink}>About</p>
-      <p style={styles.lastLink}>Journey</p>
+      <Link to ="/company" style={styles.middleLink}>
+        <p>Company</p>
+      </Link>
+      <Link to="/Journey" style={styles.lastLink}>
+        <p>Journey</p>
+      </Link>
     </div>
   )
 }

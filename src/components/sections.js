@@ -3,6 +3,15 @@ import React from 'react';
 import {Timeline} from './timeline';
 import Sales from './funding';
 import Footer from './footer';
+import ProductOverview from './productOverview.js';
+import {HashLink as Link} from 'react-router-hash-link';
+import {
+  InfoStrong,
+  InfoResponsive,
+  InfoConnected,
+  InfoSmart,
+  InfoAdaptive
+} from './productInfo.js';
 import COLORS from '../constants/theme';
 
 function Section(props) {
@@ -11,7 +20,18 @@ function Section(props) {
       <header style={styles.header}>
         <p>{props.title}</p>
       </header>
-      {props.note && <p>{props.note}</p>}
+      {props.note && <h3>{props.note}</h3>}
+      {props.children}
+    </div>
+  )
+}
+
+function HalfSection(props) {
+  return (
+    <div style={props.theme=='light'?stylesLight.mainContainerHalf:styles.mainContainerHalf}>
+      <header style={styles.header}>
+        <p>{props.title}</p>
+      </header>
       {props.children}
     </div>
   )
@@ -28,13 +48,14 @@ function SectionAffordances(props) {
             <h2>Secured</h2>
             <p>Your packages are protected by aerospace hexcore material, staying safe from theft and waiting for you.</p>
             <p>Our advanced AI monitors your neighborhood security and provides warnings when danger lurks. </p>
-
           </div>
+
           <div style={styles.card}>
             <h2>Protected</h2>
-            <p>In side the lockbox, your packages stay out of the weather</p>
-            <p>We warn you of extream temperatures that can effect sensative deliveries like medication and food.</p>
+            <p>Inside the lockbox, your packages stay out of the weather</p>
+            <p>We warn you of extreme temperatures that can effect sensative deliveries like medication and food.</p>
           </div>
+
           <div style={styles.card}>
             <h2>Private</h2>
             <p>Your packages are concealed.  No one needs to know if you have  package, where its from, what size it is or anything else.</p>
@@ -64,22 +85,33 @@ function SectionTech(props) {
           <h2>Connected</h2>
           <p>Cellular connection and solar power allowes you to place your lockbox anywhere.</p>
           <p>You recieve updates and control your lockbox from anywhere using your mobile phone.</p>
+          <p><Link to="/product#InfoConnected">-more-</Link></p>
         </div>
 
         <div style={styles.card}>
           <h2>Responsive</h2>
-          <p>Using Near Field Communication makes retrieving you packages faster and more reliable.</p>
+          <p>Using Near Field Communication makes retrieving your packages faster and more reliable.</p>
+          <p><Link to="/product#InfoResponsive">-more-</Link></p>
         </div>
 
         <div style={styles.card}>
           <h2>Strong</h2>
           <p>Aerospace hexcore makes your lockbox strong but keeps the weight manageable.</p>
+          <p><Link to="/product#InfoStrong">-more-</Link></p>
         </div>
 
         <div style={styles.card}>
           <h2>Adaptive</h2>
           <p>Your lockbox evolves with the shipping industry at not cost to you.</p>
           <p>Updates will be made to your product, adapting to droid and drone deliveries, carrier access, new forms of package tracking, and anything else the industry throws at us.</p>
+          <p><Link to="/product#InfoAdaptive">-more-</Link></p>
+        </div>
+
+        <div style={styles.card}>
+          <h2>Smart</h2>
+          <p>We are developing a package receiving robot that uses lockbox data, Shipmate network data, weather data, security data, and carrier data to learn what all this means for the safety, security, and timely delivery of your packages."
+          </p>
+          <p><Link to="/product#InfoSmart">-more-</Link></p>
         </div>
       </div>
     </Section>
@@ -116,6 +148,73 @@ function SectionFooter(props) {
   )
 }
 
+function SectionProductOverview(props) {
+  return (
+    <div  id={props._id}>
+      <Section
+        title="Product"
+        theme="light">
+        <ProductOverview/>
+      </Section>
+    </div>
+  )
+}
+
+function SectionProductInfoStrong(props) {
+  return (
+    <div id={props._id}>
+      <HalfSection
+        theme="light">
+          <InfoStrong/>
+      </HalfSection>
+    </div>
+  )
+}
+
+function SectionProductInfoResponsive(props) {
+  return (
+    <div id={props._id}>
+      <HalfSection
+        theme="light">
+          <InfoResponsive/>
+      </HalfSection>
+    </div>
+  )
+}
+
+function SectionProductInfoConnected(props) {
+  return (
+    <div id={props._id}>
+      <HalfSection
+        theme="light">
+          <InfoConnected/>
+      </HalfSection>
+    </div>
+  )
+}
+
+function SectionProductInfoSmart(props) {
+  return (
+    <div id={props._id}>
+      <HalfSection
+        theme="light">
+          <InfoSmart/>
+      </HalfSection>
+    </div>
+  )
+}
+
+function SectionProductInfoAdaptive(props) {
+  return (
+    <div id={props._id}>
+      <HalfSection
+        theme="light">
+          <InfoAdaptive/>
+      </HalfSection>
+    </div>
+  )
+}
+
 const styles = {
   mainContainer: {
     backgroundColor: COLORS.COLORS.BLACK_MAIN_THEME,
@@ -124,6 +223,19 @@ const styles = {
     paddingLeft: '10vw',
     paddingRight: '10vw',
     minHeight: '70vh',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'start',
+    color: COLORS.COLORS.WHITE
+  },
+  mainContainerHalf: {
+    backgroundColor: COLORS.COLORS.BLACK_MAIN_THEME,
+    paddingTop: '1vh',
+    paddingBottom: '5vh',
+    paddingLeft: '5vw',
+    paddingRight: '5vw',
+    minHeight: '5vh',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -159,20 +271,19 @@ const stylesLight = {
     justifyContent: 'start',
     color: COLORS.COLORS.BLACK_MAIN_THEME
   },
-  header: {
-    fontSize: 'calc(14px + 3vmin)',
-    paddingBottom: '0px'
-  },
-  cardContainer: {
+  mainContainerHalf: {
+    backgroundColor: COLORS.COLORS.WHITE,
+    paddingTop: '5vh',
+    paddingBottom: '5vh',
+    paddingLeft: '5vw',
+    paddingRight: '5vw',
+    minHeight: '20vh',
     display: 'flex',
-    flexWrap: 'wrap'
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'start',
+    color: COLORS.COLORS.BLACK_MAIN_THEME
   },
-  card: {
-    flex: 1,
-    padding: '5vw',
-    minWidth: '150px'
-
-  }
 }
 const stylesFooter = {
   mainContainer: {
@@ -188,8 +299,17 @@ const stylesFooter = {
   }
 }
 export {
+  Section,
+  HalfSection,
   SectionAffordances,
   SectionTech,
   SectionTimeline,
   SectionSales,
-  SectionFooter};
+  SectionFooter,
+  SectionProductOverview,
+  SectionProductInfoStrong,
+  SectionProductInfoResponsive,
+  SectionProductInfoConnected,
+  SectionProductInfoSmart,
+  SectionProductInfoAdaptive
+};

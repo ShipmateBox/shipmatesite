@@ -12,7 +12,7 @@ export default function Footer() {
           <p style={styles.item}>About</p>
         </div>
         <div style={styles.card}>
-          <h4>Product</h4>
+          <h4>Support</h4>
           <p style={styles.item}>Presales</p>
           <p style={styles.item}>NFT</p>
           <p style={styles.item}>Donate</p>
@@ -21,7 +21,8 @@ export default function Footer() {
           <h4>Contact</h4>
           <p style={styles.item}>Email</p>
           <p style={styles.item}>Twitter</p>
-          <p style={styles.item}></p>
+          <p style={styles.item}>Discord</p>
+          <p style={styles.item}>Facebook</p>
         </div>
       </div>
       <div style={styles.copyright}>
