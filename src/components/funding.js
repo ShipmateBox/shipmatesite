@@ -3,7 +3,7 @@ import React from 'react';
 import {
   PreorderCard,
   DonateCard
-} from './preorder';
+} from './buttons';
 
 function Presales(props) {
   return (
