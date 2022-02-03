@@ -5,6 +5,10 @@ import {
   DonateCard
 } from './buttons';
 
+import SCREENSIZE from '../constants/screenSize';
+
+const smallScreenSize = SCREENSIZE.SCREENSIZE.SMALL;
+
 function Presales(props) {
   return (
     <div style={styles.presales}>
@@ -53,11 +57,14 @@ export default function Sales() {
   )
 }
 
+function smallScreen() {
+  return window.innerWidth<smallScreenSize
+}
 
 const styles = {
   mainContainer: {
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: smallScreen()?'column':'row',
     marginTop: '5vw'
   },
   subContainer: {

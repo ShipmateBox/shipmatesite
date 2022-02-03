@@ -6,9 +6,10 @@ import {
   DonateCard,
 } from './buttons';
 import {GetWindowDimensions} from './window';
+import SCREENSIZE from '../constants/screenSize';
 import neighborhood from '../images/neighborhood.jpeg';
 
-const smallScreenSize = 800;
+const smallScreenSize = SCREENSIZE.SCREENSIZE.SMALL;
 
 function Banner(props) {
 
