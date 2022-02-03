@@ -2,6 +2,14 @@ import React from 'react';
 
 import COLORS from '../constants/theme';
 
+// function SectionFooter(props) {
+//   return (
+//     <div style={stylesFooter.mainContainer}>
+//       <Footer/>
+//     </div>
+//   )
+// }
+
 export default function Footer() {
   return (
     <div style={styles.mainContainer}>

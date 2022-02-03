@@ -7,7 +7,6 @@ import boxSecure2 from '../images/BoxSecureBigMini.svg';
 import boxProtected from '../images/BoxProtectedBigMini.svg';
 import boxOrganized from '../images/BoxOrganizedBigMini.svg';
 import boxPrivate2 from '../images/BoxPrivateBigMini.svg';
-import neighborhood from '../images/neighborhood.jpeg';
 
 const words = [['S','e','c','u','r','e'],
               ['P','r','i','v','a','t','e'],

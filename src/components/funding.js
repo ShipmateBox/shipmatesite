@@ -4,6 +4,7 @@ import {
   PreorderCard,
   DonateCard
 } from './buttons';
+import {Section, HalfSection} from '../components/sections';
 
 import SCREENSIZE from '../constants/screenSize';
 
@@ -43,24 +44,73 @@ function Nft() {
   )
 }
 
-export default function Sales() {
+function Sales(props) {
   return (
-    <div style={styles.mainContainer}>
-      <div style={styles.subContainer}>
-        <Presales/>
-        <Donations/>
+    <Section
+      title="Sales / Support"
+      note="-Every great product requires capital-"
+      theme="dark">
+      <div style={styles.mainContainer}>
+        <div style={styles.subContainer}>
+          <Presales/>
+          <Donations/>
+        </div>
+        <div style={styles.subContainer}>
+          <Nft style={styles.nft}/>
+        </div>
       </div>
-      <div style={styles.subContainer}>
-        <Nft style={styles.nft}/>
-      </div>
+    </Section>
+  )
+}
+
+
+function FundraiseOverview() {
+  return (
+    <div>
     </div>
   )
 }
 
+function FundraisePreOrder() {
+  return (
+    <div>
+      <HalfSection
+        theme='light'>
+          <h2>Traditional Preorder Campaign</h2>
+      </HalfSection>
+    </div>
+  )
+}
+
+function FundraiseNFT() {
+  return (
+    <div>
+      <HalfSection
+        theme='light'>
+          <h2>NFT Preorder Campaign</h2>
+      </HalfSection>
+    </div>
+  )
+}
+
+function FundraiseDonate() {
+  return (
+    <div>
+      <HalfSection
+        theme='light'>
+          <h2>Donate And Be Our Hero !</h2>
+          <p>Building stuff is hard and requires money.  If you like the product, like what we are trying to do, want to suport a small business, or just feel generous plase donate. </p>
+          <p>All donated funds are invested directly into the business.</p>
+          <p>For donating we will put you on our wall of heroes. A special place for everyone that helps bring this product to life.</p>
+      </HalfSection>
+    </div>
+  )
+}
+
+
 function smallScreen() {
   return window.innerWidth<smallScreenSize
 }
-
 const styles = {
   mainContainer: {
     display: 'flex',
@@ -110,4 +160,11 @@ const styles = {
     margin: '10px',
     borderRadius: '5px'
   }
+}
+export {
+  Sales,
+  FundraiseOverview,
+  FundraisePreOrder,
+  FundraiseNFT,
+  FundraiseDonate
 }

@@ -1,24 +1,24 @@
 import React from 'react';
 
 import {
-  SectionProductOverview,
-  SectionProductInfoStrong,
-  SectionProductInfoResponsive,
-  SectionProductInfoConnected,
-  SectionProductInfoAdaptive,
-  SectionProductInfoSmart
-} from '../components/sections';
-
+  ProductOverview,
+  ProductInfo,
+  InfoAdaptive,
+  InfoResponsive,
+  InfoConnected,
+  InfoStrong,
+  InfoSmart
+} from '../components/productInfo';
 
 export default function Product() {
   return (
     <div className="App">
-      <SectionProductOverview _id="ProductOverview"/>
-      <SectionProductInfoStrong _id="InfoStrong"/>
-      <SectionProductInfoResponsive _id="InfoResponsive"/>
-      <SectionProductInfoConnected _id="InfoConnected"/>
-      <SectionProductInfoSmart _id="InfoSmart"/>
-      <SectionProductInfoAdaptive _id="InfoAdaptive"/>
+      <ProductOverview _id="ProductOverview"/>
+      <InfoSmart _id="InfoSmart"/>
+      <InfoConnected _id="InfoConnected"/>
+      <InfoResponsive _id="InfoResponsive"/>
+      <InfoAdaptive _id="InfoAdaptive"/>
+      <InfoStrong _id="InfoStrong"/>
     </div>
   )
 }

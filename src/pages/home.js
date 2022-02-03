@@ -6,22 +6,20 @@ import BoxSecure from '../images/result.svg';
 
 import MenuBar from '../components/menu-bar';
 import {Banner} from '../components/banner';
-import {
-  SectionAffordances,
-  SectionTech,
-  SectionTimeline,
-  SectionSales,
-  SectionFooter
-} from '../components/sections';
+
+import Affordances from '../components/affordances';
+import {ProductInfo} from '../components/productInfo';
+import {Timeline} from '../components/timeline';
+import {Sales} from '../components/funding';
 
 export default function Home() {
   return (
     <div className="App">
       <Banner/>
-      <SectionAffordances/>
-      <SectionTech/>
-      <SectionSales/>
-      <SectionTimeline/>
+      <Affordances/>
+      <ProductInfo/>
+      <Sales/>
+      <Timeline/>
     </div>
 
   )

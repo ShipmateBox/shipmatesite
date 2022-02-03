@@ -4,7 +4,7 @@ import {
   FundraisePreOrder,
   FundraiseNFT,
   FundraiseDonate
-} from '../components/fundraise';
+} from '../components/funding';
 
 export default function Fundraise() {
   return (
