@@ -15,10 +15,10 @@ function LargeMenu(props) {
         <p>Product</p>
       </Link>
       <Link to ="/company" style={styles.middleLink}>
-        <p>Company</p>
+        <p>How it Works</p>
       </Link>
       <Link to="/Journey" style={styles.lastLink}>
-        <p>Journey</p>
+        <p>Company</p>
       </Link>
     </div>
   )

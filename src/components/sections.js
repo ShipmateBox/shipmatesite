@@ -83,7 +83,7 @@ function SectionTech(props) {
 
         <div style={styles.card}>
           <h2>Connected</h2>
-          <p>Cellular connection and solar power allowes you to place your lockbox anywhere.</p>
+          <p>Cellular connection and solar power allows you to place your lockbox anywhere.</p>
           <p>You recieve updates and control your lockbox from anywhere using your mobile phone.</p>
           <p><Link to="/product#InfoConnected">-more-</Link></p>
         </div>

@@ -12,6 +12,7 @@ import boxSecure2 from '../images/BoxSecureBigMini.svg';
 import boxProtected from '../images/BoxProtectedBigMini.svg';
 import boxOrganized from '../images/BoxOrganizedBigMini.svg';
 import boxPrivate2 from '../images/BoxPrivateBigMini.svg';
+import neighborhood from '../images/neighborhood.jpeg';
 
 const words = [['S','e','c','u','r','e'],
               ['P','r','i','v','a','t','e'],
@@ -55,22 +56,51 @@ function Banner(props) {
   },[]);
 
   return(
-    <div style={width > 500?styles.mainContainer:stylesSmall.mainContainer}>
-      <div style={width>500?styles.promoContainer:stylesSmall.promoContainer}>
-        <PreorderCard/>
-        <DonateCard/>
+    <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '80vh',
+        backgroundImage: `url(${neighborhood})`,
+        backgroundSize: 'cover',
+        // background: "linear-gradient(335deg, rgba(61,133,197,1) 0%, rgba(256, 256,256,1) 25%)"
+      }}>
+      <div style={{
+                display: 'flex',
+                flex: 1,
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'start',
+                height: '100%',
+                paddingTop: '10vh'
+      }}>
+        <div style={{display: 'flex', flexWrap: 'wrap'}}>
+          <div style={{display: 'flex',
+                      flex: 1, flexDirection: 'column',
+                      alignItems: 'end',
+                      justifyContent: 'center',
+                      paddingRight: '5%',
+                      borderRight: '2px solid #3D85C5'}}>
+            <h1 style={{margin: '0px'}}>Inteligent</h1>
+            <h1 style={{margin: '0px'}}>Package</h1>
+            <h1 style={{margin: '0px'}}>Deliveries</h1>
+          </div >
+            <div style={{display:
+                      'flex', flex: 1,
+                      flexDirection: 'column',
+                      paddingLeft: '5%'}}>
+              <p>A fully remote package recieving lockbox that will change the way you get deliveries.</p>
+              <p>Place it anywhere on your property, control it with your phone, recieve warnings and notifications.</p>
+            </div>
+        </div>
+        <div style={{marginTop: '5vh'}}>
+          <PreorderCard/>
+          <DonateCard/>
+        </div>
       </div>
-      <div style={width > 500?styles.imageContainer:stylesSmall.imageContainer}>
-        <img src={image} style={width > 500?styles.image:stylesSmall.image}/>
+      <div style={{flex: 1}}>
       </div>
-      <div style={width > 500?styles.imageTextContainer:stylesSmall.imageTextContainer}>
-        <div style={stylesSmall.textContainer}>
-          <div>
-            <p style={width > 500?styles.imageText2:stylesSmall.imageText2}>Make Your Deliveries</p></div>
-          <div>
-            <p style={width > 500?styles.imageText:stylesSmall.imageText}>{text}</p></div>
-          </div>
-      </div>
+
     </div>
   )
 }
@@ -80,7 +110,8 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    height: '80vh'
+    height: '80vh',
+    // background: "linear-gradient(315deg, rgba(61,133,197,1) 0%, rgba(40,44,52,1) 60%)"
   },
   image: {
     height: '20vh',
@@ -88,6 +119,10 @@ const styles = {
     marginRight: 40,
     marginTop: 100,
     marginBottom: 100
+  },
+  introContainer: {
+    display: 'flex',
+    width: '80%'
   },
   imageText: {
     fontSize: 30,
