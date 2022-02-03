@@ -88,7 +88,8 @@ a:hover {
 .card:hover {
   background: rgb(111,168,220);
   background: linear-gradient(59deg, rgba(61,133,198,.5) 0%, rgba(111,168,220,.5) 100%);
-  border: none;
+  border: 1px solid var(--theme-main-white);
+  border-radius: 5px;
 }
 
 .cardHeader {

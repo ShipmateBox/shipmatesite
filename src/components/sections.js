@@ -218,10 +218,7 @@ function SectionProductInfoAdaptive(props) {
 const styles = {
   mainContainer: {
     backgroundColor: COLORS.COLORS.BLACK_MAIN_THEME,
-    paddingTop: '20vh',
-    paddingBottom: '20vh',
-    paddingLeft: '10vw',
-    paddingRight: '10vw',
+    padding: '10vh 10vw',
     minHeight: '70vh',
     display: 'flex',
     flexDirection: 'column',
@@ -260,10 +257,7 @@ const styles = {
 const stylesLight = {
   mainContainer: {
     backgroundColor: COLORS.COLORS.WHITE,
-    paddingTop: '20vh',
-    paddingBottom: '20vh',
-    paddingLeft: '10vw',
-    paddingRight: '10vw',
+    padding: '10vh 10vw',
     minHeight: '70vh',
     display: 'flex',
     flexDirection: 'column',
@@ -273,10 +267,7 @@ const stylesLight = {
   },
   mainContainerHalf: {
     backgroundColor: COLORS.COLORS.WHITE,
-    paddingTop: '5vh',
-    paddingBottom: '5vh',
-    paddingLeft: '5vw',
-    paddingRight: '5vw',
+    paddingTop: '5vh 5vw',
     minHeight: '20vh',
     display: 'flex',
     flexDirection: 'column',
@@ -289,10 +280,7 @@ const stylesFooter = {
   mainContainer: {
     mainContainer: {
       backgroundColor: COLORS.COLORS.BLACK_MAIN_THEME,
-      paddingTop: '10vh',
-      paddingBottom: '10vh',
-      paddingLeft: '10vw',
-      paddingRight: '10vw',
+      paddingTop: '10vh 10vw',
       minHeight: '20vh',
       color: COLORS.COLORS.WHITE
     },
