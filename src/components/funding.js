@@ -14,7 +14,7 @@ function Presales(props) {
   return (
     <div style={styles.presales}>
       <h2 style={styles.subContainerHeading}>Presales</h2>
-      <p>Preorder your lockbox and recieve reduced mothly costs for the first year. </p>
+      <p>$50 today </p>
       <PreorderCard/>
     </div>
   )
@@ -47,7 +47,7 @@ function Nft() {
 function Sales(props) {
   return (
     <Section
-      title="Sales / Support"
+      title="Presales"
       note="-Every great product requires capital-"
       theme="dark">
       <div style={styles.mainContainer}>

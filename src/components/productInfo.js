@@ -134,8 +134,7 @@ function ProductInfo() {
 
         <div style={styles.card}>
           <h2>Connected</h2>
-          <p>Cellular connection and solar power allows you to place your lockbox anywhere.</p>
-          <p>You recieve updates and control your lockbox from anywhere using your mobile phone.</p>
+          <p>Cellular connection and solar power allows you to place your lockbox anywhere and stay in control.</p>
           <p><Link to="/product#InfoConnected">-more-</Link></p>
         </div>
 
@@ -154,7 +153,6 @@ function ProductInfo() {
         <div style={styles.card}>
           <h2>Adaptive</h2>
           <p>Your lockbox evolves with the shipping industry at not cost to you.</p>
-          <p>Updates will be made to your product, adapting to droid and drone deliveries, carrier access, new forms of package tracking, and anything else the industry throws at us.</p>
           <p><Link to="/product#InfoAdaptive">-more-</Link></p>
         </div>
 
@@ -190,7 +188,7 @@ const styles = {
   },
   card: {
     flex: 1,
-    padding: '5vw',
+    padding: '3vw',
     minWidth: '150px'
 
   }

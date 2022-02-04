@@ -11,12 +11,14 @@ import Affordances from '../components/affordances';
 import {ProductInfo} from '../components/productInfo';
 import {Timeline} from '../components/timeline';
 import {Sales} from '../components/funding';
+import Security from '../components/security';
 
 export default function Home() {
   return (
     <div className="App">
       <Banner/>
       <Affordances/>
+      <Security/>
       <ProductInfo/>
       <Sales/>
       <Timeline/>
