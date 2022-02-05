@@ -107,3 +107,32 @@ a:hover {
   margin: 1px;
   padding: 1px;
 }
+
+.skew {
+  box-shadow: 5px 5px 5px 1px grey;
+  opacity: .95;
+}
+
+.skew:hover {
+  transform: skew(0deg, 2deg);
+  box-shadow: 10px 5px 5px 1px grey;
+  opacity: 1;
+}
+
+.pan {
+  left: -10vw;
+  top: -20vh;
+  height: 120vh;
+  animation: panning 20s linear forwards;
+}
+
+@keyframes panning {
+  to {
+    height: 80vh;
+  }
+}
+
+
+.featureItem {
+  margin: 0.5vh 0vw;
+}

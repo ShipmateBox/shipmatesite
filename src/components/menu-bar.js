@@ -17,7 +17,7 @@ function LargeMenu(props) {
       <Link to ="/company" style={styles.middleLink}>
         <p>How it Works</p>
       </Link>
-      <Link to="/Journey" style={styles.lastLink}>
+      <Link to="/Company" style={styles.lastLink}>
         <p>Company</p>
       </Link>
     </div>

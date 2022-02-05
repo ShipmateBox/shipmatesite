@@ -6,6 +6,7 @@ import Layout from './components/layout';
 import Home from './pages/home';
 import Product from './pages/product';
 import Fundraise from './pages/fundraise';
+import Company from './pages/company';
 
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
             <Route index element={<Home/>} />
             <Route path="/product" element={<Product/>} />
             <Route path="/Fundraise" element={<Fundraise/>}/>
+            <Route path="/Company" element={<Company/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
