@@ -14,6 +14,12 @@
   --delay-arrow3: 1.5s;
 }
 
+
+body{
+  font-family: Vredana, sansa-serif;
+  font-size: 18px;
+}
+
 .App {
   background-color: #ffffff
 }
@@ -67,31 +73,31 @@ a:hover {
 }
 
 
-/* Buttoms */
+/* --------Buttoms ---------*/
 .card {
   display: flex;
   flex: 1;
   flex-direction: row;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background: rgb(111,168,220);
-  background: linear-gradient(59deg, rgba(61,133,198,1) 0%, rgba(111,168,220,1) 100%);
-  /* background: linear-gradient(59deg, var(--theme-main-black) 0%, rgba(50, 50, 50, 1) 100%); */
-  border: 1px solid var(--theme-main-black);
+  padding: 8px;
+  background-color: var(--theme-main-black);
+background: linear-gradient(94deg, rgba(40,44,52,1) 0%, rgba(55,60,70,1) 100%);
+  /* background: rgb(111,168,220); */
+  /* background: linear-gradient(59deg, rgba(61,133,198,1) 0%, rgba(111,168,220,1) 100%); */
   border-radius: 10px;
   color: var(--theme-main-white);
   justify-content: center;
   align-items: center;
   margin: 10px;
+  font-weight: bolder;
 }
 
 .card:hover {
-  background: linear-gradient(59deg, rgba(61,133,198,.5) 0%, rgba(111,168,220,.5) 100%);
+  background: linear-gradient(59deg, rgba(61,133,198,1) 0%, rgba(111,168,220,1) 100%);
   /* background: linear-gradient(59deg, var(--theme-main-black) 0%, rgba(50, 50, 50, .75) 100%); */
-  border: 1px solid var(--theme-main-white);
+  /* border: 1px solid var(--theme-main-white); */
   border-radius: 10px;
+
+  box-shadow: none;
 }
 
 .cardHeader {
@@ -133,6 +139,110 @@ a:hover {
 }
 
 
+/* ---------section -----------*/
+.mainC9Rfull {
+  background-color: var(--theme-main-black);
+  padding: 10vh 10vw;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(theme-main-white)
+}
+
+.sectionLight {
+  background-color: white;
+  color: var(--theme-main-black);
+}
+
+.sectionDark {
+  background-color: var(--theme-main-black);
+  color: white;
+  background: var(--theme-main-black);
+  background: linear-gradient(120deg, rgba(40,44,52,1) 0%, rgba(51,56,61,1) 100%);
+}
+
+/* ---------features----------- */
 .featureItem {
   margin: 0.5vh 0vw;
+}
+
+/* ---------------table----------- */
+.itemColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid white;
+  margin: 0vw 1vw;
+  padding: 2em 1vw;
+
+}
+
+.supportNFTColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0vw 1vw;
+  padding: 2em 1vw;
+}
+
+.redeemableColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0vw 1vw;
+  padding: 2em 1vw;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 3px 3px 2px 1px;
+}
+
+.preorderColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0vw 1vw;
+  padding: 2em 1vw;
+}
+
+.titleRow {
+  min-height: 3.5em;
+}
+
+.titleRowPadding {
+  flex: 1;
+  margin: 0em;
+  padding: 0em;
+  min-height: 3.5em;
+}
+
+.titleP9H {
+  margin: 0px;
+}
+
+.costRow {
+  flex: 1;
+  min-height: 4em;
+  border-top: 1px solid white;
+  align-items: center;
+  display: flex;
+}
+
+.availableRow {
+  flex: 1;
+  min-height: 4em;
+  display: flex;
+  align-items: center;
+}
+
+.perkItem {
+  flex: 1;
+  min-height: 2em;
+  display: flex;
+  align-items: center;
+}
+
+.tableVPadding {
+  min-height: 2em;
 }

@@ -7,7 +7,8 @@ import COLORS from '../constants/theme';
 
 function Section(props) {
   return (
-    <div style={props.theme=='light'?stylesLight.mainContainer:styles.mainContainer}>
+    <div style={{backgroundImage: props.image}}
+    className={props.theme=='light'?"mainC9Rfull sectionLight":"mainC9Rfull sectionDark"}>
       <header style={styles.header}>
         <p>{props.title}</p>
       </header>
@@ -32,12 +33,6 @@ function HalfSection(props) {
 const styles = {
   mainContainer: {
     backgroundColor: COLORS.COLORS.BLACK_MAIN_THEME,
-    padding: '10vh 10vw',
-    minHeight: '70vh',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'start',
     color: COLORS.COLORS.WHITE
   },
   mainContainerHalf: {
@@ -71,12 +66,6 @@ const styles = {
 const stylesLight = {
   mainContainer: {
     backgroundColor: COLORS.COLORS.WHITE,
-    padding: '10vh 10vw',
-    minHeight: '70vh',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'start',
     color: COLORS.COLORS.BLACK_MAIN_THEME
   },
   mainContainerHalf: {

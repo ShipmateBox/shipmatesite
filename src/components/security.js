@@ -14,28 +14,6 @@ import right from '../images/right.jpeg';
 import bottom from '../images/bottom.jpeg';
 import left from '../images/left.jpeg';
 
-// export default function Security() {
-//   return (
-//     <div style={styles.mainContainer}>
-//       <div style={styles.subContainerFirst}>
-//         <div style={styles.imageCard}>
-//           <div style={styles.imageDiv}>
-//             <img src={windowImage} style={styles.image}/>
-//           </div>
-//           <div style={styles.imageCaption}>
-//             <h3>Windows Locked</h3>
-//           </div>
-//         </div>
-//       </div>
-//       <div style={styles.subContainerSecond}>
-//         <div style={styles.title}>
-//           <h1>Normal Home Precautions</h1>
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }
-
 function Doorpan() {
   return (
 
@@ -59,8 +37,6 @@ function Doorpan() {
                 overflow: 'hidden',
                 width: '30vw',
                 height: '30vw',
-
-                // boxShadow: '5px 5px 5px 5px grey'
               }}>
                 <img src={packages} style={{
                   transform: 'rotate(-45deg)',
@@ -78,7 +54,7 @@ export default function Security() {
     <div>
       <div style={{
         display: 'flex',
-        width: '100vw',
+        width: '100%',
         height: '60vh'
       }}>
 
@@ -161,7 +137,7 @@ export default function Security() {
 
       <div style={{
         display: 'flex',
-        width: '100vw',
+        width: '100',
       }}>
         <div style={{
           display: 'flex',

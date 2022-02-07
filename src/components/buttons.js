@@ -7,14 +7,14 @@ function Card(props) {
   return (
     <Link to={props.link}>
       <div className="card">
-        <h4 className="cardHeader">{props.title}</h4>
+        <p className="cardHeader">{props.title}</p>
         <FontAwesomeIcon icon={faArrowRight} className="cardIcon"/>
       </div>
     </Link>
   )
 }
 
-function PreorderCard() {
+function PreorderButton() {
   return (
     <div>
       <Card
@@ -24,14 +24,28 @@ function PreorderCard() {
   )
 }
 
-function DonateCard() {
+function R9ENFTButton() {
   return (
     <div>
       <Card
-        title="Show Support"
+        title="NFT"
         link="/donate"/>
     </div>
   )
 }
 
-export {PreorderCard, DonateCard};
+function SupportButton() {
+  return (
+    <div>
+      <Card
+        title="Support NFT"
+        link="/donate"/>
+    </div>
+  )
+}
+
+export {
+  PreorderButton,
+  R9ENFTButton,
+  SupportButton,
+};

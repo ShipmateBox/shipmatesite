@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react';
 
 import COLORS from '../constants/theme';
 import {
-  PreorderCard,
-  DonateCard,
+  PreorderButton,
+  R9ENFTButton,
 } from './buttons';
 import {GetWindowDimensions} from './window';
 import SCREENSIZE from '../constants/screenSize';
@@ -29,9 +29,16 @@ function Banner(props) {
               <p>Place it anywhere on your property, control it with your phone, recieve warnings and notifications.</p>
             </div>
         </div>
-        <div style={styles.mainSubContainerLower}>
-          <PreorderCard/>
-          <DonateCard/>
+        <div style={{
+          display: 'flex',
+          flexDirection: 'row',
+          marginTop: '2em'}}>
+          <div style={{flex: 1, minWidth: '8em'}}>
+            <PreorderButton/>
+          </div>
+          <div style={{flex: 1, minWidth: '8em'}}>
+            <R9ENFTButton/>
+          </div>
         </div>
       </div>
       <div style={styles.padding}>

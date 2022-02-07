@@ -20,7 +20,6 @@ export default function Home() {
       <Affordances/>
       <Security/>
       <Features/>
-      <ProductInfo/>
       <Sales/>
     </div>
 

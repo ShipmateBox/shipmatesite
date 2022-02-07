@@ -20,7 +20,7 @@ export default function Features() {
               <thead>
                 <tr>
                   <td>
-                    <h2>Curent</h2>
+                    <h2>Current</h2>
                   </td>
                 </tr>
               </thead>
