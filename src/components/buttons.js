@@ -1,11 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {HashLink as Link} from 'react-router-hash-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
-function Card(props) {
+function Button(props) {
   return (
-    <Link to={props.link}>
+    <Link
+      to={props.link}
+      state={props.itemState}>
       <div className="card">
         <p className="cardHeader">{props.title}</p>
         <FontAwesomeIcon icon={faArrowRight} className="cardIcon"/>
@@ -17,9 +19,10 @@ function Card(props) {
 function PreorderButton() {
   return (
     <div>
-      <Card
+      <Button
         title="Preorder"
-        link="/fundraise"/>
+        link="/Fundraise"
+        itemState={{data: 3}}/>
     </div>
   )
 }
@@ -27,19 +30,31 @@ function PreorderButton() {
 function R9ENFTButton() {
   return (
     <div>
-      <Card
+      <Button
         title="NFT"
-        link="/donate"/>
+        link="/Fundraise"
+        itemState={{data: 2}}/>
     </div>
   )
 }
 
 function SupportButton() {
+
   return (
     <div>
-      <Card
+      <Button
         title="Support NFT"
-        link="/donate"/>
+        link={'/Fundraise'}
+        itemState={{data: 1}}/>
+    </div>
+  )
+}
+
+function CheckoutButton(props) {
+  return (
+    <div className="card">
+      <p className="cardHeader">{props.title}</p>
+      <FontAwesomeIcon icon={faArrowRight} className="cardIcon"/>
     </div>
   )
 }
@@ -48,4 +63,5 @@ export {
   PreorderButton,
   R9ENFTButton,
   SupportButton,
+  CheckoutButton,
 };

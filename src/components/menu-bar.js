@@ -11,15 +11,16 @@ import logoIcon from '../images/LogoNoElectrodesLightMini.svg';
 function LargeMenu(props) {
   return (
     <div style={styles.linkContainer}>
-      <Link to="/product" style={styles.firstLink}>
-        <p>Product</p>
+      <Link to="/fundraise" style={styles.firstLink}>
+        <p>Preorder</p>
       </Link>
-      <Link to ="/company" style={styles.middleLink}>
-        <p>How it Works</p>
+      <Link to="/product" style={styles.middleLink}>
+        <p>Product</p>
       </Link>
       <Link to="/Company" style={styles.lastLink}>
         <p>Company</p>
       </Link>
+      
     </div>
   )
 }

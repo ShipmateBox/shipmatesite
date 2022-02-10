@@ -7,13 +7,15 @@ import {
   InfoResponsive,
   InfoConnected,
   InfoStrong,
-  InfoSmart
+  InfoSmart,
+  Uses
 } from '../components/productInfo';
 
 export default function Product() {
   return (
     <div className="App">
       <ProductOverview _id="ProductOverview"/>
+      <Uses />
       <InfoSmart _id="InfoSmart"/>
       <InfoConnected _id="InfoConnected"/>
       <InfoResponsive _id="InfoResponsive"/>

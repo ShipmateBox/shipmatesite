@@ -124,6 +124,22 @@ function InfoAdaptive(props) {
   )
 }
 
+function Uses() {
+  return (
+    <div>
+      <HalfSection
+        theme="light">
+          <p>Perfect for</p>
+          <p>Suburban Neighborhoods</p>
+          <p>Country Homes</p>
+          <p>Hid-a-key box / Airbnb key box</p>
+          <p>Food / Medicaton Deliveries</p>
+          <p>Transfering Goods to Friends / Neighbors when your not home</p>
+      </HalfSection>
+    </div>
+  )
+}
+
 function ProductInfo() {
   return (
     <Section
@@ -202,5 +218,6 @@ export {
   InfoResponsive,
   InfoConnected,
   InfoStrong,
-  InfoSmart
+  InfoSmart,
+  Uses
 };

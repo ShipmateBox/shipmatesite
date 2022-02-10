@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {SideBySide} from './cards';
+
 import {Section} from './sections';
 import COLORS from '../constants/theme'
 
@@ -14,7 +16,7 @@ import right from '../images/right.jpeg';
 import bottom from '../images/bottom.jpeg';
 import left from '../images/left.jpeg';
 
-function Doorpan() {
+function Doorpan() { // currrently not used
   return (
 
           <div style={{
@@ -51,13 +53,8 @@ function Doorpan() {
 
 export default function Security() {
   return (
-    <div>
-      <div style={{
-        display: 'flex',
-        width: '100%',
-        height: '60vh'
-      }}>
-
+    <div style={{display: 'flex', flexDirection: 'column'}}>
+      <div className="securityMainRow">
         <div style={{
           display: 'flex',
           flex: 2,
@@ -65,15 +62,7 @@ export default function Security() {
         }}>
 
           <div>
-            <div style={{
-              transform: 'rotate(45deg)',
-              position: 'relative',
-              left: '0vw',
-              top: '0vw',
-              display: 'flex',
-              background: 'white',
-              borderRadius: '10px'
-            }}>
+            <div className="imageGroupC8R">
               <div style={{
                   display: 'flex',
                   flexDirection: 'column'}}>
@@ -109,49 +98,53 @@ export default function Security() {
 
         <div style={{
           display: 'flex',
+          flex: 2,
           justifyContent: 'center',
-          flex: 2
+          alignItems: 'center',
+
         }}>
-          <div style={{
-            marginTop: '10vh'
-          }}>
-            <h1 style={{
-              borderBottom: `3px solid ${COLORS.COLORS.BLUE_DARK}`,
-              maxWidth: '35vw'
-            }}>Normal Home Precautions</h1>
-            <table style={{width: '100%', alignItems: 'center'}}>
-              <tbody>
-                <tr style={{margin: '25px'}}>
-                  <td style={{textAlign: 'center', padding: '0px 0px'}}><h3>Locked Door</h3></td>
-                  <td style={{textAlign: 'center'}}><h3>Locked Window</h3></td>
-                </tr>
-                <tr>
-                  <td style={{textAlign: 'center'}}><h3>Nothing Out</h3></td>
-                  <td style={{textAlign: 'center'}}><h3>Garage Shut</h3></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <SideBySide
+            rightSide={
+                <div className="securityHeaderElement">
+                  <h1 className="securityHeaderItem">Normal</h1>
+                  <h1 className="securityHeaderItem"> Home</h1>
+                  <h1 className="securityHeaderItem">Precautions</h1>
+                </div>
+              }
+            leftSide={
+              <div className="securityItemTable">
+                <div className="securityItemElement" >
+                  <p className="securityItemText">Locked Door</p>
+                </div>
+                <div className="securityItemElement" >
+                  <p className="securityItemText">Locked Windows</p>
+                </div>
+                <div className="securityItemElement" >
+                  <p className="securityItemText">Nothing Out</p>
+                </div>
+                <div className="securityItemElement" >
+                  <p className="securityItemText">Garage Shut</p>
+                </div>
+              </div>
+            }
+            breakColor={COLORS.COLORS.BLUE_DARK}
+          />
+
         </div>
       </div>
 
-      <div style={{
-        display: 'flex',
-        width: '100',
-      }}>
+      <div className="securityMainRow">
         <div style={{
           display: 'flex',
           justifyContent: 'center',
+          alignItems: 'center',
           flex: 2,
 
         }}>
           <div style={{
-            marginTop: '0vh'
+            textAlign: 'center'
           }}>
-            <h1 style={{
-              borderBottom: `3px solid ${COLORS.COLORS.BLUE_DARK}`,
-              maxWidth: '30vw'
-            }}>Why Not Packages</h1>
+            <h1 className="securityPackageItem">Why Not Packages</h1>
           </div>
         </div>
         <div style={{
@@ -161,13 +154,7 @@ export default function Security() {
         }}>
 
           <div>
-            <div style={{
-              transform: 'rotate(45deg)',
-              position: 'relative',
-              left: '0vw',
-              top: '-10vw',
-              display: 'flex'
-            }}>
+            <div className="imageGroupC8R">
               <div style={{
                   display: 'flex',
                   flexDirection: 'column'}}>
@@ -231,11 +218,9 @@ const styles = {
     display: 'flex',
     flex: 1,
     flexDirection: 'row',
-    // border: '2px solid #282C34',
     borderRadius: '10px',
     maxWidth: '400px',
-    height: '50px',
-    // justifySelf: 'center'
+    height: '50px'
   },
   image: {
     borderRadius: '10px',
@@ -250,8 +235,6 @@ const styles = {
     flex: 2,
   },
   imageDiv: {
-    background: COLORS.COLORS.BLUE_DARK,
-    background: 'linear-gradient(59deg, rgba(61,133,198,1) 0%, rgba(111,168,220,1) 100%)',
     borderRadius: '10px',
     margin: '8px',
     overflow: 'hidden',
