@@ -37,8 +37,8 @@ const styles = {
   },
   mainContainerHalf: {
     backgroundColor: COLORS.COLORS.BLACK_MAIN_THEME,
-    paddingTop: '1vh',
-    paddingBottom: '5vh',
+    paddingTop: '10vh',
+    paddingBottom: '10vh',
     paddingLeft: '5vw',
     paddingRight: '5vw',
     minHeight: '5vh',
@@ -70,7 +70,10 @@ const stylesLight = {
   },
   mainContainerHalf: {
     backgroundColor: COLORS.COLORS.WHITE,
-    paddingTop: '5vh 5vw',
+    paddingTop: '10vh',
+    paddingBottom: '10vh',
+    paddingLeft: '5vw',
+    paddingRight: '5vw',
     minHeight: '20vh',
     display: 'flex',
     flexDirection: 'column',

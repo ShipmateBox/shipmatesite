@@ -3,6 +3,11 @@ import COLORS from '../constants/theme';
 import{ HalfSection, Section }from './sections';
 
 import {HashLink as Link} from 'react-router-hash-link';
+import food from '../images/food.jpeg';
+import house from '../images/house2.jpeg';
+import farm from '../images/farm.jpeg';
+import gear from '../images/sportGear.jpeg';
+import key from '../images/key.jpeg';
 
 function ProductOverview(props) {
   return (
@@ -25,10 +30,9 @@ function InfoStrong(props) {
         theme="light">
         <div style={styles.mainContainer}>
           <div style={styles.imageContainer}>
-            <p>image needed</p>
+            <p className="infoCardsHeader">Strong</p>
           </div>
           <div style={styles.textContainer}>
-            <h1>Strong</h1>
             <p>This lockbox is strong.  We build our product using special material from the aerospace industry called hex core.  This make the lockbox very strong and light.</p>
             <p>Though this box is strong, it does not need to be to protect packages.  Package theft is a crime of opportunity.  If your package is hidden and modestly protected, thieves will look for an easier target.</p>
             <p>Maintaining the product light is key in keeping costs to consumers low and making the product easy to manage.  Don’t worry though, every lockbox comes with a chain down port to prevent anyone from walking away with it.</p>
@@ -46,10 +50,9 @@ function InfoResponsive(props) {
         theme="light">
         <div style={styles.mainContainer}>
           <div style={styles.imageContainer}>
-            <p>image needed</p>
+            <p className="infoCardsHeader">Responsive</p>
           </div>
           <div style={styles.textContainer}>
-            <h1>Responsive</h1>
             <p>We believe ease of use is one of the most important parts of a great product.  This is why our product is designed to be opened using only your phone. </p>
             <p>By using technologies like Near Field Communication and staying away from WiFi or BLE, our product is fast.  Our product will not lag due to network issues, or fail to connect.  It simply works first time, every time. </p>
             <p>Additional, this technology lets you place the lockbox anywhere on your property, far outside your WiFi router range.  </p>
@@ -67,10 +70,9 @@ function InfoConnected(props) {
         theme="light">
         <div style={styles.mainContainer}>
           <div style={styles.imageContainer}>
-            <p>image needed</p>
+            <p className="infoCardsHeader">Connected</p>
           </div>
           <div style={styles.textContainer}>
-            <h1>Connected</h1>
             <p>You will always have the ability to control and monitor your lockbox from anywhere.  Data including deliveries and temperatures of your lockbox are constantly updated to your mobile phone.  This provides real time delivery updates, warning of extreme temperatures that may harm sensitive packages, and overall understanding of what is going on with your deliveries.</p>
             <p>We chose to use cellular networks, and not WiFi, to connect your lockbox to the cloud. This allows you to place your lockbox far away from your home and it will still be connected.</p>
           </div>
@@ -87,10 +89,9 @@ function InfoSmart(props) {
         theme="light">
       <div style={styles.mainContainer}>
         <div style={styles.imageContainer}>
-          <p>image needed</p>
+          <p className="infoCardsHeader">Smart</p>
         </div>
         <div style={styles.textContainer}>
-          <h1>Smart</h1>
           <p>This product is not a lockbox, it is a package receiving system.  Just like companies maintain shipping and receiving department to manage, maintain, and track their deliveries, with the exponential increase in packages being delivered to the home,  people need something similar.</p>
           <p>Weather can destroy sensitive packages. Our system will monitor and learn what weather forecasts mean for your packages.  If you have sensitive packages coming, we will notify you of extreme weather before it arrives.  This is a must have for anyone who gets medication, food, electronics, or any other sensitive items delivered to their home. </p>
           <p>Our system uses advanced AI to learn from Shipmate network data, weather data, security data, and lockbox data, to lear what it all means for the safety, security and timely delivery of your packages</p>
@@ -110,10 +111,9 @@ function InfoAdaptive(props) {
         theme="light">
         <div style={styles.mainContainer}>
           <div style={styles.imageContainer}>
-            <p>image needed</p>
+            <p className="infoCardsHeader">Adaptive</p>
           </div>
           <div style={styles.textContainer}>
-            <h1>Adaptive</h1>
             <p>By offering our product and a subscription product, we are able to keep your lockbox up to date with all the revolutions that are coming to the package delivery industry. </p>
             <p>In the following years the number of deliveries to peoples homes will skyrocket.  New technology will be used to manage the new delivery volume.  Only a product that can adapt to these changes will stay useful over the medium long term. </p>
             <p>Technology that we are already preparing for are droid and drone deliveries, carrier handled devices that can access your lockbox and increase your package security, and advanced tracking systems.</p>
@@ -128,13 +128,45 @@ function Uses() {
   return (
     <div>
       <HalfSection
-        theme="light">
-          <p>Perfect for</p>
-          <p>Suburban Neighborhoods</p>
-          <p>Country Homes</p>
-          <p>Hid-a-key box / Airbnb key box</p>
-          <p>Food / Medicaton Deliveries</p>
-          <p>Transfering Goods to Friends / Neighbors when your not home</p>
+        theme="light"
+        title="Perfect For">
+          <div style={{
+            display: 'flex',
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            padding: '0em 2em'
+          }}>
+            <div className="usesCard">
+              <p className="usesCardText">Neighborhoods</p>
+              <div className="usesCardImageC8R">
+                  <img src={house} className="usesCardImage"/>
+              </div>
+            </div>
+            <div className="usesCard">
+              <p className="usesCardText">Long Drivways</p>
+              <div className="usesCardImageC8R">
+                  <img src={farm} className="usesCardImage"/>
+              </div>
+            </div>
+            <div className="usesCard">
+              <p className="usesCardText">Airbnb / Hid-a-key</p>
+              <div className="usesCardImageC8R">
+                  <img src={key} className="usesCardImage"/>
+              </div>
+            </div>
+            <div className="usesCard">
+              <p  className="usesCardText">Food / Medicaton Deliveries</p>
+              <div className="usesCardImageC8R">
+                  <img src={food} className="usesCardImage"/>
+              </div>
+            </div>
+            <div className="usesCard">
+              <p className="usesCardText">Friends dropping stuff off</p>
+              <div className="usesCardImageC8R">
+                  <img src={gear} className="usesCardImage"/>
+              </div>
+            </div>
+          </div>
       </HalfSection>
     </div>
   )
@@ -183,6 +215,33 @@ function ProductInfo() {
   )
 }
 
+function HowItWorks() {
+  return (
+    <HalfSection
+      theme="dark"
+      title="How It Works">
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column'
+      }}>
+        <div style={{
+          flex: 1,
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap'
+        }}>
+          <div style={{flex: 1}}>Order Online Like Normal</div>
+          <div style={{flex: 1}}>Track Using your Lockbox APP </div>
+          <div style={{flex: 1}}>Carrier places package in lockbox and you automaticly get notified</div>
+          <div style={{flex: 1}}>When you are ready, unlock the lockbox using your mobile phone</div>
+          <div style={{flex: 1}}>Leave the lockbox in ready to recieve state for the next package</div>
+        </div>
+        <div style={{flex: 1}}>Know you have a nother package coming before you will get back to your home, unlick the lockbox remotly using your mobile phone.</div>
+      </div>
+    </HalfSection>
+  )
+}
+
 const styles = {
   mainContainer: {
     display: 'flex',
@@ -219,5 +278,6 @@ export {
   InfoConnected,
   InfoStrong,
   InfoSmart,
-  Uses
+  Uses,
+  HowItWorks
 };

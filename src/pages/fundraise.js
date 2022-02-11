@@ -31,9 +31,21 @@ export default function Fundraise() {
 
   return (
     <div className="App">
+
+
+      {saleItem===1 &&
+        <FundraiseSupportNFT/>
+      }
+      {saleItem===2 &&
+        <FundraiseNFT/>
+      }
+      {saleItem===3 &&
+        <FundraisePreOrder/>
+      }
+
     <div
       style={{
-        marginTop: '2em',
+        margin: '2vh 2vw 10vh 2em',
         padding: '0vh 5vw'
       }}>
       <div style={{
@@ -46,27 +58,18 @@ export default function Fundraise() {
           flex: 1,
         }}
           onClick={() => setSaleItem(1)}>
-          <NonRedeemableCard/>
+          <NonRedeemableCard active={saleItem}/>
         </div>
         <div style={{flex: 1}}
           onClick={() => setSaleItem(2)}>
-          <RedeemableCard/>
+          <RedeemableCard active={saleItem}/>
         </div>
         <div style={{flex: 1}}
           onClick={() => setSaleItem(3)}>
-          <TraditionalPreorderCard/>
+          <TraditionalPreorderCard active={saleItem}/>
         </div>
       </div>
     </div>
-      {saleItem===1 &&
-        <FundraiseSupportNFT/>
-      }
-      {saleItem===2 &&
-        <FundraiseNFT/>
-      }
-      {saleItem===3 &&
-        <FundraisePreOrder/>
-      }
 
       <Section
         theme="light"

@@ -350,3 +350,56 @@ a:hover {
     flex: 1;
   }
 }
+
+/* ----------product Info---------- */
+
+.usesCard {
+  flex: 1;
+  padding: 0em 2em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.usesCardText {
+  font-size: 22px;
+  text-align: center;
+}
+
+.usesCardImage {
+  width: 10vw;
+  min-width: 100px;
+  min-height: 100px;
+}
+
+.usesCardImageC8R {
+  overflow: hidden;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 10px;
+  min-width: 100px;
+  min-height: 100px;
+}
+
+.usesCardImage:hover {
+  animation-name: zoomout;
+  animation-duration: 5s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
+  width: 10vw;
+}
+
+@keyframes zoomout {
+  0% {
+    width: 10vw;
+  }
+  100% {
+    width: 13vw;
+  }
+}
+
+.infoCardsHeader {
+  font-size: 8vh;
+}

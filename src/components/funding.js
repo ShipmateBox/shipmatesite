@@ -217,9 +217,10 @@ function SalesTableButtons() {
 
 
 
-function RedeemableCard() {
+function RedeemableCard(props) {
   return (
-    <div className="fundingCard">
+    <div className="fundingCard" style={{
+      boxShadow: props.active===2?`3px 3px 5px 0px ${COLORS.COLORS.BLUE_DARK}`:'3px 3px 5px 0px'}}>
       <div style={{
         display: 'flex',
         flexDirection: 'row',
@@ -249,10 +250,11 @@ function RedeemableCard() {
   )
 }
 
-function NonRedeemableCard() {
+function NonRedeemableCard(props) {
   return (
 
-    <div className="fundingCard">
+    <div className="fundingCard"  style={{
+      boxShadow: props.active===1?`3px 3px 5px 0px ${COLORS.COLORS.BLUE_DARK}`:'3px 3px 5px 0px'}}>
       <div style={{
         display: 'flex',
         flexDirection: 'row',
@@ -293,9 +295,10 @@ function NonRedeemableCard() {
   )
 }
 
-function TraditionalPreorderCard() {
+function TraditionalPreorderCard(props) {
   return (
-    <div className="fundingCard">
+    <div className="fundingCard"  style={{
+      boxShadow: props.active===3?`3px 3px 5px 0px ${COLORS.COLORS.BLUE_DARK}` :'3px 3px 5px 0px'}}>
       <div style={{
         display: 'flex',
         flexDirection: 'row',
