@@ -232,9 +232,35 @@ function HowItWorks() {
           flexDirection: 'row',
           flexWrap: 'wrap'
         }}>
-          <LockboxDeliveryRive />
+          <div style={{
+            flex: 1,
+          }}>
+            <LockboxDeliveryRive />
+          </div>
+          <div style={{
+            flex: 1
+          }}>
+            <div>
+              <p>Your lockbox starts in Ready to Recieve Mode.</p>
+            </div>
+            <div>
+              <p>Delivered packages are placed in the lockbox.</p>
+            </div>
+            <div>
+              <p>The lockbox locks when the lid is closed.</p>
+            </div>
+            <div>
+              <p>You are notified right away.</p>
+            </div>
+            <div>
+              <p>When you are ready to get your package, open the lockobx with the mobile app.</p>
+            </div>
+            <div>
+              <p>Leave your lockbox in Ready to Recieve Mode.</p>
+            </div>
+          </div>
         </div>
-        <div style={{flex: 1}}>Know you have a nother package coming before you will get back to your home, unlock the lockbox remotly using your mobile phone.</div>
+        <div style={{flex: 1}}>Know you have a nother package coming before you expect to get home, unlock the lockbox remotly using your mobile phone.</div>
       </div>
     </HalfSection>
   )
