@@ -29,6 +29,19 @@ function HalfSection(props) {
   )
 }
 
+function SalesSectionTemplate(props) {
+  return (
+    <div style={{backgroundImage: props.image, paddingTop: '0px'}}
+    className="mainC9Rfull sectionLight">
+      <header style={styles.header}>
+        <p>{props.title}</p>
+      </header>
+      {props.note && <h3>{props.note}</h3>}
+      {props.children}
+    </div>
+  )
+}
+
 
 const styles = {
   mainContainer: {
@@ -86,4 +99,5 @@ const stylesLight = {
 export {
   Section,
   HalfSection,
+  SalesSectionTemplate
 };

@@ -6,7 +6,11 @@ import {
   SupportButton,
   CheckoutButton
 } from './buttons';
-import {Section, HalfSection} from '../components/sections';
+import {
+  Section,
+  HalfSection,
+  SalesSectionTemplate,
+} from '../components/sections';
 
 import SCREENSIZE from '../constants/screenSize';
 import COLORS from '../constants/theme';
@@ -346,7 +350,7 @@ function FundraiseOverview() {
 function FundraisePreOrder() {
   return (
     <div>
-      <Section
+      <SalesSectionTemplate
         theme='light'
         title="Traditional Preorder Campaign">
           <div style={{paddingTop: '2em'}}>
@@ -373,7 +377,7 @@ function FundraisePreOrder() {
             breakColor={COLORS.COLORS.BLUE_DARK}
           />
           </div>
-      </Section>
+      </SalesSectionTemplate>
     </div>
   )
 }
@@ -381,7 +385,7 @@ function FundraisePreOrder() {
 function FundraiseNFT() {
   return (
     <div>
-      <Section
+      <SalesSectionTemplate
         theme='light'
         title="Redeemable NFT">
           <div style={{paddingTop: '2em'}}>
@@ -408,7 +412,7 @@ function FundraiseNFT() {
             breakColor={COLORS.COLORS.BLUE_DARK}
           />
           </div>
-      </Section>
+      </SalesSectionTemplate>
     </div>
   )
 }
@@ -417,8 +421,7 @@ function FundraiseSupportNFT(props) {
 
   return (
     <div>
-      <Section
-        theme='light'
+      <SalesSectionTemplate
         title="Non Redeemable NFT">
           <div style={{paddingTop: '2em'}}>
           <SideBySide
@@ -443,7 +446,7 @@ function FundraiseSupportNFT(props) {
             breakColor={COLORS.COLORS.BLUE_DARK}
           />
           </div>
-      </Section>
+      </SalesSectionTemplate>
     </div>
   )
 }

@@ -2,6 +2,8 @@ import React from 'react';
 import COLORS from '../constants/theme';
 import{ HalfSection, Section }from './sections';
 
+import LockboxDeliveryRive from '../components/Rive';
+
 import {HashLink as Link} from 'react-router-hash-link';
 import food from '../images/food.jpeg';
 import house from '../images/house2.jpeg';
@@ -149,7 +151,7 @@ function Uses() {
               </div>
             </div>
             <div className="usesCard">
-              <p className="usesCardText">Airbnb / Hid-a-key</p>
+              <p className="usesCardText">Airbnb / Hid-A-Key</p>
               <div className="usesCardImageC8R">
                   <img src={key} className="usesCardImage"/>
               </div>
@@ -161,7 +163,7 @@ function Uses() {
               </div>
             </div>
             <div className="usesCard">
-              <p className="usesCardText">Friends dropping stuff off</p>
+              <p className="usesCardText">Drop Offs</p>
               <div className="usesCardImageC8R">
                   <img src={gear} className="usesCardImage"/>
               </div>
@@ -230,13 +232,9 @@ function HowItWorks() {
           flexDirection: 'row',
           flexWrap: 'wrap'
         }}>
-          <div style={{flex: 1}}>Order Online Like Normal</div>
-          <div style={{flex: 1}}>Track Using your Lockbox APP </div>
-          <div style={{flex: 1}}>Carrier places package in lockbox and you automaticly get notified</div>
-          <div style={{flex: 1}}>When you are ready, unlock the lockbox using your mobile phone</div>
-          <div style={{flex: 1}}>Leave the lockbox in ready to recieve state for the next package</div>
+          <LockboxDeliveryRive />
         </div>
-        <div style={{flex: 1}}>Know you have a nother package coming before you will get back to your home, unlick the lockbox remotly using your mobile phone.</div>
+        <div style={{flex: 1}}>Know you have a nother package coming before you will get back to your home, unlock the lockbox remotly using your mobile phone.</div>
       </div>
     </HalfSection>
   )
