@@ -16,8 +16,8 @@ export default function Product() {
   return (
     <div className="App">
       <ProductOverview _id="ProductOverview"/>
-      <Uses />
       <HowItWorks />
+      <Uses />
       <InfoSmart _id="InfoSmart"/>
       <InfoConnected _id="InfoConnected"/>
       <InfoResponsive _id="InfoResponsive"/>
