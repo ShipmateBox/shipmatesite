@@ -1,6 +1,7 @@
 import React from 'react';
 
 import COLORS from '../constants/theme';
+import {HashLink as Link} from 'react-router-hash-link';
 
 export default function Footer() {
   return (
@@ -8,19 +9,29 @@ export default function Footer() {
       <div style={styles.subContainer}>
         <div style={styles.card}>
           <h4>Company</h4>
-          <p style={styles.item}>Team</p>
-          <p style={styles.item}>About</p>
+          <Link to="/company#team"><p style={styles.item}>Team</p></Link>
+          <Link to="/company#about"><p style={styles.item}>About</p></Link>
+
         </div>
         <div style={styles.card}>
           <h4>Support</h4>
-          <p style={styles.item}>Presales</p>
-          <p style={styles.item}>NFT</p>
-          <p style={styles.item}>Donate</p>
+          <Link
+            to="/Fundraise"
+            state={{data: 3}}>
+            <p style={styles.item}>Presales</p>
+          </Link>
+          <Link
+            to="/Fundraise"
+            state={{data: 2}}>
+            <p style={styles.item}>NFT</p>
+          </Link>
+          
         </div>
         <div style={styles.card}>
           <h4>Contact</h4>
           <p style={styles.item}>Email</p>
-          <p style={styles.item}>Twitter</p>
+          <a href="https://twitter.com/ShipmateBox" style={styles.item}>Twitter</a>
+
           <p style={styles.item}>Discord</p>
           <p style={styles.item}>Facebook</p>
         </div>
@@ -53,7 +64,8 @@ const styles = {
     flexDirection: 'column'
   },
   item: {
-    margin: 3
+    margin: 3,
+    color: 'white',
   },
   copyright: {
     textAlign: 'center'

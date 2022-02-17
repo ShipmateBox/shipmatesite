@@ -15,7 +15,8 @@ import productHunt from '../images/productHunt.svg';
 
 export default function Company() {
   return (
-    <div>
+    <div
+      id='about'>
       <Section
         theme="light"
         title="About The Company">
@@ -46,7 +47,7 @@ export default function Company() {
       <HalfSection
         theme="light"
         title="The Team">
-        <div className="aboutStaff">
+        <div className="aboutStaff" id='team'>
           <div className="aboutImageC8R">
             <img src={josh} className="aboutStaffImage"/>
             <p>Josh Illenberger</p>
