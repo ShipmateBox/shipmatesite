@@ -94,7 +94,7 @@ function InfoSmart(props) {
           <p className="infoCardsHeader">Smart</p>
         </div>
         <div style={styles.textContainer}>
-          <p>This product is not a lockbox, it is a package receiving system.  Just like companies maintain shipping and receiving department to manage, maintain, and track their deliveries, with the exponential increase in packages being delivered to the home,  people need something similar.</p>
+          <p>This product is not a typical lockbox, it is a package receiving system.  Just like companies maintain shipping and receiving department to manage, maintain, and track their deliveries, with the exponential increase in packages being delivered to the home,  people need something similar.</p>
           <p>Weather can destroy sensitive packages. Our system will monitor and learn what weather forecasts mean for your packages.  If you have sensitive packages coming, we will notify you of extreme weather before it arrives.  This is a must have for anyone who gets medication, food, electronics, or any other sensitive items delivered to their home. </p>
           <p>Our system uses advanced AI to learn from Shipmate network data, weather data, security data, and lockbox data, to lear what it all means for the safety, security and timely delivery of your packages</p>
           <p>Security is a top concern for deliveries.  Tens of millions of dollars worth of packages are stolen everyday.  We monitor public records and Shipmate network data to understand your neighborhoods security so you can take precautionary measures. </p>

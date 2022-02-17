@@ -403,3 +403,32 @@ a:hover {
 .infoCardsHeader {
   font-size: 8vh;
 }
+
+/* ----about------ */
+.aboutStaff {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.aboutImageC8R {
+  flex: 1;
+  text-align: center;
+}
+
+.aboutStaffImage {
+  width: 50%;
+  min-width: 200px;
+}
+
+.aboutLogoMainC8R {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.aboutLogoC8R {
+  flex: 1;
+  max-width: 50px;
+}
