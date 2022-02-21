@@ -7,7 +7,9 @@ import {
 } from './buttons';
 import {GetWindowDimensions} from './window';
 import SCREENSIZE from '../constants/screenSize';
-import neighborhood from '../images/neighborhood.jpeg';
+import {EmailForm} from './forms';
+
+const neighborhood = 'https://shipmate-images.s3.us-west-2.amazonaws.com/neighborhood.jpeg';
 
 const smallScreenSize = SCREENSIZE.SCREENSIZE.SMALL;
 
@@ -29,10 +31,11 @@ function Banner(props) {
               <p>Place it anywhere on your property, control it with your phone, recieve warnings and notifications.</p>
             </div>
         </div>
+        <p>Show your support</p>
         <div style={{
           display: 'flex',
           flexDirection: 'row',
-          marginTop: '2em'}}>
+          marginTop: '0em'}}>
           <div style={{flex: 1, minWidth: '8em'}}>
             <PreorderButton/>
           </div>
@@ -40,6 +43,8 @@ function Banner(props) {
             <R9ENFTButton/>
           </div>
         </div>
+        <p> or submitting your email </p>
+        <EmailForm />
       </div>
       <div style={styles.padding}>
       </div>

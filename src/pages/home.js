@@ -13,10 +13,6 @@ import {Sales} from '../components/funding';
 import Security from '../components/security';
 import Features from '../components/features';
 
-
-import "aws-sdk/dist/aws-sdk";
-const AWS = window.AWS;
-
 export default function Home() {
   return (
     <div className="App">

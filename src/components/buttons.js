@@ -39,7 +39,6 @@ function R9ENFTButton() {
 }
 
 function SupportButton() {
-
   return (
     <div>
       <Button
@@ -52,10 +51,20 @@ function SupportButton() {
 
 function CheckoutButton(props) {
   return (
-    <div className="card">
+    <div className="card" onClick={() => props.setAction(props.action)}>
       <p className="cardHeader">{props.title}</p>
       <FontAwesomeIcon icon={faArrowRight} className="cardIcon"/>
     </div>
+  )
+}
+
+function SubmitButton(props) {
+  return (
+    <button type='submit' style={{padding: '0px', background: 'none', border: 'none'}}>
+      <div className="card">
+        <p className="cardHeader">{props.title}</p>
+      </div>
+    </button>
   )
 }
 
@@ -64,4 +73,5 @@ export {
   R9ENFTButton,
   SupportButton,
   CheckoutButton,
+  SubmitButton,
 };

@@ -347,7 +347,7 @@ function FundraiseOverview() {
 
 
 
-function FundraisePreOrder() {
+function FundraisePreOrder(props) {
   return (
     <div>
       <SalesSectionTemplate
@@ -363,8 +363,7 @@ function FundraisePreOrder() {
                 <p>Purchasing a lockbox through our traditional preorder campaign means you will receive your lockbox as soon as it’s made.  All lockboxes will be shipped to customers in the order they were purchased and after all redeemable NFT purchases are fulfilled.</p>
                 <p>The purchase price will cover the initial cost of the lockbox including all fees and you will receive 20% reduction in the first year subscription cost. </p>
                 <p>Participating in the preorder campaign provides the company with valuable initial revenue to build the best product possible.  We value each of our early customers and you will be forever memorialized on our companies Wall Of Heroes.</p>
-                <CheckoutButton
-                  title="Checkout"/>
+                <CheckoutButton title="Checkout" setAction={props.setAction} action={props.action}/>
               </div>
             }
             leftSide={
@@ -382,7 +381,7 @@ function FundraisePreOrder() {
   )
 }
 
-function FundraiseNFT() {
+function FundraiseNFT(props) {
   return (
     <div>
       <SalesSectionTemplate
@@ -398,8 +397,7 @@ function FundraiseNFT() {
                 <p>Our NFT preorder offering is a revolutionary way to manage preorders. As an NFT holder, once lockboxes are ready to ship, all you have to do is prove you are a holder of one of these NFT’s and we will ship you your lockbox.  You keep your NFT as collectable art and proof you were one of the first to support Shipmate.</p>
                 <p>NFT’s also allow for transfer of the preorder item.  If you would like to sell or transfer the NFT to another person as a gift or trade, this is made possible and requires no help or approval by Shipmate.</p>
                 <p>Your purchase of the Redeemable NFT will cover the initial cost of the lockbox, the collectable art, and give you one year of 20% of the subscription.  You will also be memorialized on your Wall Of Heroes.</p>
-                <CheckoutButton
-                  title="Checkout"/>
+                <CheckoutButton title="Checkout" setAction={props.action} action={true}/>
               </div>
             }
             leftSide={
@@ -433,8 +431,7 @@ function FundraiseSupportNFT(props) {
                 <p>Show your support for Shipmate by purchasing a non redeemable NFT.  This item is collectable art and will forever show how you supported Shipmate with one of our first product launches.</p>
                 <p>Along with keeping the collectable art forever, when you are ready to purchase a lockbox, show us this NFT and you will receive 10% off your first year subscription.</p>
                 <p>You will also be memorialized on our Wall Of Heroes.</p>
-                <CheckoutButton
-                  title="Checkout"/>
+                <CheckoutButton title="Checkout" setAction={props.setAction} action={props.action} />
               </div>
             }
             leftSide={
