@@ -6,12 +6,13 @@ import {Section, HalfSection} from '../components/sections';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin } from '@fortawesome/free-solid-svg-icons'
 
-import josh from '../images/Josh.png';
-import dan from '../images/Dan.jpeg';
-import colin from '../images/colin.png';
 import linkedIn from '../images/linkedIn.svg';
 import twitter from '../images/twitter.svg';
 import productHunt from '../images/productHunt.svg';
+
+const josh = 'https://shipmate-images.s3.us-west-2.amazonaws.com/Josh.png';
+const colin = 'https://shipmate-images.s3.us-west-2.amazonaws.com/colin.png';
+const dan = 'https://shipmate-images.s3.us-west-2.amazonaws.com/Dan.jpeg';
 
 export default function Company() {
   return (

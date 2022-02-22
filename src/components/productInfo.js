@@ -5,11 +5,12 @@ import{ HalfSection, Section }from './sections';
 import LockboxDeliveryRive from '../components/Rive';
 
 import {HashLink as Link} from 'react-router-hash-link';
-import food from '../images/food.jpeg';
-import house from '../images/house2.jpeg';
-import farm from '../images/farm.jpeg';
-import gear from '../images/sportGear.jpeg';
-import key from '../images/key.jpeg';
+
+const gear = 'https://shipmate-images.s3.us-west-2.amazonaws.com/sportGear.jpeg';
+const farm = 'https://shipmate-images.s3.us-west-2.amazonaws.com/farm.jpeg';
+const food = 'https://shipmate-images.s3.us-west-2.amazonaws.com/food.jpeg';
+const key = 'https://shipmate-images.s3.us-west-2.amazonaws.com/key.jpeg';
+const house = 'https://shipmate-images.s3.us-west-2.amazonaws.com/house2.jpeg';
 
 function ProductOverview(props) {
   return (

@@ -5,51 +5,14 @@ import {SideBySide} from './cards';
 import {Section} from './sections';
 import COLORS from '../constants/theme'
 
-import house from '../images/house.jpeg';
-import door from '../images/door.jpeg';
-import windowImage from '../images/window.jpeg';
-import packages from '../images/packages.jpeg';
-import nothingout from '../images/nothingout.jpeg';
-import garage from '../images/garage.jpeg';
-import upper from '../images/upperdoor.jpeg';
-import right from '../images/right.jpeg';
-import bottom from '../images/bottom.jpeg';
-import left from '../images/left.jpeg';
-
-function Doorpan() { // currrently not used
-  return (
-
-          <div style={{
-            display: 'flex',
-            flexDirection: 'row'
-          }}>
-            <div style={{
-              flex: 2,
-              textAlign: 'end',
-            }}>
-              <h1 style={{marginRight: '15vw'}}>Why not our packages</h1>
-            </div>
-            <div style={{
-              flex: 2,
-            }}>
-              <div style={{
-                transform: 'rotate(45deg)',
-                position: 'relative',
-                top: '-10vh',
-                overflow: 'hidden',
-                width: '30vw',
-                height: '30vw',
-              }}>
-                <img src={packages} style={{
-                  transform: 'rotate(-45deg)',
-                  position: 'relative',
-              }} className='pan'/>
-              </div>
-            </div>
-          </div>
-  )
-}
-
+const nothingout = 'https://shipmate-images.s3.us-west-2.amazonaws.com/nothingout.jpeg';
+const door = 'https://shipmate-images.s3.us-west-2.amazonaws.com/door.jpeg';
+const garage = 'https://shipmate-images.s3.us-west-2.amazonaws.com/garage.jpeg';
+const windowImage = 'https://shipmate-images.s3.us-west-2.amazonaws.com/window.jpeg';
+const upper = 'https://shipmate-images.s3.us-west-2.amazonaws.com/upperdoor.jpeg';
+const left = 'https://shipmate-images.s3.us-west-2.amazonaws.com/left.jpeg'
+const bottom = 'https://shipmate-images.s3.us-west-2.amazonaws.com/bottom.jpeg';
+const right = 'https://shipmate-images.s3.us-west-2.amazonaws.com/right.jpeg';
 
 export default function Security() {
   return (

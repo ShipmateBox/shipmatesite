@@ -15,7 +15,8 @@ import {useLocation} from 'react-router-dom';
 import {HalfSection, Section} from '../components/sections';
 import {PreorderButton, R9ENFTButton, SupportButton, CheckoutButton} from '../components/buttons';
 import {CheckoutForm} from '../components/forms';
-import map from '../images/map_bg.png';
+
+const map = 'https://shipmate-images.s3.us-west-2.amazonaws.com/map_bg.png';
 
 export default function Fundraise() {
   const [saleItem, setSaleItem] = useState(1);

@@ -19,11 +19,12 @@ import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import {SideBySide} from './cards';
 
-import map from '../images/map_bg.png';
-import lockbox from '../images/lockbox.png';
 import ftx from '../images/FTX (1).svg';
 import opensea from '../images/opensea.svg';
-import lockboxWithNFT from '../images/lockboxWithNFT.png';
+
+const map = 'https://shipmate-images.s3.us-west-2.amazonaws.com/map_bg.png';
+const lockbox = 'https://shipmate-images.s3.us-west-2.amazonaws.com/lockbox.png';
+const lockboxWithNFT = 'https://shipmate-images.s3.us-west-2.amazonaws.com/lockboxWithNFT.png';
 
 const smallScreenSize = SCREENSIZE.SCREENSIZE.SMALL;
 
