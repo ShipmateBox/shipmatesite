@@ -7,6 +7,7 @@ import {
   FundraiseDonate,
   FundraiseSupportNFT,
   SalesTable,
+  SmallSalesTable,
   RedeemableCard,
   NonRedeemableCard,
   TraditionalPreorderCard
@@ -15,6 +16,7 @@ import {useLocation} from 'react-router-dom';
 import {HalfSection, Section} from '../components/sections';
 import {PreorderButton, R9ENFTButton, SupportButton, CheckoutButton} from '../components/buttons';
 import {CheckoutForm} from '../components/forms';
+import SCREENSIZE from '../constants/screenSize';
 
 const map = 'https://shipmate-images.s3.us-west-2.amazonaws.com/map_bg.png';
 
@@ -85,7 +87,10 @@ export default function Fundraise() {
           { checkout &&
           <CheckoutForm title="Traditional Preorder">
             <div>
-              <p></p>
+              <p>We will keep your information on file and notify you when your lockbox is ready.</p>
+              <p>Only after you recieve the physical product will the monthly subscriptin cost start.</p>
+              <p>If you ever have questions, Shipmate is always available. Feel free to contact us.</p>
+              <p>Thank You :)</p>
             </div>
             <div className="checkoutButtonHolder">
               <CheckoutButton title="Cancle" setAction={setCheckout} action={false}/>
@@ -128,7 +133,11 @@ export default function Fundraise() {
         theme="light"
         title="Other Options"
         image={`url(${map})`}>
-        <SalesTable/>
+        {window.innerWidth > SCREENSIZE.SCREENSIZE.SMALL ?
+          <SalesTable/>
+        :
+        <SmallSalesTable/>
+      }
       </Section>
     </div>
   )

@@ -10,7 +10,7 @@ import logoIcon from '../images/LogoNoElectrodesLightMini.svg';
 
 function LargeMenu(props) {
   return (
-    <div style={styles.linkContainer}>
+    <div className="menuBarLinkC8R">
       <Link to="/fundraise" style={styles.firstLink}>
         <p>Preorder</p>
       </Link>
@@ -20,7 +20,7 @@ function LargeMenu(props) {
       <Link to="/Company" style={styles.lastLink}>
         <p>Company</p>
       </Link>
-      
+
     </div>
   )
 }
@@ -34,12 +34,31 @@ function SmallMenu(props) {
   };
 
   return (
-    <div style={styles.linkContainer}>
+    <div className="menuBarLinkC8R">
       <i style={styles.menuIcon} className="fa fa-bars" onClick={handleMenuActivate}/>
       {menuActive && (
-        <ul style={styles.listHolder}>
-        <li style={styles.listItem}>product</li>
-        </ul>
+        <div className="menuBarDropdown">
+          <Link
+            to="/fundraise"
+            onClick={handleMenuActivate}
+            className="menuBarDropdownItem">
+            <p>Preorder</p>
+          </Link>
+
+          <Link
+            to="/product"
+            onClick={handleMenuActivate}
+            className="menuBarDropdownItem">
+            <p>Product</p>
+          </Link>
+
+          <Link
+            to="/company"
+            onClick={handleMenuActivate}
+            className="menuBarDropdownItem">
+            <p>Company</p>
+          </Link>
+        </div>
         )}
     </div>
   )
@@ -49,7 +68,7 @@ export default function MenuBar(props) {
   const {width, height} = GetWindowDimensions();
 
   return (
-    <div style={styles.menuContainer}>
+    <div className="menuBarMainC8R">
       <Link to="/">
         <div style={styles.logo}>
           <img src={logoIcon} style={styles.logoIcon}/>
@@ -67,21 +86,6 @@ export default function MenuBar(props) {
 }
 
 const styles = {
-  menuContainer: {
-    paddingTop: '1%',
-    paddingBottom: '1%',
-    paddingLeft: '3%',
-    paddingRight: '3%',
-    display: 'flex',
-    flex: 2,
-    flexDirection: 'row'
-  },
-  linkContainer: {
-    display: 'flex',
-    flex: 6,
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
-  },
   logo: {
     flex: 1,
   },
@@ -108,7 +112,9 @@ const styles = {
   listHolder: {
     position: 'absolute',
     top: 40,
-    right: 0
+    right: 0,
+    width: '100vw',
+    backgroundColor: 'COLORS_C'
   },
   listItem: {
     backgroundColor: 'white'

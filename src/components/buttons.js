@@ -68,10 +68,22 @@ function SubmitButton(props) {
   )
 }
 
+function FullWidthButton(props) {
+  return (
+    <button
+      style={{padding: '0px', background: 'none', border: 'none', width: '100%'}}>
+      <div className="card">
+        <p className="cardHeader">{props.title}</p>
+      </div>
+    </button>
+  )
+}
+
 export {
   PreorderButton,
   R9ENFTButton,
   SupportButton,
   CheckoutButton,
   SubmitButton,
+  FullWidthButton
 };

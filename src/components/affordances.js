@@ -25,7 +25,7 @@ export default function Affordances(props) {
           <div style={styles.card}>
             <h2>Protected</h2>
             <p>Inside the lockbox, your packages stay out of the weather</p>
-            <p>We warn you of extreme temperatures that can effect sensative deliveries like medication and food.</p>
+            <p>We warn you of extreme temperatures that can effect sensitive deliveries like medication and food.</p>
           </div>
 
           <div style={styles.card}>

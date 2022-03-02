@@ -7,19 +7,32 @@ function SideBySide(props) {
         display: 'flex',
         flexDirection: 'row',
       }}>
-        <div style={{
-            flex: 1, display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'}}>
+        <div className="cardC8R">
           {props.leftSide}
         </div>
-        <div style={{width: '0px', height: '100', borderRight: `3px solid ${props.breakColor}`}}></div>
-        <div style={{
-          flex: 1,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'}}>
+        <div style={{borderRight: `3px solid ${props.breakColor}`, width: '0px'}}></div>
+        <div className="cardC8R">
           {props.rightSide}
+        </div>
+      </div>
+      {props.children}
+    </div>
+  )
+}
+
+function OverUnder(props) {
+  return (
+    <div>
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+      }}>
+        <div className="cardC8R">
+          {props.upper}
+        </div>
+        <div style={{borderTop: `3px solid ${props.breakColor}`, height: '0px'}}></div>
+        <div className="cardC8R">
+          {props.lower}
         </div>
       </div>
       {props.children}
@@ -30,4 +43,5 @@ function SideBySide(props) {
 
 export {
   SideBySide,
+  OverUnder
 }

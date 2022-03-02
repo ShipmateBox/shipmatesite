@@ -31,7 +31,7 @@ function InfoStrong(props) {
     <div id={props._id}>
       <HalfSection
         theme="light">
-        <div style={styles.mainContainer}>
+        <div className="infoFeatureC8R">
           <div style={styles.imageContainer}>
             <p className="infoCardsHeader">Strong</p>
           </div>
@@ -51,7 +51,7 @@ function InfoResponsive(props) {
     <div id={props._id}>
       <HalfSection
         theme="light">
-        <div style={styles.mainContainer}>
+        <div className="infoFeatureC8R">
           <div style={styles.imageContainer}>
             <p className="infoCardsHeader">Responsive</p>
           </div>
@@ -71,7 +71,7 @@ function InfoConnected(props) {
     <div id={props._id}>
       <HalfSection
         theme="light">
-        <div style={styles.mainContainer}>
+        <div className="infoFeatureC8R">
           <div style={styles.imageContainer}>
             <p className="infoCardsHeader">Connected</p>
           </div>
@@ -90,7 +90,7 @@ function InfoSmart(props) {
     <div id={props._id}>
       <HalfSection
         theme="light">
-      <div style={styles.mainContainer}>
+      <div className="infoFeatureC8R">
         <div style={styles.imageContainer}>
           <p className="infoCardsHeader">Smart</p>
         </div>
@@ -112,7 +112,7 @@ function InfoAdaptive(props) {
     <div id={props._id}>
       <HalfSection
         theme="light">
-        <div style={styles.mainContainer}>
+        <div className="infoFeatureC8R">
           <div style={styles.imageContainer}>
             <p className="infoCardsHeader">Adaptive</p>
           </div>
@@ -270,7 +270,7 @@ function HowItWorks() {
 const styles = {
   mainContainer: {
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
   },
   imageContainer: {
     flex: 1,

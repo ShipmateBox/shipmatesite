@@ -25,15 +25,13 @@ export default function Footer() {
             state={{data: 2}}>
             <p style={styles.item}>NFT</p>
           </Link>
-          
+
         </div>
         <div style={styles.card}>
           <h4>Contact</h4>
           <p style={styles.item}>Email</p>
           <a href="https://twitter.com/ShipmateBox" style={styles.item}>Twitter</a>
 
-          <p style={styles.item}>Discord</p>
-          <p style={styles.item}>Facebook</p>
         </div>
       </div>
       <div style={styles.copyright}>

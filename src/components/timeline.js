@@ -9,7 +9,7 @@ import {Section} from './sections';
 
 function TimeElement(props) {
   return (
-    <div id={props.id} style={styles.timeElement}>
+    <div id={props.id} className="journeyTimeElement">
       {props.children}
     </div>
   )
@@ -17,7 +17,7 @@ function TimeElement(props) {
 
 function GoalElement(props) {
   return (
-    <div id={props.id} style={styles.goalElement}>
+    <div id={props.id} className="goalElement">
       {props.children}
     </div>
   )
@@ -66,8 +66,8 @@ function Timeline(props) {
       title= "The Journey"
       note="-Where we have been and where we are going-"
       theme="light">
-      <div style={styles.mainContainer}>
-        <div style={styles.timeElementContainer1}>
+      <div className="journeyMainC8R">
+        <div style={{display: 'flex', flexDirection: 'column'}}>
           <TimeElement id='milestone1'>
             <h2>Problem Analysis</h2>
             <p>We spent time understanding the currently delivery system, and solving its problems.</p>
@@ -93,8 +93,8 @@ function Timeline(props) {
         </TimeElement>
         <Arrow id="arrow3" start='milestone3' end='milestone4' condition={showArrow.arrow3}/>
 
-        <div style={styles.goalContainer} id='goals'>
-          <div style={styles.goalHeader}><h2>First Product Updates</h2></div>
+        <div id='goals' className="journeyGoalC8R">
+          <div style={{width: '100%', textAlign: 'center'}}><h2>First Product Updates</h2></div>
           <GoalElement>
             <p>AI Development</p>
           </GoalElement>
@@ -122,56 +122,5 @@ function Timeline(props) {
 }
 
 
-const styles = {
-  mainContainer: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    flexDirection: 'row',
-    justifyContent: 'center'
-  },
-  goalContainer: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    width: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderTop: '4px solid #282C34',
-    margin: '5vw',
-    paddingTop: '3vh'
-  },
-  timeElementContainer1: {
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  timeElement: {
-    border: '1px solid ' + COLORS.COLORS.BLACK_MAIN_THEME,
-    borderRadius: 5,
-    paddingTop: '3vh',
-    paddingBottom: '5vh',
-    paddingLeft: '3vw',
-    paddingRight: '3vw',
-    margin: '5vh',
-    backgroundColor: COLORS.COLORS.BLACK_MAIN_THEME,
-    color: 'white',
-    width: '20vw'
-  },
-  goalHeader: {
-    width: '100%',
-    textAlign: 'center'
-  },
-  goalElement: {
-    border: '4px solid ' + COLORS.COLORS.BLACK_MAIN_THEME,
-    borderRadius: 2,
-    paddingTop: '1vh',
-    paddingBottom: '1vh',
-    paddingLeft: '1vw',
-    paddingRight: '1vw',
-    margin: '3vh',
-    backgroundColor: 'white',
-    color: '#282C34',
-    width: '10vw',
-    textAlign: 'center'
-  }
-}
 
 export {Timeline};

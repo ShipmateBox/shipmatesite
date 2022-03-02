@@ -4,7 +4,8 @@ import {
   PreorderButton,
   R9ENFTButton,
   SupportButton,
-  CheckoutButton
+  CheckoutButton,
+  FullWidthButton
 } from './buttons';
 import {
   Section,
@@ -17,7 +18,10 @@ import COLORS from '../constants/theme';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-import {SideBySide} from './cards';
+import {
+  SideBySide,
+  OverUnder
+} from './cards';
 
 import ftx from '../images/FTX (1).svg';
 import opensea from '../images/opensea.svg';
@@ -28,24 +32,6 @@ const lockboxWithNFT = 'https://shipmate-images.s3.us-west-2.amazonaws.com/lockb
 
 const smallScreenSize = SCREENSIZE.SCREENSIZE.SMALL;
 
-
-
-function Sales() {
-  return (
-    <Section
-      theme="light"
-      title="Ready To Get Started"
-      image={`url(${map})`}>
-      <div style={{
-        display: 'flex',
-        flexDirection: 'column'}}
-      >
-        <SalesTable/>
-        <SalesTableButtons/>
-
-      </div>
-    </Section>
-  )}
 
 function SalesTable() {
   const [tableWidth, setTableWidth] = useState();
@@ -61,7 +47,7 @@ function SalesTable() {
       fontSize: '18px',
       marginTop: '5vh',
       maxWidth: '50em',
-      fontWeight: 'bold'
+      fontWeight: 'bold',
     }} id="table1">
 
 
@@ -200,10 +186,7 @@ function SalesTable() {
 
 function SalesTableButtons() {
   return (
-    <div style={{
-      display: 'flex',
-      flexDirection: 'row',
-      marginTop: '3em'}}>
+    <div className="saleTableButtons">
       <div style={{flex: 1, width: '1px'}}>
       </div>
       <div style={{flex: 1}}>
@@ -219,7 +202,168 @@ function SalesTableButtons() {
   )
 }
 
+function SmallSalesTable(props) {
+  const [type, setType] = useState(1);
 
+  return (
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center'
+    }}>
+    <div style={{width: '100vw'}} onClick={()=>setType(1)}><FullWidthButton title="Support NFT"/></div>
+    <div style={{width: '100vw'}} onClick={()=>setType(2)}><FullWidthButton title="Redeemable NFT"/></div>
+    <div style={{width: '100vw'}} onClick={()=>setType(3)}><FullWidthButton title="Traditional"/></div>
+
+    <div style={{
+      display: 'flex',
+      textAlign: 'center',
+      fontSize: '18px',
+      marginTop: '5vh',
+      maxWidth: '50em',
+      fontWeight: 'bold',
+    }} id="table1">
+
+      <div className="itemColumn">
+        <div className="titleRowPadding">
+        </div>
+        <div className="costRow">
+          <p style={{flex: 1}}>Cost</p>
+
+        </div>
+        <div className="availableRow">
+          <p style={{flex: 1}}>Available</p>
+        </div>
+        <div className="tableVPadding"></div>
+        <div className="perkItem">
+          <p style={{flex: 1}}>Art</p>
+        </div>
+        <div className="perkItem">
+          <p style={{flex: 1}}>Cut In Line</p>
+        </div>
+        <div className="perkItem">
+          <p style={{flex: 1}}>Initial Cost</p>
+        </div>
+        <div className="perkItem">
+          <p style={{flex: 1}}>Subscription Savings</p>
+        </div>
+      </div>
+
+      {type===1 &&
+        <div className="supportNFTColumn">
+          <div className="titleRow">
+            <p className="titleP9H">Support</p>
+            <p className="titleP9H">(NFT)</p>
+          </div>
+          <div className="costRow">
+            <p > 0.1 SOL / 0.1 ETH</p>
+          </div>
+          <div style={{height:0, width: '100%', borderBottom: '1px solid black'}}></div>
+          <div className="availableRow">
+            <p style={{flex: 1}}>  2500 </p>
+          </div>
+          <div style={{height:0, width: '100%', borderBottom: '1px solid black'}}></div>
+          <div className="tableVPadding"></div>
+          <div className="perkItem">
+            <p style={{flex: 1}}><FontAwesomeIcon icon={faCheck} className="cardIcon"/></p>
+          </div>
+          <div style={{height:0, width: '100%', borderBottom: '1px solid black'}}></div>
+          <div className="perkItem">
+            <p style={{flex: 1}}><FontAwesomeIcon icon={faCheck} className="cardIcon"/></p>
+          </div>
+          <div style={{height:0, width: '100%', borderBottom: '1px solid black'}}></div>
+          <div className="perkItem">
+          </div>
+          <div style={{height:0, width: '100%', borderBottom: '1px solid black'}}></div>
+          <div className="perkItem">
+          </div>
+        </div>}
+
+
+      {type===2 &&
+        <div className="redeemableColumn">
+          <div className="titleRow">
+            <p className="titleP9H">Redeemable</p>
+            <p className="titleP9H">(NFT)</p>
+          </div>
+          <div className="costRow">
+            <p style={{flex: 1}}>$100</p>
+          </div>
+          <div style={{height:0, width: '100%', borderBottom: '1px solid black'}}></div>
+          <div className="availableRow">
+            <p style={{flex: 1}}>500</p>
+          </div>
+          <div style={{height:0, width: '100%', borderBottom: '1px solid black'}}></div>
+          <div className="tableVPadding"></div>
+          <div className="perkItem">
+            <p style={{flex: 1}}><FontAwesomeIcon icon={faCheck} className="cardIcon"/></p>
+          </div>
+          <div style={{height:0, width: '100%', borderBottom: '1px solid black'}}></div>
+          <div className="perkItem">
+            <p style={{flex: 1}}><FontAwesomeIcon icon={faCheck} className="cardIcon"/></p>
+          </div>
+          <div style={{height:0, width: '100%', borderBottom: '1px solid black'}}></div>
+          <div className="perkItem">
+            <p style={{flex: 1}}><FontAwesomeIcon icon={faCheck} className="cardIcon"/></p>
+          </div>
+          <div style={{height:0, width: '100%', borderBottom: '1px solid black'}}></div>
+          <div className="perkItem">
+            <p style={{flex: 1}}>20% 1st Year</p>
+          </div>
+        </div>}
+
+
+      {type===3 &&
+        <div className="preorderColumn">
+          <div className="titleRow">
+            <p className="titleP9H">Preorder</p>
+            <p className="titleP9H">(Traditional)</p>
+          </div>
+          <div className="costRow">
+            <p style={{flex: 1}}>$100</p>
+          </div>
+          <div style={{height:0, width: '100%', borderBottom: '1px solid black'}}></div>
+          <div className="availableRow">
+            <p style={{flex: 1}}>No Limit</p>
+          </div>
+          <div style={{height:0, width: '100%', borderBottom: '1px solid black'}}></div>
+          <div className="tableVPadding"></div>
+          <div className="perkItem">
+          </div>
+          <div style={{height:0, width: '100%', borderBottom: '1px solid black'}}></div>
+          <div className="perkItem">
+            <p style={{flex: 1}}><FontAwesomeIcon icon={faCheck} className="cardIcon"/></p>
+          </div>
+          <div style={{height:0, width: '100%', borderBottom: '1px solid black'}}></div>
+          <div className="perkItem">
+            <p style={{flex: 1}}><FontAwesomeIcon icon={faCheck} className="cardIcon"/></p>
+          </div>
+          <div style={{height:0, width: '100%', borderBottom: '1px solid black'}}></div>
+          <div className="perkItem">
+            <p style={{flex: 1}}>20% 1st Year</p>
+          </div>
+        </div>}
+
+    </div>
+    { type === 1 &&
+    <div style={{flex: 1}}>
+      {props.showButton && <SupportButton/> }
+    </div>}
+
+    { type === 2 &&
+    <div style={{flex: 1}}>
+      {props.showButton && <R9ENFTButton/> }
+    </div>}
+
+    { type === 3 &&
+    <div style={{flex: 1}}>
+      {props.showButton && <PreorderButton/> }
+    </div>}
+
+    </div>
+  )
+}
 
 
 function RedeemableCard(props) {
@@ -349,33 +493,47 @@ function FundraiseOverview() {
 
 
 function FundraisePreOrder(props) {
+  const info = () => {
+    return (
+      <div className="saleInfoC8R">
+        <p className="saleInfoLable">Price</p>
+        <p>$100</p>
+        <p className="saleInfoLable">Preorder Decription</p>
+        <p>Purchasing a lockbox through our traditional preorder campaign means you will receive your lockbox as soon as it’s made.  All lockboxes will be shipped to customers in the order they were purchased and after all redeemable NFT purchases are fulfilled.</p>
+        <p>The purchase price will cover the initial cost of the lockbox including all fees and you will receive 20% reduction in the first year subscription cost. </p>
+        <p>Participating in the preorder campaign provides the company with valuable initial revenue to build the best product possible.  We value each of our early customers and you will be forever memorialized on our companies Wall Of Heroes.</p>
+        <CheckoutButton title="Checkout" setAction={props.setAction} action={props.action}/>
+      </div>
+    )
+  }
+
+  const image = () => {
+    return (
+      <div className="saleInfoC8R">
+        <img src={lockbox} style={{
+          width: '25vw'
+        }}/>
+      </div>
+    )
+  }
+
   return (
     <div>
       <SalesSectionTemplate
         theme='light'
         title="Traditional Preorder Campaign">
           <div style={{paddingTop: '2em'}}>
-          <SideBySide
-            rightSide= {
-              <div className="saleInfoC8R">
-                <p>Price</p>
-                <p>$100</p>
-                <p>Preorder Decription</p>
-                <p>Purchasing a lockbox through our traditional preorder campaign means you will receive your lockbox as soon as it’s made.  All lockboxes will be shipped to customers in the order they were purchased and after all redeemable NFT purchases are fulfilled.</p>
-                <p>The purchase price will cover the initial cost of the lockbox including all fees and you will receive 20% reduction in the first year subscription cost. </p>
-                <p>Participating in the preorder campaign provides the company with valuable initial revenue to build the best product possible.  We value each of our early customers and you will be forever memorialized on our companies Wall Of Heroes.</p>
-                <CheckoutButton title="Checkout" setAction={props.setAction} action={props.action}/>
-              </div>
-            }
-            leftSide={
-              <div className="saleInfoC8R">
-                <img src={lockbox} style={{
-                  width: '25vw'
-                }}/>
-              </div>
-            }
-            breakColor={COLORS.COLORS.BLUE_DARK}
-          />
+          {window.innerWidth > smallScreenSize?
+            <SideBySide
+              rightSide= {info()}
+              leftSide={image()}
+              breakColor={COLORS.COLORS.BLUE_DARK}
+            />
+            :
+            <OverUnder
+              upper={image()}
+              lower={info()}/>
+          }
           </div>
       </SalesSectionTemplate>
     </div>
@@ -383,33 +541,47 @@ function FundraisePreOrder(props) {
 }
 
 function FundraiseNFT(props) {
+  const info = () => {
+    return (
+      <div className="saleInfoC8R">
+        <p className="saleInfoLable">Price</p>
+        <p>$100</p>
+        <p className="saleInfoLable">Decription</p>
+        <p>Our NFT preorder offering is a revolutionary way to manage preorders. As an NFT holder, once lockboxes are ready to ship, all you have to do is prove you are a holder of one of these NFT’s and we will ship you your lockbox.  You keep your NFT as collectable art and proof you were one of the first to support Shipmate.</p>
+        <p>NFT’s also allow for transfer of the preorder item.  If you would like to sell or transfer the NFT to another person as a gift or trade, this is made possible and requires no help or approval by Shipmate.</p>
+        <p>Your purchase of the Redeemable NFT will cover the initial cost of the lockbox, the collectable art, and give you one year of 20% of the subscription.  You will also be memorialized on your Wall Of Heroes.</p>
+        <CheckoutButton title="Checkout" setAction={props.action} action={true}/>
+      </div>
+    )
+  }
+
+  const image = () => {
+    return (
+      <div className="saleInfoC8R">
+        <img src={lockboxWithNFT} style={{
+          width: '30vw'
+        }}/>
+      </div>
+    )
+  }
+
   return (
     <div>
       <SalesSectionTemplate
         theme='light'
         title="Redeemable NFT">
           <div style={{paddingTop: '2em'}}>
-          <SideBySide
-            rightSide= {
-              <div className="saleInfoC8R">
-                <p>Price</p>
-                <p>$100</p>
-                <p>Preorder Decription</p>
-                <p>Our NFT preorder offering is a revolutionary way to manage preorders. As an NFT holder, once lockboxes are ready to ship, all you have to do is prove you are a holder of one of these NFT’s and we will ship you your lockbox.  You keep your NFT as collectable art and proof you were one of the first to support Shipmate.</p>
-                <p>NFT’s also allow for transfer of the preorder item.  If you would like to sell or transfer the NFT to another person as a gift or trade, this is made possible and requires no help or approval by Shipmate.</p>
-                <p>Your purchase of the Redeemable NFT will cover the initial cost of the lockbox, the collectable art, and give you one year of 20% of the subscription.  You will also be memorialized on your Wall Of Heroes.</p>
-                <CheckoutButton title="Checkout" setAction={props.action} action={true}/>
-              </div>
-            }
-            leftSide={
-              <div className="saleInfoC8R">
-                <img src={lockboxWithNFT} style={{
-                  width: '30vw'
-                }}/>
-              </div>
-            }
-            breakColor={COLORS.COLORS.BLUE_DARK}
-          />
+          {window.innerWidth > smallScreenSize?
+            <SideBySide
+              rightSide= {info()}
+              leftSide={image()}
+              breakColor={COLORS.COLORS.BLUE_DARK}
+            />
+          :
+            <OverUnder
+              upper={image()}
+              lower={info()}/>
+        }
           </div>
       </SalesSectionTemplate>
     </div>
@@ -417,34 +589,49 @@ function FundraiseNFT(props) {
 }
 
 function FundraiseSupportNFT(props) {
+  const info = () => {
+    return (
+      <div className="saleInfoC8R">
+        <p className="saleInfoLable">Price</p>
+        <p>0.1 SOL, 0.1ETH</p>
+        <p className="saleInfoLable">Decription</p>
+        <p>Show your support for Shipmate by purchasing a non redeemable NFT.  This item is collectable art and will forever show how you supported Shipmate with one of our first product launches.</p>
+        <p>Along with keeping the collectable art forever, when you are ready to purchase a lockbox, show us this NFT and you will receive 10% off your first year subscription.</p>
+        <p>You will also be memorialized on our Wall Of Heroes.</p>
+        <CheckoutButton title="Checkout" setAction={props.setAction} action={props.action} />
+      </div>
+    )
+  }
+
+  const image = () => {
+    return (
+      <div className="saleInfoC8R">
+        <img src={opensea} />
+        <img src={ftx} />
+      </div>
+    )
+  }
 
   return (
     <div>
       <SalesSectionTemplate
         title="Non Redeemable NFT">
           <div style={{paddingTop: '2em'}}>
-          <SideBySide
-            rightSide= {
-              <div className="saleInfoC8R">
-                <p>Price</p>
-                <p>0.1 SOL, 0.1ETH</p>
-                <p>Non Redeemable NFT Decription</p>
-                <p>Show your support for Shipmate by purchasing a non redeemable NFT.  This item is collectable art and will forever show how you supported Shipmate with one of our first product launches.</p>
-                <p>Along with keeping the collectable art forever, when you are ready to purchase a lockbox, show us this NFT and you will receive 10% off your first year subscription.</p>
-                <p>You will also be memorialized on our Wall Of Heroes.</p>
-                <CheckoutButton title="Checkout" setAction={props.setAction} action={props.action} />
-              </div>
-            }
-            leftSide={
-              <div className="saleInfoC8R">
-                <img src={opensea} />
-                <img src={ftx} />
-              </div>
-            }
-            breakColor={COLORS.COLORS.BLUE_DARK}
-          />
-          </div>
-      </SalesSectionTemplate>
+          {window.innerWidth>smallScreenSize?
+            <SideBySide
+              rightSide= {info()}
+              leftSide={image()}
+              breakColor={COLORS.COLORS.BLUE_DARK}
+            />
+            :
+            <OverUnder
+              upper={image()}
+              lower={info()}
+            />
+
+    }
+    </div>
+    </SalesSectionTemplate>
     </div>
   )
 }
@@ -518,8 +705,9 @@ const styles = {
   }
 }
 export {
-  Sales,
   SalesTable,
+  SmallSalesTable,
+  SalesTableButtons,
   FundraiseOverview,
   FundraisePreOrder,
   FundraiseNFT,
