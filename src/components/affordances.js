@@ -37,7 +37,7 @@ export default function Affordances(props) {
         <div style={styles.card}>
           <h2>Organized</h2>
           <p>You can monitor all your delivereis from one app.  No more searching through emials, texts, and websites to find where your package is. </p>
-          <p>You will be notified, with proof, that your package has arived.</p>
+          <p>You will be notified, with proof, that your package has arrived.</p>
         </div>
 
       </div>

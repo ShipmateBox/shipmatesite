@@ -51,7 +51,7 @@ function SupportButton() {
 
 function CheckoutButton(props) {
   return (
-    <div className="card" onClick={() => props.setAction(props.action)}>
+    <div style={props.style} className="card" onClick={() => props.setAction(props.action)}>
       <p className="cardHeader">{props.title}</p>
       <FontAwesomeIcon icon={faArrowRight} className="cardIcon"/>
     </div>

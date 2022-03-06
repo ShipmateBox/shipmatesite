@@ -5,6 +5,9 @@ import{ HalfSection, Section }from './sections';
 import LockboxDeliveryRive from '../components/Rive';
 
 import {HashLink as Link} from 'react-router-hash-link';
+import flowerbed from '../images/flowerbed.png';
+
+import {OverUnder} from '../components/cards';
 
 const gear = 'https://shipmate-images.s3.us-west-2.amazonaws.com/sportGear.jpeg';
 const farm = 'https://shipmate-images.s3.us-west-2.amazonaws.com/farm.jpeg';
@@ -14,14 +17,24 @@ const house = 'https://shipmate-images.s3.us-west-2.amazonaws.com/house2.jpeg';
 
 function ProductOverview(props) {
   return (
-    <div  id={props._id}>
-      <Section
-        title="Product"
-        theme="light">
-        <div>
-          <p>Image</p>
+    <div  id={props._id}
+    style={{display: 'flex', justifyContent:'center', backgroundImage: `url(${flowerbed})`, height: '100vh', backgroundSize: 'cover'}}>
+      <div style={{
+        textAlign: 'center',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'}}>
+        <div style={{
+          backgroundColor: 'rgb(62,133, 192, .95)',
+          borderRadius: '10px',
+          marginTop: '-30vh'}}>
+          <OverUnder
+            upper = {<p style={{fontSize: '3em', padding: '0em 1em', margin: '.3em'}}>The Product</p>}
+            lower = {<p style={{flex: 1}}>A one of a kind package recieving system</p>}
+            breakColor = {COLORS.COLORS.BLUE_DARK}/>
         </div>
-      </Section>
+      </div>
+
     </div>
   )
 }

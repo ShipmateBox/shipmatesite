@@ -123,7 +123,7 @@ export default function Security() {
                   flexDirection: 'column'}}>
                 <div style = {styles.imageDiv} className='skew'>
                   <img src={upper}
-                    style={{}}/>
+                    style={{height: '100%'}}/>
                 </div>
 
                 <div style = {styles.imageDiv} className='skew'>

@@ -14,11 +14,30 @@ import {
 } from '../components/funding';
 import {useLocation} from 'react-router-dom';
 import {HalfSection, Section} from '../components/sections';
-import {PreorderButton, R9ENFTButton, SupportButton, CheckoutButton} from '../components/buttons';
-import {CheckoutForm} from '../components/forms';
+import {PreorderButton, R9ENFTButton, SupportButton, CheckoutButton, SubmitButton} from '../components/buttons';
+import {CheckoutForm, EmailForm} from '../components/forms';
 import SCREENSIZE from '../constants/screenSize';
 
 const map = 'https://shipmate-images.s3.us-west-2.amazonaws.com/map_bg.png';
+
+const ModalPlaceholder = () => {
+  return (
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center'}}
+    >
+      <p>We are not ready to take preorders yet, but submit your email and we will let you know when we start our preorder campaign.</p>
+      <EmailForm/>
+      <p>Please don't worry, we believe in customer privacy and will never sell your personal information.</p>
+
+      <p>If you have time, please take the survey.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCHo5t1XcAwKOD100VgOYMxSBo6fNEJjjG9LsvqCGSyqYC2A/viewform?usp=sf_link">
+        <SubmitButton title="Take The Survey"/></a>
+    </div>
+  )
+}
 
 export default function Fundraise() {
   const [saleItem, setSaleItem] = useState(1);
@@ -43,15 +62,16 @@ export default function Fundraise() {
           <FundraiseSupportNFT setAction={setCheckout} action={true}/>
           { checkout &&
           <CheckoutForm title="Non Redeemable NFT">
-            <div>
+            <div style={{display: 'none'}}>
               <p>For ease and customer peace of mind we process all NFT sales through Opensea or FTX</p>
               <p>If you ever have questions, Shipmate is always available. Feel free to contact us.</p>
               <p>Thank You :)</p>
             </div>
+            <ModalPlaceholder/>
             <div className="checkoutButtonHolder">
               <CheckoutButton title="Cancle" setAction={setCheckout} action={false}/>
-              <CheckoutButton title="Opensea" />
-              <CheckoutButton title="FTX" />
+              <CheckoutButton style={{display: 'none'}} title="Opensea" />
+              <CheckoutButton style={{display: 'none'}} title="FTX" />
             </div>
           </CheckoutForm>
           }
@@ -62,7 +82,7 @@ export default function Fundraise() {
           <FundraiseNFT  action={setCheckout}/>
           { checkout &&
           <CheckoutForm title="Redeemable NFT">
-            <div>
+            <div style={{display: 'none'}}>
               <p>Hold your NFT as proof of your preorder purchase.
               When we are ready to ship the prodcut we will announce it on the site.
               Redeeming your NFT will be as simple as proving you hold the NFT in
@@ -72,10 +92,11 @@ export default function Fundraise() {
               <p>If you ever have questions, Shipmate is always available. Feel free to contact us.</p>
               <p>Thank You :)</p>
             </div>
+            <ModalPlaceholder/>
             <div className="checkoutButtonHolder">
               <CheckoutButton title="Cancle" setAction={setCheckout} action={false}/>
-              <CheckoutButton title="Opensea" />
-              <CheckoutButton title="FTX" />
+              <CheckoutButton style={{display: 'none'}} title="Opensea" />
+              <CheckoutButton style={{display: 'none'}} title="FTX" />
             </div>
           </CheckoutForm>
           }
@@ -86,15 +107,16 @@ export default function Fundraise() {
           <FundraisePreOrder  setAction={setCheckout} action={true}/>
           { checkout &&
           <CheckoutForm title="Traditional Preorder">
-            <div>
+            <div style={{display: 'none'}}>
               <p>We will keep your information on file and notify you when your lockbox is ready.</p>
               <p>Only after you recieve the physical product will the monthly subscriptin cost start.</p>
               <p>If you ever have questions, Shipmate is always available. Feel free to contact us.</p>
               <p>Thank You :)</p>
             </div>
+            <ModalPlaceholder/>
             <div className="checkoutButtonHolder">
               <CheckoutButton title="Cancle" setAction={setCheckout} action={false}/>
-              <CheckoutButton title="Submit" />
+              <CheckoutButton style={{display: 'none'}} title="Submit" />
             </div>
           </CheckoutForm>
           }
