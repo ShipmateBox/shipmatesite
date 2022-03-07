@@ -69,7 +69,7 @@ export default function Fundraise() {
             </div>
             <ModalPlaceholder/>
             <div className="checkoutButtonHolder">
-              <CheckoutButton title="Cancle" setAction={setCheckout} action={false}/>
+              <CheckoutButton title="Cancel" setAction={setCheckout} action={false}/>
               <CheckoutButton style={{display: 'none'}} title="Opensea" />
               <CheckoutButton style={{display: 'none'}} title="FTX" />
             </div>
@@ -94,7 +94,7 @@ export default function Fundraise() {
             </div>
             <ModalPlaceholder/>
             <div className="checkoutButtonHolder">
-              <CheckoutButton title="Cancle" setAction={setCheckout} action={false}/>
+              <CheckoutButton title="Cancel" setAction={setCheckout} action={false}/>
               <CheckoutButton style={{display: 'none'}} title="Opensea" />
               <CheckoutButton style={{display: 'none'}} title="FTX" />
             </div>
@@ -115,7 +115,7 @@ export default function Fundraise() {
             </div>
             <ModalPlaceholder/>
             <div className="checkoutButtonHolder">
-              <CheckoutButton title="Cancle" setAction={setCheckout} action={false}/>
+              <CheckoutButton title="Cancel" setAction={setCheckout} action={false}/>
               <CheckoutButton style={{display: 'none'}} title="Submit" />
             </div>
           </CheckoutForm>

@@ -30,9 +30,9 @@ import {
 import Security from '../components/security';
 import Features from '../components/features';
 import SCREENSIZE from '../constants/screenSize';
-import danopening from '../images/danopening.png';
-import momopening from '../images/momopening.png';
-import boxinbox from '../images/boxinbox.png';
+const danopening = 'https://shipmate-images.s3.us-west-2.amazonaws.com/danopening.png';
+const momopening = 'https://shipmate-images.s3.us-west-2.amazonaws.com/momopening.png';
+const boxinbox = 'https://shipmate-images.s3.us-west-2.amazonaws.com/boxinbox.png';
 
 const map = 'https://shipmate-images.s3.us-west-2.amazonaws.com/map_bg.png';
 

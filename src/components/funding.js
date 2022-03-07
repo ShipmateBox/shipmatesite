@@ -93,7 +93,7 @@ function SalesTable() {
           <p className="titleP9H">(NFT)</p>
         </div>
         <div className="costRow">
-          <p > 0.1 SOL / 0.1 ETH</p>
+          <p>Coming Soon</p>
         </div>
         <div style={{height:0, width: '100%', borderBottom: '1px solid black'}}></div>
         <div className="availableRow">
@@ -124,7 +124,7 @@ function SalesTable() {
           <p className="titleP9H">(NFT)</p>
         </div>
         <div className="costRow">
-          <p style={{flex: 1}}>$100</p>
+          <p style={{flex: 1}}>Coming Soon</p>
         </div>
         <div style={{height:0, width: '100%', borderBottom: '1px solid black'}}></div>
         <div className="availableRow">
@@ -156,7 +156,7 @@ function SalesTable() {
           <p className="titleP9H">(Traditional)</p>
         </div>
         <div className="costRow">
-          <p style={{flex: 1}}>$100</p>
+          <p style={{flex: 1}}>Coming Soon</p>
         </div>
         <div style={{height:0, width: '100%', borderBottom: '1px solid black'}}></div>
         <div className="availableRow">
@@ -257,7 +257,7 @@ function SmallSalesTable(props) {
             <p className="titleP9H">(NFT)</p>
           </div>
           <div className="costRow">
-            <p > 0.1 SOL / 0.1 ETH</p>
+            <p >Coming Soon</p>
           </div>
           <div style={{height:0, width: '100%', borderBottom: '1px solid black'}}></div>
           <div className="availableRow">
@@ -288,7 +288,7 @@ function SmallSalesTable(props) {
             <p className="titleP9H">(NFT)</p>
           </div>
           <div className="costRow">
-            <p style={{flex: 1}}>$100</p>
+            <p style={{flex: 1}}>Coming Soon</p>
           </div>
           <div style={{height:0, width: '100%', borderBottom: '1px solid black'}}></div>
           <div className="availableRow">
@@ -321,7 +321,7 @@ function SmallSalesTable(props) {
             <p className="titleP9H">(Traditional)</p>
           </div>
           <div className="costRow">
-            <p style={{flex: 1}}>$100</p>
+            <p style={{flex: 1}}>Coming Soon</p>
           </div>
           <div style={{height:0, width: '100%', borderBottom: '1px solid black'}}></div>
           <div className="availableRow">
@@ -497,7 +497,7 @@ function FundraisePreOrder(props) {
     return (
       <div className="saleInfoC8R">
         <p className="saleInfoLable">Price</p>
-        <p>$100</p>
+        <p>Coming Soon</p>
         <p className="saleInfoLable">Preorder Decription</p>
         <p>Purchasing a lockbox through our traditional preorder campaign means you will receive your lockbox as soon as it’s made.  All lockboxes will be shipped to customers in the order they were purchased and after all redeemable NFT purchases are fulfilled.</p>
         <p>The purchase price will cover the initial cost of the lockbox including all fees and you will receive 20% reduction in the first year subscription cost. </p>
@@ -545,7 +545,7 @@ function FundraiseNFT(props) {
     return (
       <div className="saleInfoC8R">
         <p className="saleInfoLable">Price</p>
-        <p>$100</p>
+        <p>Coming Soon</p>
         <p className="saleInfoLable">Decription</p>
         <p>Our NFT preorder offering is a revolutionary way to manage preorders. As an NFT holder, once lockboxes are ready to ship, all you have to do is prove you are a holder of one of these NFT’s and we will ship you your lockbox.  You keep your NFT as collectable art and proof you were one of the first to support Shipmate.</p>
         <p>NFT’s also allow for transfer of the preorder item.  If you would like to sell or transfer the NFT to another person as a gift or trade, this is made possible and requires no help or approval by Shipmate.</p>
@@ -593,7 +593,7 @@ function FundraiseSupportNFT(props) {
     return (
       <div className="saleInfoC8R">
         <p className="saleInfoLable">Price</p>
-        <p>0.1 SOL, 0.1ETH</p>
+        <p>Coming Soon</p>
         <p className="saleInfoLable">Decription</p>
         <p>Show your support for Shipmate by purchasing a non redeemable NFT.  This item is collectable art and will forever show how you supported Shipmate with one of our first product launches.</p>
         <p>Along with keeping the collectable art forever, when you are ready to purchase a lockbox, show us this NFT and you will receive 10% off your first year subscription.</p>

@@ -5,7 +5,6 @@ import{ HalfSection, Section }from './sections';
 import LockboxDeliveryRive from '../components/Rive';
 
 import {HashLink as Link} from 'react-router-hash-link';
-import flowerbed from '../images/flowerbed.png';
 
 import {OverUnder} from '../components/cards';
 
@@ -14,6 +13,7 @@ const farm = 'https://shipmate-images.s3.us-west-2.amazonaws.com/farm.jpeg';
 const food = 'https://shipmate-images.s3.us-west-2.amazonaws.com/food.jpeg';
 const key = 'https://shipmate-images.s3.us-west-2.amazonaws.com/key.jpeg';
 const house = 'https://shipmate-images.s3.us-west-2.amazonaws.com/house2.jpeg';
+const flowerbed = 'https://shipmate-images.s3.us-west-2.amazonaws.com/flowerbed.png';
 
 function ProductOverview(props) {
   return (

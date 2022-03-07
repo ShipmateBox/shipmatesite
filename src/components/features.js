@@ -7,7 +7,7 @@ export default function Features() {
   return (
     <Section
       theme='dark'
-      title='We do more than just stop package theft'>
+      title='We Do More Than Just Stop Package Theft'>
         <div style={{
           display: 'flex',
           flexDirection: 'row',
