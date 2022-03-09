@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import ReactGA from 'react-ga';
 
 import {
   ProductOverview,
@@ -13,6 +14,10 @@ import {
 } from '../components/productInfo';
 
 export default function Product() {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname)
+  }, [])
+  
   return (
     <div className="App">
       <ProductOverview _id="ProductOverview"/>

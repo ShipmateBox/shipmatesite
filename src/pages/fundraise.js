@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import ReactGA from 'react-ga';
 
 import {
   FundraiseOverview,
@@ -21,6 +22,10 @@ import SCREENSIZE from '../constants/screenSize';
 const map = 'https://shipmate-images.s3.us-west-2.amazonaws.com/map_bg.png';
 
 const ModalPlaceholder = () => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname)
+  }, [])
+
   return (
     <div style={{
       display: 'flex',

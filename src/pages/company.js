@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import {Timeline} from '../components/timeline';
 import {Section, HalfSection} from '../components/sections';
+import ReactGA from 'react-ga';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin } from '@fortawesome/free-solid-svg-icons'
@@ -15,6 +16,10 @@ const colin = 'https://shipmate-images.s3.us-west-2.amazonaws.com/colin.png';
 const dan = 'https://shipmate-images.s3.us-west-2.amazonaws.com/Dan.jpeg';
 
 export default function Company() {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname)
+  }, [])
+
   return (
     <div
       id='about'>

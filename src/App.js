@@ -9,14 +9,14 @@ import Product from './pages/product';
 import Fundraise from './pages/fundraise';
 import Company from './pages/company';
 
-import ReactGA from 'react-ga'
+import ReactGA from 'react-ga';
 
 
 export default function App() {
 
   useEffect(() => {
     // report site data to google analytics
-    ReactGA.initialize('G-MNSK9LJGLK');
+    ReactGA.initialize('UA-112008242-3');
     ReactGA.pageview(window.location.pathname);
   },[])
 
