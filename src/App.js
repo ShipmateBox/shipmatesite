@@ -1,5 +1,6 @@
 import './App.css';
 
+import React, {useEffect} from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Layout from './components/layout';
@@ -8,8 +9,17 @@ import Product from './pages/product';
 import Fundraise from './pages/fundraise';
 import Company from './pages/company';
 
+import ReactGA from 'react-ga'
+
 
 export default function App() {
+
+  useEffect(() => {
+    // report site data to google analytics
+    ReactGA.initialize('G-MNSK9LJGLK');
+    ReactGA.pageview(window.location.pathname);
+  },[])
+
   return (
     <div>
       <BrowserRouter>
