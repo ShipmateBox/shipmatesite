@@ -17,7 +17,7 @@ const dan = 'https://shipmate-images.s3.us-west-2.amazonaws.com/Dan.jpeg';
 
 export default function Company() {
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname)
+    ReactGA.pageview(window.location.pathname) //Google Analytics. 
   }, [])
 
   return (
@@ -42,8 +42,8 @@ export default function Company() {
         products are $500 or more.</p>
 
         <p>Here at Shipmate, we want you to be confident your packages will be at your home waiting for you.  You will
-        never take another day off work waiting for important packages to arrive, never rush home because that expense
-        item was delivered, never divert packages to neighbors or your place of work, never lose track of where your packages are.</p>
+        never take another day off work waiting for important packages to arrive, never rush home because that expensive
+        item was delivered, never divert packages to your neighbors house or your place of work, never lose track of where your packages are.</p>
 
         <p>We hope you join us on our journey and participate in our pre-sales campaign. </p>
       </Section>

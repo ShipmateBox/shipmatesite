@@ -16,8 +16,9 @@ export default function App() {
 
   useEffect(() => {
     // report site data to google analytics
-    ReactGA.initialize('UA-112008242-3');
-    ReactGA.pageview(window.location.pathname);
+    ReactGA.initialize('UA-112008242-3', {
+      siteSpeedSampleRate: 100
+    });
   },[])
 
   return (

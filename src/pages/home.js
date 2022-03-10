@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
+import ReactGA from 'react-ga';
 import '../App.css';
 
 import BoxSecure from '../images/result.svg';
@@ -38,6 +39,10 @@ const map = 'https://shipmate-images.s3.us-west-2.amazonaws.com/map_bg.png';
 
 
 export default function Home() {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname); //Google Analytics
+  },[])
+
   return (
     <div className="App">
       <Banner/>

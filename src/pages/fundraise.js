@@ -22,9 +22,6 @@ import SCREENSIZE from '../constants/screenSize';
 const map = 'https://shipmate-images.s3.us-west-2.amazonaws.com/map_bg.png';
 
 const ModalPlaceholder = () => {
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname)
-  }, [])
 
   return (
     <div style={{
@@ -56,6 +53,7 @@ export default function Fundraise() {
       setSaleItem(1);
     }
     window.scrollTo(0,0)
+    ReactGA.pageview(window.location.pathname) //Google analytics. 
   }, [])
 
   return (

@@ -15,9 +15,9 @@ import {
 
 export default function Product() {
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname)
+    ReactGA.pageview(window.location.pathname) //Google analytics. 
   }, [])
-  
+
   return (
     <div className="App">
       <ProductOverview _id="ProductOverview"/>
