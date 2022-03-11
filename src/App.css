@@ -534,6 +534,7 @@ a:hover {
 .fundingCard:hover {
   box-shadow: rgb(61 133 198) 3px 3px 5px 0px!important;
   opacity: .8;
+  cursor: pointer;
 }
 
 .fundingCardText {

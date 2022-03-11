@@ -7,15 +7,13 @@ import LockboxDeliveryRive from '../components/Rive';
 import {HashLink as Link} from 'react-router-hash-link';
 
 import {OverUnder} from '../components/cards';
-import DansHouse from '../images/DansHouse.png';
-import Gate from '../images/Gate.png';
 
 const gear = 'https://shipmate-images.s3.us-west-2.amazonaws.com/sportGear.jpeg';
-const farm = 'https://shipmate-images.s3.us-west-2.amazonaws.com/farm.jpeg';
 const food = 'https://shipmate-images.s3.us-west-2.amazonaws.com/food.jpeg';
 const key = 'https://shipmate-images.s3.us-west-2.amazonaws.com/key.jpeg';
-const house = 'https://shipmate-images.s3.us-west-2.amazonaws.com/house2.jpeg';
 const flowerbed = 'https://shipmate-images.s3.us-west-2.amazonaws.com/flowerbed.png';
+const DansHouse = 'https://shipmate-images.s3.us-west-2.amazonaws.com/DansHouse.png';
+const Gate = 'https://shipmate-images.s3.us-west-2.amazonaws.com/Gate.png';
 
 function ProductOverview(props) {
   return (
