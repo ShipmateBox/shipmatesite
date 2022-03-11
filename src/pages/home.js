@@ -27,6 +27,10 @@ import {
 import {
   SubmitButton
 } from '../components/buttons';
+import {
+  Uses,
+  HowItWorks
+} from '../components/productInfo';
 
 import Security from '../components/security';
 import Features from '../components/features';
@@ -46,6 +50,8 @@ export default function Home() {
   return (
     <div className="App">
       <Banner/>
+      <HowItWorks />
+      <Uses />
       <Affordances/>
       <Security/>
       <Features/>

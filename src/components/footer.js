@@ -31,7 +31,7 @@ export default function Footer() {
           <h4>Contact</h4>
           <p style={styles.item}>Email</p>
           <a href="https://twitter.com/ShipmateBox" style={styles.item}>Twitter</a>
-
+          <a href="https://www.facebook.com/ShipmateBox" style={styles.item}>Facebook</a>
         </div>
       </div>
       <div style={styles.copyright}>

@@ -7,6 +7,8 @@ import LockboxDeliveryRive from '../components/Rive';
 import {HashLink as Link} from 'react-router-hash-link';
 
 import {OverUnder} from '../components/cards';
+import DansHouse from '../images/DansHouse.png';
+import Gate from '../images/Gate.png';
 
 const gear = 'https://shipmate-images.s3.us-west-2.amazonaws.com/sportGear.jpeg';
 const farm = 'https://shipmate-images.s3.us-west-2.amazonaws.com/farm.jpeg';
@@ -155,13 +157,13 @@ function Uses() {
             <div className="usesCard">
               <p className="usesCardText">Neighborhoods</p>
               <div className="usesCardImageC8R">
-                  <img src={house} className="usesCardImage"/>
+                  <img src={DansHouse} className="usesCardImage"/>
               </div>
             </div>
             <div className="usesCard">
-              <p className="usesCardText">Long Drivways</p>
+              <p className="usesCardText">Gated Properties / Long Driveways</p>
               <div className="usesCardImageC8R">
-                  <img src={farm} className="usesCardImage"/>
+                  <img src={Gate} className="usesCardImage"/>
               </div>
             </div>
             <div className="usesCard">
