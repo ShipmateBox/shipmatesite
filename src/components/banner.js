@@ -4,11 +4,11 @@ import COLORS from '../constants/theme';
 import {
   PreorderButton,
   R9ENFTButton,
+  SubmitButton,
 } from './buttons';
 import {GetWindowDimensions} from './window';
 import SCREENSIZE from '../constants/screenSize';
 import {EmailForm} from './forms';
-
 const neighborhood = 'https://shipmate-images.s3.us-west-2.amazonaws.com/neighborhood.jpeg';
 
 const smallScreenSize = SCREENSIZE.SCREENSIZE.SMALL;
@@ -46,6 +46,8 @@ function Banner(props) {
         </div>
         <p> Stay connected by submitting your email. </p>
         <EmailForm />
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCHo5t1XcAwKOD100VgOYMxSBo6fNEJjjG9LsvqCGSyqYC2A/viewform?usp=sf_link">
+          <SubmitButton title="Take The Survey"/></a>
       </div>
       </div>
       <div className="padding">

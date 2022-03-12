@@ -30,13 +30,13 @@ export default function Affordances(props) {
 
           <div style={styles.card}>
             <h2>Private</h2>
-            <p>Your packages are concealed.  No one needs to know if you have  package, where its from, what size it is or anything else.</p>
+            <p>Your packages are concealed.  No one needs to know if you have a package, where its from, what size it is or anything else.</p>
             <p>No cameras watch you and your family coming and going from your home.</p>
           </div>
 
         <div style={styles.card}>
           <h2>Organized</h2>
-          <p>You can monitor all your delivereis from one app.  No more searching through emials, texts, and websites to find where your package is. </p>
+          <p>You can monitor all your delivereis from one app.  No more searching through emails, texts, and websites to find where your package is. </p>
           <p>You will be notified, with proof, that your package has arrived.</p>
         </div>
 

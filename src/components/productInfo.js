@@ -165,7 +165,7 @@ function Uses() {
               </div>
             </div>
             <div className="usesCard">
-              <p className="usesCardText">Airbnb / Hid-A-Key</p>
+              <p className="usesCardText">Airbnb / Hide-A-Key</p>
               <div className="usesCardImageC8R">
                   <img src={key} className="usesCardImage"/>
               </div>
@@ -177,7 +177,7 @@ function Uses() {
               </div>
             </div>
             <div className="usesCard">
-              <p className="usesCardText">Drop Offs</p>
+              <p className="usesCardText">Dropoffs</p>
               <div className="usesCardImageC8R">
                   <img src={gear} className="usesCardImage"/>
               </div>
@@ -255,7 +255,7 @@ function HowItWorks() {
             flex: 1
           }}>
             <div>
-              <p>Your lockbox starts in Ready to Recieve Mode.</p>
+              <p>Your lockbox starts in Ready to Receive Mode.</p>
             </div>
             <div>
               <p>Delivered packages are placed in the lockbox.</p>
@@ -267,14 +267,14 @@ function HowItWorks() {
               <p>You are notified right away.</p>
             </div>
             <div>
-              <p>When you are ready to get your package, open the lockobx with the mobile app.</p>
+              <p>When you are ready to get your package, open the lockbox with the mobile app.</p>
             </div>
             <div>
-              <p>Leave your lockbox in Ready to Recieve Mode.</p>
+              <p>Leave your lockbox in Ready to Receive Mode.</p>
             </div>
           </div>
         </div>
-        <div style={{flex: 1}}>Know you have a nother package coming before you expect to get home, unlock the lockbox remotly using your mobile phone.</div>
+        <div style={{flex: 1}}>Know you have another package coming before you expect to get home, unlock the lockbox remotely using your mobile phone.</div>
       </div>
     </HalfSection>
   )
