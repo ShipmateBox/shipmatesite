@@ -70,7 +70,7 @@ function Timeline(props) {
         <div style={{display: 'flex', flexDirection: 'column'}}>
           <TimeElement id='milestone1'>
             <h2>Problem Analysis</h2>
-            <p>We spent time understanding the currently delivery system, and solving its problems.</p>
+            <p>We spent time understanding the current delivery system, and solving its problems.</p>
           </TimeElement>
           <TimeElement id='milestone2'>
             <h2>Prototype / MVP</h2>
@@ -88,7 +88,7 @@ function Timeline(props) {
         <Arrow id="arrow2" start='milestone2' end='milestone3' condition={showArrow.arrow2}/>
 
         <TimeElement id='milestone4'>
-          <h2>Products Ship</h2>
+          <h2>Ship Product</h2>
           <p>We will deliver preorders and begin delivering product as orders come in.</p>
         </TimeElement>
         <Arrow id="arrow3" start='milestone3' end='milestone4' condition={showArrow.arrow3}/>

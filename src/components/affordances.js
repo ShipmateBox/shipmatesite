@@ -13,7 +13,7 @@ export default function Affordances(props) {
   return (
     <Section
       title="AI Managing Your Deliveries!"
-      note="-Our package lockbox is a full shipping and recieving robot for the home-"
+      note="-Our package lockbox is a full shipping and receiving robot for the home-"
       theme="dark">
       <div style={styles.cardContainer}>
           <div style={styles.card}>
@@ -36,7 +36,7 @@ export default function Affordances(props) {
 
         <div style={styles.card}>
           <h2>Organized</h2>
-          <p>You can monitor all your delivereis from one app.  No more searching through emails, texts, and websites to find where your package is. </p>
+          <p>You can monitor all your deliveries from one app.  No more searching through emails, texts, and websites to find where your package is. </p>
           <p>You will be notified, with proof, that your package has arrived.</p>
         </div>
 
