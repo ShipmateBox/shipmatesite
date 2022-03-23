@@ -171,7 +171,7 @@ function Uses() {
               </div>
             </div>
             <div className="usesCard">
-              <p  className="usesCardText">Food / Medicaton Deliveries</p>
+              <p  className="usesCardText">Food / Medication Deliveries</p>
               <div className="usesCardImageC8R">
                   <img src={food} className="usesCardImage"/>
               </div>

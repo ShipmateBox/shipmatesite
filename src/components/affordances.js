@@ -30,7 +30,7 @@ export default function Affordances(props) {
 
           <div style={styles.card}>
             <h2>Private</h2>
-            <p>Your packages are concealed.  No one needs to know if you have a package, where its from, what size it is or anything else.</p>
+            <p>Your packages are concealed.  No one needs to know if you have a package, where it's from, what size it is, or anything else.</p>
             <p>No cameras watch you and your family coming and going from your home.</p>
           </div>
 
