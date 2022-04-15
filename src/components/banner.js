@@ -48,25 +48,26 @@ function Banner(props) {
         <EmailForm />
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCHo5t1XcAwKOD100VgOYMxSBo6fNEJjjG9LsvqCGSyqYC2A/viewform?usp=sf_link">
           <SubmitButton title="Take The Survey"/></a>
+        {width<600 && <BannerSmall/>}
       </div>
       </div>
       <div className="padding">
       </div>
+
     </div>
   )
 }
 
-function smallScreen() {
-  return window.innerWidth<smallScreenSize
+function BannerSmall(props)
+{
+  const frontdoorSmall = 'https://shipmate-images.s3.us-west-2.amazonaws.com/frontdoor_small.jpg';
+
+  return(
+    <div>
+      <img src={frontdoorSmall} style={{width: '100vw', marginBottom: '0px'}}/>
+    </div>
+  )
 }
 
-const styles = {
 
-  padding: {
-    flex: smallScreen()?0:1
-  }
-}
-
-
-
-export {Banner};
+export {Banner, BannerSmall};
