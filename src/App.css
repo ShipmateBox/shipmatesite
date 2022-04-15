@@ -70,10 +70,10 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: start;
-  min-height: 100vh;
+  min-height: 50vh;
   background-image: none;
   background-size: none;
-  padding: 10vh 0vh 0vw 0vw;
+  padding: 0vh 0vh 0vw 0vw;
 }
 
 .bannerMainSubC8R {
@@ -126,6 +126,8 @@ a:hover {
     background-image: url("./images/frontdoor(1).jpeg");
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 10vh 0vh 0vw 0vw;
   }
   .bannerMainSubC8R {
     background-color: rgb(62, 133, 192, .80);
@@ -322,10 +324,14 @@ a:hover {
 
 .imageGroupC8R {
   transform: rotate(45deg);
-  display: flex;
   background: white;
   border-radius: 10px;
   margin-right: 5vw;
+  display: none;
+}
+
+.imageGroupC8RSmall {
+  width: 100vw;
 }
 
 .securityItemText {
@@ -369,6 +375,29 @@ a:hover {
   border-bottom: 3px solid var(--theme-main-blue);
 }
 
+.securityImage {
+  border-radius: 10px;
+  width: 17.1vw;
+  height: 17.1vw;
+  transform: rotate(-45deg);
+  position: relative;
+  top: -2.5vw;
+  left: -2.4vw;
+}
+
+.securityImageSmall {
+  width: 100vw;
+}
+
+.securitySideBySide1 {
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 .skew {
   box-shadow: 5px 5px 5px 1px grey;
   opacity: .95;
@@ -393,14 +422,23 @@ a:hover {
   }
 }
 
-
 @media only screen and (min-width: 600px) {
+
+  .imageGroupC8R {
+    display: flex;
+  }
+  .imageGroupC8RSmall {
+    display: none;
+  }
   .securityHeaderItem {
     font-size: 32px;
   }
-
   .securityPackageItem {
     font-size: 32px;
+  }
+  .securitySideBySide1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 }
 
@@ -588,8 +626,8 @@ a:hover {
 
 .usesCardImage {
   width: 10vw;
-  min-width: 100px;
-  min-height: 100px;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .usesCardImageC8R {
@@ -597,8 +635,8 @@ a:hover {
   width: 10vw;
   height: 10vw;
   border-radius: 10px;
-  min-width: 100px;
-  min-height: 100px;
+  min-width: 200px;
+  min-height: 200px;
 }
 
 .usesCardImage:hover {
@@ -633,6 +671,25 @@ a:hover {
     font-size: 4vw;
   }
   .infoFeatureC8R {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.howItWorksC8R {
+  display: flex;
+  flex-direction: column;
+}
+
+.howItWorksMain {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 600px) {
+  .howItWorksMain {
     display: flex;
     flex-direction: row;
   }

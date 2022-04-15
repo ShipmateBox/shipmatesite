@@ -236,16 +236,8 @@ function HowItWorks() {
     <HalfSection
       theme="dark"
       title="How It Works">
-      <div style={{
-        display: 'flex',
-        flexDirection: 'column'
-      }}>
-        <div style={{
-          flex: 1,
-          display: 'flex',
-          flexDirection: 'row',
-          flexWrap: 'wrap'
-        }}>
+      <div className={'howItWorksC8R'}>
+        <div className={'howItWorksMain'}>
           <div style={{
             flex: 1,
           }}>

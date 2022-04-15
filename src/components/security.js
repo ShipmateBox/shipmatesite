@@ -13,6 +13,7 @@ const upper = 'https://shipmate-images.s3.us-west-2.amazonaws.com/upperdoor.jpeg
 const left = 'https://shipmate-images.s3.us-west-2.amazonaws.com/left.jpeg'
 const bottom = 'https://shipmate-images.s3.us-west-2.amazonaws.com/bottom.jpeg';
 const right = 'https://shipmate-images.s3.us-west-2.amazonaws.com/right.jpeg';
+const house = 'https://shipmate-images.s3.us-west-2.amazonaws.com/house2.jpeg';
 
 export default function Security() {
   return (
@@ -23,20 +24,17 @@ export default function Security() {
           flex: 2,
           justifyContent: 'end'
         }}>
-
           <div>
-            <div className="imageGroupC8R">
+            <div className={"imageGroupC8R"}>
               <div style={{
                   display: 'flex',
                   flexDirection: 'column'}}>
                 <div style = {styles.imageDiv} className='skew'>
-                    <img src={windowImage}
-                      style={styles.image}/>
+                    <img src={windowImage} className={'securityImage'}/>
                 </div>
 
                 <div style = {styles.imageDiv} className='skew'>
-                  <img src={door}
-                    style={styles.image}/>
+                  <img src={door} className={'securityImage'}/>
                 </div>
               </div>
 
@@ -44,28 +42,24 @@ export default function Security() {
                   display: 'flex',
                   flexDirection: 'column'}}>
                 <div style = {styles.imageDiv} className='skew'>
-                  <img src={garage}
-                    style={styles.image}/>
+                  <img src={garage} className={'securityImage'}/>
                 </div>
 
                 <div style = {styles.imageDiv} className='skew'>
-                  <img src={nothingout}
-                    style={styles.image}/>
+                  <img src={nothingout} className={'securityImage'}/>
                 </div>
               </div>
 
             </div>
           </div>
 
+          <div className={'imageGroupC8RSmall'}>
+            <img src={house} className='securityImageSmall'/>
+          </div>
+
         </div>
 
-        <div style={{
-          display: 'flex',
-          flex: 2,
-          justifyContent: 'center',
-          alignItems: 'center',
-
-        }}>
+        <div className='securitySideBySide1'>
           <SideBySide
             rightSide={
                 <div className="securityHeaderElement">
@@ -105,54 +99,51 @@ export default function Security() {
 
         }}>
           <div style={{
-            textAlign: 'center'
+            textAlign: 'center',
+            marginTop: '10px',
+            marginBottom: '10px',
           }}>
             <h1 className="securityPackageItem">Why Not Packages</h1>
           </div>
         </div>
-        <div style={{
+
+        <div style={window.innerWidth>600?{
           display: 'flex',
           justifyContent: 'start',
-          flex: 2
-        }}>
-
-          <div>
-            <div className="imageGroupC8R">
-              <div style={{
-                  display: 'flex',
-                  flexDirection: 'column'}}>
-                <div style = {styles.imageDiv} className='skew'>
-                  <img src={upper}
-                    style={{height: '100%'}}/>
-                </div>
-
-                <div style = {styles.imageDiv} className='skew'>
-                  <img src={left}
-                    style={{height: '100%'}}/>
-                </div>
+          flex: 2,
+        }:{display: 'none'}}>
+          <div className="imageGroupC8R">
+            <div style={{
+                display: 'flex',
+                flexDirection: 'column'}}>
+              <div style = {styles.imageDiv} className='skew'>
+                <img src={upper}
+                  style={{height: '100%'}}/>
               </div>
 
-              <div style={{
-                  display: 'flex',
-                  flexDirection: 'column'}}>
-                <div style = {styles.imageDiv} className='skew'>
-                  <img src={right}
-                    style={{height: '100%'}}/>
-                </div>
-
-                <div style = {styles.imageDiv} className='skew'>
-                  <img src={bottom}
-                    style={{height: '100%'}}/>
-                </div>
+              <div style = {styles.imageDiv} className='skew'>
+                <img src={left}
+                  style={{height: '100%'}}/>
               </div>
-
             </div>
+
+            <div style={{
+                display: 'flex',
+                flexDirection: 'column'}}>
+              <div style = {styles.imageDiv} className='skew'>
+                <img src={right}
+                  style={{height: '100%'}}/>
+              </div>
+
+              <div style = {styles.imageDiv} className='skew'>
+                <img src={bottom}
+                  style={{height: '100%'}}/>
+              </div>
+            </div>
+
           </div>
-
         </div>
-
       </div>
-
     </div>
   )
 }
@@ -193,9 +184,6 @@ const styles = {
     position: 'relative',
     top: '-2.5vw',
     left: '-2.4vw'
-  },
-  imageCaption: {
-    flex: 2,
   },
   imageDiv: {
     borderRadius: '10px',
