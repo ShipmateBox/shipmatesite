@@ -577,6 +577,18 @@ a:hover {
   cursor: pointer;
 }
 
+.fundingCardImageR10E {
+  width: 20vw;
+  position: absolute;
+  margin-top: 2vh;
+}
+
+.fundingCardImageTraditional {
+  width: 15vw;
+  position: absolute;
+  margin-top: 2vh;
+}
+
 .fundingCardText {
   margin: 0em;
 }
@@ -588,6 +600,16 @@ a:hover {
   .fundingCardTextC8R {
     display: block;
     flex: 1;
+  }
+  .fundingCardImageR10E {
+    width: 10vw;
+    margin-top: -1vh;
+  }
+
+  .fundingCardImageTraditional {
+    width: 7.5vw;
+    position: absolute;
+    margin-top: 1vh;
   }
 }
 

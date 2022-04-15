@@ -382,12 +382,7 @@ function RedeemableCard(props) {
             alignItems: 'center',
             justifyContent: 'center',
         }}>
-          <img
-          style={{
-            width: '10vw',
-            position: 'absolute',
-            marginTop: '-1vh'
-          }}
+          <img className='fundingCardImageR10E'
           src={lockboxWithNFT}/>
         </div>
         <div className="fundingCardTextC8R">
@@ -417,19 +412,29 @@ function NonRedeemableCard(props) {
             justifyContent: 'center'
         }}>
           <img
-          style={{
+          style={window.innerWidth>600?{
             width: '5vw',
+            position: 'absolute',
+            marginTop: '-1vh',
+            marginLeft: '-1vw'
+          }:{
+            width: '12vw',
             position: 'absolute',
             marginTop: '-1vh',
             marginLeft: '-1vw'
           }}
           src={opensea}/>
           <img
-          style={{
+          style={window.innerWidth>600?{
             width: '5.5vw',
             position: 'absolute',
             marginTop: '1vh',
             marginLeft: '1.5vw'
+          }:{
+            width: '14vw',
+            position: 'absolute',
+            marginTop: '3vh',
+            marginLeft: '3vw'
           }}
           src={ftx}/>
       </div>
@@ -460,12 +465,7 @@ function TraditionalPreorderCard(props) {
             alignItems: 'center',
             justifyContent: 'center'
         }}>
-          <img
-          style={{
-            width: '7.5vw',
-            position: 'absolute',
-            marginTop: '1vh'
-          }}
+          <img className='fundingCardImageTraditional'
           src={lockbox}/>
         </div>
         <div className="fundingCardTextC8R">

@@ -83,8 +83,8 @@ const stylesLight = {
   },
   mainContainerHalf: {
     backgroundColor: COLORS.COLORS.WHITE,
-    paddingTop: '10vh',
-    paddingBottom: '10vh',
+    paddingTop: '2vh',
+    paddingBottom: '2vh',
     paddingLeft: '5vw',
     paddingRight: '5vw',
     minHeight: '20vh',
