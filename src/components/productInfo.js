@@ -12,13 +12,15 @@ const gear = 'https://shipmate-images.s3.us-west-2.amazonaws.com/sportGear.jpeg'
 const food = 'https://shipmate-images.s3.us-west-2.amazonaws.com/food.jpeg';
 const key = 'https://shipmate-images.s3.us-west-2.amazonaws.com/key.jpeg';
 const flowerbed = 'https://shipmate-images.s3.us-west-2.amazonaws.com/flowerbed.png';
+const flowerbedSmall = 'https://shipmate-images.s3.us-west-2.amazonaws.com/flowerbed_small.jpeg'
 const DansHouse = 'https://shipmate-images.s3.us-west-2.amazonaws.com/DansHouse.png';
 const Gate = 'https://shipmate-images.s3.us-west-2.amazonaws.com/Gate.png';
 
 function ProductOverview(props) {
   return (
     <div  id={props._id}
-    style={{display: 'flex', justifyContent:'center', backgroundImage: `url(${flowerbed})`, height: '100vh', backgroundSize: 'cover'}}>
+    style={window.innerWidth>600?{display: 'flex', justifyContent:'center', backgroundImage: `url(${flowerbed})`, height: '100vh', backgroundSize: 'cover'}
+  :{display: 'flex', justifyContent:'center', backgroundImage: `url(${flowerbedSmall})`, height: '100vh', backgroundSize: 'cover'}}>
       <div style={{
         textAlign: 'center',
         display: 'flex',
