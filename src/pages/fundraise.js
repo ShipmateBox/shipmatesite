@@ -18,6 +18,7 @@ import {HalfSection, Section} from '../components/sections';
 import {PreorderButton, R9ENFTButton, SupportButton, CheckoutButton, SubmitButton} from '../components/buttons';
 import {CheckoutForm, EmailForm} from '../components/forms';
 import SCREENSIZE from '../constants/screenSize';
+import {Helmet} from 'react-helmet-async';
 
 const map = 'https://shipmate-images.s3.us-west-2.amazonaws.com/map_bg.png';
 
@@ -53,11 +54,19 @@ export default function Fundraise() {
       setSaleItem(1);
     }
     window.scrollTo(0,0)
-    ReactGA.pageview(window.location.pathname) //Google analytics. 
+    ReactGA.pageview(window.location.pathname) //Google analytics.
   }, [])
 
   return (
     <div className="App">
+
+      <Helmet>
+        <title>purchase</title>
+        <meta
+          name="description"
+          content="Purchase a lockbox today and start protecting and tracking your packages. We also have an NFT presale option for crypto fans." />
+        <link rel="canonical" href="/fundraise"/>
+      </Helmet>
 
 
       {saleItem===1 &&

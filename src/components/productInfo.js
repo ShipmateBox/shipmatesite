@@ -157,31 +157,31 @@ function Uses() {
             <div className="usesCard">
               <p className="usesCardText">Neighborhoods</p>
               <div className="usesCardImageC8R">
-                  <img src={DansHouse} className="usesCardImage"/>
+                  <img src={DansHouse} className="usesCardImage" alt="product at house" width="500" height="500"/>
               </div>
             </div>
             <div className="usesCard">
               <p className="usesCardText">Gated Properties / Long Driveways</p>
               <div className="usesCardImageC8R">
-                  <img src={Gate} className="usesCardImage"/>
+                  <img src={Gate} className="usesCardImage" alt="product at gate" width="500" height="500"/>
               </div>
             </div>
             <div className="usesCard">
               <p className="usesCardText">Airbnb / Hide-A-Key</p>
               <div className="usesCardImageC8R">
-                  <img src={key} className="usesCardImage"/>
+                  <img src={key} className="usesCardImage" alt="Airbnb" width="425" height="425"/>
               </div>
             </div>
             <div className="usesCard">
               <p  className="usesCardText">Food / Medication Deliveries</p>
               <div className="usesCardImageC8R">
-                  <img src={food} className="usesCardImage"/>
+                  <img src={food} className="usesCardImage" alt="food deliveries" width="294" height="289"/>
               </div>
             </div>
             <div className="usesCard">
               <p className="usesCardText">Dropoffs</p>
               <div className="usesCardImageC8R">
-                  <img src={gear} className="usesCardImage"/>
+                  <img src={gear} className="usesCardImage" alt="gear" width="425" height="425"/>
               </div>
             </div>
           </div>

@@ -35,6 +35,8 @@ import {
 import Security from '../components/security';
 import Features from '../components/features';
 import SCREENSIZE from '../constants/screenSize';
+import {Helmet} from 'react-helmet-async';
+
 const danopening = 'https://shipmate-images.s3.us-west-2.amazonaws.com/danopening.png';
 const momopening = 'https://shipmate-images.s3.us-west-2.amazonaws.com/momopening.png';
 const boxinbox = 'https://shipmate-images.s3.us-west-2.amazonaws.com/boxinbox.png';
@@ -48,6 +50,13 @@ export default function Home() {
 
   return (
     <div className="App">
+      <Helmet>
+        <title>home</title>
+        <meta
+          name="description"
+          content="Stop package theft and protect your packages today.  Most advanced package protection and package tracking system available for your home." />
+        <link rel="canonical" href="/"/>
+      </Helmet>
       <Banner/>
       <HowItWorks />
       <Uses />

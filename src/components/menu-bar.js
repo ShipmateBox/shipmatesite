@@ -71,7 +71,7 @@ export default function MenuBar(props) {
     <div className="menuBarMainC8R">
       <Link to="/">
         <div style={styles.logo}>
-          <img src={logoIcon} style={styles.logoIcon}/>
+          <img src={logoIcon} style={styles.logoIcon} alt="Shipmate Logo" width="30" height="40"/>
         </div>
       </Link>
       <div style={styles.padding}></div>
@@ -79,8 +79,7 @@ export default function MenuBar(props) {
         <LargeMenu/>
       ):(
         <SmallMenu/>
-      )
-      }
+      )}
     </div>
   )
 }
@@ -91,7 +90,8 @@ const styles = {
   },
   logoIcon: {
     flex: 1,
-    height: 40
+    height: 40,
+    width: 30,
   },
   firstLink: {
     marginRight: '1.5%'

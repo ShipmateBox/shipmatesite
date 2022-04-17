@@ -64,7 +64,7 @@ function BannerSmall(props)
 
   return(
     <div>
-      <img src={frontdoorSmall} style={{width: '100vw', marginBottom: '0px', display: 'block'}}/>
+      <img src={frontdoorSmall} style={{width: '100vw', marginBottom: '0px', display: 'block'}} alt="Front Door Product"/>
     </div>
   )
 }

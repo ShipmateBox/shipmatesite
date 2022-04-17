@@ -10,6 +10,7 @@ import { faLinkedin } from '@fortawesome/free-solid-svg-icons'
 import linkedIn from '../images/linkedIn.svg';
 import twitter from '../images/twitter.svg';
 import productHunt from '../images/productHunt.svg';
+import {Helmet} from 'react-helmet-async';
 
 const josh = 'https://shipmate-images.s3.us-west-2.amazonaws.com/Josh.png';
 const colin = 'https://shipmate-images.s3.us-west-2.amazonaws.com/colin.png';
@@ -17,12 +18,21 @@ const dan = 'https://shipmate-images.s3.us-west-2.amazonaws.com/Dan.jpeg';
 
 export default function Company() {
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname) //Google Analytics. 
+    ReactGA.pageview(window.location.pathname) //Google Analytics.
   }, [])
 
   return (
     <div
       id='about'>
+
+      <Helmet>
+        <title>company</title>
+        <meta
+          name="description"
+          content="Everything you need to know about Shipmate Box company.  We are a startup solving the disorganized package delivery system." />
+        <link rel="canonical" href="/company"/>
+      </Helmet>
+
       <Section
         theme="light"
         title="About The Company">
@@ -55,49 +65,49 @@ export default function Company() {
         title="The Team">
         <div className="aboutStaff" id='team'>
           <div className="aboutImageC8R">
-            <img src={josh} className="aboutStaffImage"/>
+            <img src={josh} className="aboutStaffImage" alt="josh"/>
             <p>Josh Illenberger</p>
             <div className="aboutLogoMainC8R">
               <div className="aboutLogoC8R">
                 <a href="https://www.linkedin.com/in/josh-illenberger-295a652a">
-                  <img src={linkedIn} />
+                  <img src={linkedIn} alt="linkedin logo"/>
                 </a>
               </div>
             </div>
           </div>
           <div className="aboutImageC8R">
-            <img src={dan} className="aboutStaffImage"/>
+            <img src={dan} className="aboutStaffImage" alt="daniel"/>
             <p>Daniel Illenberger</p>
             <div className="aboutLogoMainC8R">
               <div className="aboutLogoC8R">
                 <a href="https://www.linkedin.com/in/daniel-illenberger-0021094b">
-                  <img src={linkedIn} />
+                  <img src={linkedIn} alt="linkedIn logo"/>
                 </a>
               </div>
               <div className="aboutLogoC8R">
                 <a href="https://twitter.com/DPChillenberger">
-                  <img src={twitter} />
+                  <img src={twitter} alt="twitter logo"/>
                 </a>
               </div>
               <div className="aboutLogoC8R">
                 <a href="https://www.producthunt.com/@daniel_illenberger">
-                  <img src={productHunt} />
+                  <img src={productHunt} alt="product hunt logo" />
                 </a>
               </div>
             </div>
           </div>
           <div className="aboutImageC8R" >
-            <img src={colin} className="aboutStaffImage"/>
+            <img src={colin} className="aboutStaffImage" alt="colin"/>
             <p>Colin Nordman</p>
             <div className="aboutLogoMainC8R">
               <div className="aboutLogoC8R">
                 <a href="https://www.linkedin.com/in/colin-nordman-88a48837">
-                  <img src={linkedIn} />
+                  <img src={linkedIn} alt="linkedin logo"/>
                 </a>
               </div>
               <div className="aboutLogoC8R">
                 <a href="https://www.producthunt.com/@colin_nordman">
-                  <img src={productHunt} />
+                  <img src={productHunt} alt="product hunt logo"/>
                 </a>
               </div>
             </div>

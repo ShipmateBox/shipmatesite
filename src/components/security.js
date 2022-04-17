@@ -30,11 +30,11 @@ export default function Security() {
                   display: 'flex',
                   flexDirection: 'column'}}>
                 <div style = {styles.imageDiv} className='skew'>
-                    <img src={windowImage} className={'securityImage'}/>
+                    <img src={windowImage} className={'securityImage'} alt="window"/>
                 </div>
 
                 <div style = {styles.imageDiv} className='skew'>
-                  <img src={door} className={'securityImage'}/>
+                  <img src={door} className={'securityImage'} alt="door"/>
                 </div>
               </div>
 
@@ -42,11 +42,11 @@ export default function Security() {
                   display: 'flex',
                   flexDirection: 'column'}}>
                 <div style = {styles.imageDiv} className='skew'>
-                  <img src={garage} className={'securityImage'}/>
+                  <img src={garage} className={'securityImage'} alt="garage"/>
                 </div>
 
                 <div style = {styles.imageDiv} className='skew'>
-                  <img src={nothingout} className={'securityImage'}/>
+                  <img src={nothingout} className={'securityImage'} atl="driveway"/>
                 </div>
               </div>
 
@@ -54,7 +54,7 @@ export default function Security() {
           </div>
 
           <div className={'imageGroupC8RSmall'}>
-            <img src={house} className='securityImageSmall'/>
+            <img src={house} className='securityImageSmall' alt="house"/>
           </div>
 
         </div>
@@ -118,7 +118,8 @@ export default function Security() {
                 flexDirection: 'column'}}>
               <div style = {styles.imageDiv} className='skew'>
                 <img src={upper}
-                  style={{height: '100%'}}/>
+                  style={{height: '100%'}}
+                  alt="packages upper"/>
               </div>
 
               <div style = {styles.imageDiv} className='skew'>
@@ -132,12 +133,14 @@ export default function Security() {
                 flexDirection: 'column'}}>
               <div style = {styles.imageDiv} className='skew'>
                 <img src={right}
-                  style={{height: '100%'}}/>
+                  style={{height: '100%'}}
+                  alt="packages right"/>
               </div>
 
               <div style = {styles.imageDiv} className='skew'>
                 <img src={bottom}
-                  style={{height: '100%'}}/>
+                  style={{height: '100%'}}
+                  alt="packages bottom"/>
               </div>
             </div>
 
