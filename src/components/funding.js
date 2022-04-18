@@ -383,7 +383,8 @@ function RedeemableCard(props) {
             justifyContent: 'center',
         }}>
           <img className='fundingCardImageR10E'
-          src={lockboxWithNFT}/>
+            src={lockboxWithNFT}
+            alt="Redeemable NFT"/>
         </div>
         <div className="fundingCardTextC8R">
           <p className="fundingCardText">Presale</p>
@@ -423,7 +424,7 @@ function NonRedeemableCard(props) {
             marginTop: '-1vh',
             marginLeft: '-1vw'
           }}
-          src={opensea}/>
+          src={opensea} alt="opensea logo"/>
           <img
           style={window.innerWidth>600?{
             width: '5.5vw',
@@ -436,7 +437,7 @@ function NonRedeemableCard(props) {
             marginTop: '3vh',
             marginLeft: '3vw'
           }}
-          src={ftx}/>
+          src={ftx} alt="ftx logo"/>
       </div>
       <div className="fundingCardTextC8R">
         <p className="fundingCardText">NFT</p>
@@ -466,7 +467,8 @@ function TraditionalPreorderCard(props) {
             justifyContent: 'center'
         }}>
           <img className='fundingCardImageTraditional'
-          src={lockbox}/>
+          src={lockbox}
+          alt="product presale"/>
         </div>
         <div className="fundingCardTextC8R">
           <p className="fundingCardText">Presale</p>
@@ -512,7 +514,7 @@ function FundraisePreOrder(props) {
       <div className="saleInfoC8R">
         <img src={lockbox} style={{
           width: '25vw'
-        }}/>
+        }} alt="lockbox"/>
       </div>
     )
   }
@@ -560,7 +562,7 @@ function FundraiseNFT(props) {
       <div className="saleInfoC8R">
         <img src={lockboxWithNFT} style={{
           width: '30vw'
-        }}/>
+        }} alt="lockbox with NFT"/>
       </div>
     )
   }
@@ -606,8 +608,8 @@ function FundraiseSupportNFT(props) {
   const image = () => {
     return (
       <div className="saleInfoC8R">
-        <img src={opensea} />
-        <img src={ftx} />
+        <img src={opensea} alt="opensea logo"/>
+        <img src={ftx} alt="ftx logo"/>
       </div>
     )
   }

@@ -46,7 +46,7 @@ export default function Security() {
                 </div>
 
                 <div style = {styles.imageDiv} className='skew'>
-                  <img src={nothingout} className={'securityImage'} atl="driveway"/>
+                  <img src={nothingout} className={'securityImage'} alt="driveway"/>
                 </div>
               </div>
 
@@ -124,7 +124,8 @@ export default function Security() {
 
               <div style = {styles.imageDiv} className='skew'>
                 <img src={left}
-                  style={{height: '100%'}}/>
+                  style={{height: '100%'}}
+                  alt="pakcages left"/>
               </div>
             </div>
 
