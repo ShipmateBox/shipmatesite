@@ -11,39 +11,12 @@ import {OverUnder} from '../components/cards';
 const gear = 'https://shipmate-images.s3.us-west-2.amazonaws.com/sportGear.jpeg';
 const food = 'https://shipmate-images.s3.us-west-2.amazonaws.com/food.jpeg';
 const key = 'https://shipmate-images.s3.us-west-2.amazonaws.com/key.jpeg';
-const flowerbed = 'https://shipmate-images.s3.us-west-2.amazonaws.com/flowerbed.png';
-const flowerbedSmall = 'https://shipmate-images.s3.us-west-2.amazonaws.com/flowerbed_small.jpeg'
 const DansHouse = 'https://shipmate-images.s3.us-west-2.amazonaws.com/DansHouse.png';
 const Gate = 'https://shipmate-images.s3.us-west-2.amazonaws.com/Gate.png';
 
-function ProductOverview(props) {
-  return (
-    <div  id={props._id}
-    style={window.innerWidth>600?{display: 'flex', justifyContent:'center', backgroundImage: `url(${flowerbed})`, height: '100vh', backgroundSize: 'cover'}
-  :{display: 'flex', justifyContent:'center', backgroundImage: `url(${flowerbedSmall})`, height: '100vh', backgroundSize: 'cover'}}>
-      <div style={{
-        textAlign: 'center',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'}}>
-        <div style={{
-          backgroundColor: 'rgb(62,133, 192, .95)',
-          borderRadius: '10px',
-          marginTop: '-30vh'}}>
-          <OverUnder
-            upper = {<p style={{fontSize: '3em', padding: '0em 1em', margin: '.3em'}}>The Product</p>}
-            lower = {<p style={{flex: 1}}>A one of a kind package recieving system</p>}
-            breakColor = {COLORS.COLORS.BLUE_DARK}/>
-        </div>
-      </div>
-
-    </div>
-  )
-}
-
 function InfoStrong(props) {
   return (
-    <div id={props._id}>
+    <section id={props._id}>
       <HalfSection
         theme="light">
         <div className="infoFeatureC8R">
@@ -57,13 +30,13 @@ function InfoStrong(props) {
           </div>
         </div>
       </HalfSection>
-    </div>
+    </section>
   )
 }
 
 function InfoResponsive(props) {
   return (
-    <div id={props._id}>
+    <section id={props._id}>
       <HalfSection
         theme="light">
         <div className="infoFeatureC8R">
@@ -77,7 +50,7 @@ function InfoResponsive(props) {
           </div>
         </div>
       </HalfSection>
-    </div>
+    </section>
   )
 }
 
@@ -102,7 +75,7 @@ function InfoConnected(props) {
 
 function InfoSmart(props) {
   return (
-    <div id={props._id}>
+    <section id={props._id}>
       <HalfSection
         theme="light">
       <div className="infoFeatureC8R">
@@ -118,13 +91,13 @@ function InfoSmart(props) {
         </div>
       </div>
       </HalfSection>
-    </div>
+    </section>
   )
 }
 
 function InfoAdaptive(props) {
   return (
-    <div id={props._id}>
+    <section id={props._id}>
       <HalfSection
         theme="light">
         <div className="infoFeatureC8R">
@@ -138,55 +111,53 @@ function InfoAdaptive(props) {
           </div>
         </div>
       </HalfSection>
-    </div>
+    </section>
   )
 }
 
 function Uses() {
   return (
-    <div>
-      <HalfSection
-        theme="light"
-        title="Perfect For">
-          <div style={{
-            display: 'flex',
-            flexDirection: 'row',
-            flexWrap: 'wrap',
-            padding: '0em 2em'
-          }}>
-            <div className="usesCard">
-              <p className="usesCardText">Neighborhoods</p>
-              <div className="usesCardImageC8R">
-                  <img src={DansHouse} className="usesCardImage" alt="product at house" width="500" height="500"/>
-              </div>
-            </div>
-            <div className="usesCard">
-              <p className="usesCardText">Gated Properties / Long Driveways</p>
-              <div className="usesCardImageC8R">
-                  <img src={Gate} className="usesCardImage" alt="product at gate" width="500" height="500"/>
-              </div>
-            </div>
-            <div className="usesCard">
-              <p className="usesCardText">Airbnb / Hide-A-Key</p>
-              <div className="usesCardImageC8R">
-                  <img src={key} className="usesCardImage" alt="Airbnb" width="425" height="425"/>
-              </div>
-            </div>
-            <div className="usesCard">
-              <p  className="usesCardText">Food / Medication Deliveries</p>
-              <div className="usesCardImageC8R">
-                  <img src={food} className="usesCardImage" alt="food deliveries" width="294" height="289"/>
-              </div>
-            </div>
-            <div className="usesCard">
-              <p className="usesCardText">Dropoffs</p>
-              <div className="usesCardImageC8R">
-                  <img src={gear} className="usesCardImage" alt="gear" width="425" height="425"/>
-              </div>
+    <HalfSection
+      theme="light"
+      title="Perfect For">
+        <div style={{
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          padding: '0em 2em'
+        }}>
+          <div className="usesCard">
+            <h3 className="usesCardText">Neighborhoods</h3>
+            <div className="usesCardImageC8R">
+                <img src={DansHouse} className="usesCardImage" alt="product at house"/>
             </div>
           </div>
-      </HalfSection>
-    </div>
+          <div className="usesCard">
+            <h3 className="usesCardText">Gated Properties / Long Driveways</h3>
+            <div className="usesCardImageC8R">
+                <img src={Gate} className="usesCardImage" alt="product at gate"/>
+            </div>
+          </div>
+          <div className="usesCard">
+            <h3 className="usesCardText">Airbnb / Hide-A-Key</h3>
+            <div className="usesCardImageC8R">
+                <img src={key} className="usesCardImage" alt="Airbnb"/>
+            </div>
+          </div>
+          <div className="usesCard">
+            <h3  className="usesCardText">Food / Medication Deliveries</h3>
+            <div className="usesCardImageC8R">
+                <img src={food} className="usesCardImage" alt="food deliveries"/>
+            </div>
+          </div>
+          <div className="usesCard">
+            <h3 className="usesCardText">Dropoffs</h3>
+            <div className="usesCardImageC8R">
+                <img src={gear} className="usesCardImage" alt="gear"/>
+            </div>
+          </div>
+        </div>
+    </HalfSection>
   )
 }
 
@@ -304,7 +275,6 @@ const styles = {
 
 export {
   ProductInfo,
-  ProductOverview,
   InfoAdaptive,
   InfoResponsive,
   InfoConnected,

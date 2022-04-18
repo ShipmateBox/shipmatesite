@@ -68,6 +68,7 @@ export default function Fundraise() {
         <link rel="canonical" href="/fundraise"/>
       </Helmet>
 
+      <section><h1 style={{textAlign: 'center'}}>Purchase Your Lockbox Today</h1></section>
 
       {saleItem===1 &&
         <div>

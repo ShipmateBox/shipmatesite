@@ -8,13 +8,13 @@ export default function Footer() {
     <div style={styles.mainContainer}>
       <div style={styles.subContainer}>
         <div style={styles.card}>
-          <h4>Company</h4>
+          <h2 style={styles.header}>Company</h2>
           <Link to="/company#team"><p style={styles.item}>Team</p></Link>
           <Link to="/company#about"><p style={styles.item}>About</p></Link>
 
         </div>
         <div style={styles.card}>
-          <h4>Support</h4>
+          <h2 style={styles.header}>Support</h2>
           <Link
             to="/Fundraise"
             state={{data: 3}}>
@@ -28,7 +28,7 @@ export default function Footer() {
 
         </div>
         <div style={styles.card}>
-          <h4>Contact</h4>
+          <h2 style={styles.header}>Contact</h2>
           <p style={styles.item}>Email</p>
           <a href="https://twitter.com/ShipmateBox" style={styles.item}>Twitter</a>
           <a href="https://www.facebook.com/ShipmateBox" style={styles.item}>Facebook</a>
@@ -60,6 +60,9 @@ const styles = {
   card: {
     display: 'flex',
     flexDirection: 'column'
+  },
+  header: {
+    fontSize: '1.3em',
   },
   item: {
     margin: 3,

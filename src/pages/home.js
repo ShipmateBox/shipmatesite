@@ -63,11 +63,11 @@ export default function Home() {
       <Affordances/>
       <Security/>
       <Features/>
-      <div className="flashImageContainer">
+      <section className="flashImageContainer">
         <div className="flashImages" style={{backgroundImage: `url(${danopening})`}}/>
         <div className="flashImages" style={{backgroundImage: `url(${momopening})`}}/>
         <div className="flashImages" style={{backgroundImage: `url(${boxinbox})`}}/>
-      </div>
+      </section>
       <Section
         theme="light"
         title="Interested"

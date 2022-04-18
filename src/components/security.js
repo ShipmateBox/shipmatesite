@@ -17,7 +17,7 @@ const house = 'https://shipmate-images.s3.us-west-2.amazonaws.com/house2.jpeg';
 
 export default function Security() {
   return (
-    <div style={{display: 'flex', flexDirection: 'column'}}>
+    <section style={{display: 'flex', flexDirection: 'column'}}>
       <div className="securityMainRow">
         <div style={{
           display: 'flex',
@@ -63,9 +63,7 @@ export default function Security() {
           <SideBySide
             rightSide={
                 <div className="securityHeaderElement">
-                  <h1 className="securityHeaderItem">Normal</h1>
-                  <h1 className="securityHeaderItem"> Home</h1>
-                  <h1 className="securityHeaderItem">Precautions</h1>
+                  <h2 className="securityHeaderItem">Normal<br/>Home<br/>Precautions</h2>
                 </div>
               }
             leftSide={
@@ -103,7 +101,7 @@ export default function Security() {
             marginTop: '10px',
             marginBottom: '10px',
           }}>
-            <h1 className="securityPackageItem">Why Not Packages</h1>
+            <p className="securityPackageItem">Why Not Packages</p>
           </div>
         </div>
 
@@ -148,7 +146,7 @@ export default function Security() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

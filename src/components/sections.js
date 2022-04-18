@@ -7,25 +7,25 @@ import COLORS from '../constants/theme';
 
 function Section(props) {
   return (
-    <div style={{backgroundImage: props.image}}
+    <section style={{backgroundImage: props.image}}
     className={props.theme=='light'?"mainC9Rfull sectionLight":"mainC9Rfull sectionDark"}>
-      <header style={styles.header}>
-        <p>{props.title}</p>
-      </header>
-      {props.note && <h3>{props.note}</h3>}
+      <h2 className="sectionH2">
+        {props.title}
+      </h2>
+      {props.note && <p className="sectionNote">{props.note}</p>}
       {props.children}
-    </div>
+    </section>
   )
 }
 
 function HalfSection(props) {
   return (
-    <div style={props.theme=='light'?stylesLight.mainContainerHalf:styles.mainContainerHalf}>
-      <header style={styles.header}>
-        <p>{props.title}</p>
-      </header>
+    <section style={props.theme=='light'?stylesLight.mainContainerHalf:styles.mainContainerHalf}>
+      <h2 className="sectionH2">
+        {props.title}
+      </h2>
       {props.children}
-    </div>
+    </section>
   )
 }
 
@@ -33,9 +33,9 @@ function SalesSectionTemplate(props) {
   return (
     <div style={{backgroundImage: props.image, paddingTop: '0px'}}
     className="mainC9Rfull sectionLight">
-      <header style={styles.header}>
-        <p>{props.title}</p>
-      </header>
+      <h2 style={{fontSize: '1.3em'}}>
+        {props.title}
+      </h2>
       {props.note && <h3>{props.note}</h3>}
       {props.children}
     </div>
@@ -60,10 +60,6 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'start',
     color: COLORS.COLORS.WHITE
-  },
-  header: {
-    fontSize: 'calc(14px + 3vmin)',
-    paddingBottom: '0px'
   },
   cardContainer: {
     display: 'flex',

@@ -18,21 +18,19 @@ function Banner(props) {
   const {width, height} = GetWindowDimensions();
 
   return(
-    <div className="bannerMainC8R">
+    <section className="bannerMainC8R">
       <div className="bannerMainSubC8Rbacking">
       <div className="bannerMainSubC8R">
         <div className="mainSubC8RUpper">
           <div className="introTitleC8R">
-            <h1 className="introTitle">Intelligent</h1>
-            <h1 className="introTitle">Package</h1>
-            <h1 className="introTitle">Deliveries</h1>
+            <h1 className="introTitle">Intelligent<br/>Package<br/>Deliveries</h1>
           </div>
             <div className="introTextC8R">
               <p>A fully remote package receiving lockbox that will change the way you get deliveries.</p>
               <p>Place it anywhere on your property, control it with your phone, receive warnings and notifications.</p>
             </div>
         </div>
-        <p>See preorder purchase options.</p>
+        <h2 className="bannerH2">See preorder purchase options.</h2>
         <div style={{
           display: 'flex',
           flexDirection: 'row',
@@ -44,7 +42,7 @@ function Banner(props) {
             <R9ENFTButton/>
           </div>
         </div>
-        <p> Stay connected by submitting your email. </p>
+        <h2 className="bannerH2"> Stay connected by submitting your email. </h2>
         <EmailForm />
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCHo5t1XcAwKOD100VgOYMxSBo6fNEJjjG9LsvqCGSyqYC2A/viewform?usp=sf_link">
           <SubmitButton title="Take The Survey"/></a>
@@ -54,7 +52,7 @@ function Banner(props) {
       <div className="padding">
       </div>
 
-    </div>
+    </section>
   )
 }
 

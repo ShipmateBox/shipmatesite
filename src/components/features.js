@@ -20,7 +20,7 @@ export default function Features() {
               <thead>
                 <tr>
                   <td>
-                    <h2>Current</h2>
+                    <h3>Current</h3>
                   </td>
                 </tr>
               </thead>
@@ -65,7 +65,7 @@ export default function Features() {
               <thead>
                 <tr>
                   <td>
-                    <h2>Next</h2>
+                    <h3>Next</h3>
                   </td>
                 </tr>
               </thead>
@@ -104,7 +104,7 @@ export default function Features() {
               <thead>
                 <tr>
                   <td>
-                    <h2>Later</h2>
+                    <h3>Later</h3>
                   </td>
                 </tr>
               </thead>

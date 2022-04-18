@@ -33,9 +33,9 @@ export default function Company() {
         <link rel="canonical" href="/company"/>
       </Helmet>
 
-      <Section
-        theme="light"
-        title="About The Company">
+      <section
+        className="mainC9Rfull sectionLight">
+        <h1 className="sectionH2">About The Company</h1>
         <p>Shipmate Box is creating the largest and most dispersed network of home lockboxes that has ever existed.
         By selling lockboxes to suburban and rural households, we are deploying an army of data collecting package receivers.
         Each lockbox relays environmental data and delivery data to servers where it is combined with carrier logistics information,
@@ -56,7 +56,7 @@ export default function Company() {
         item was delivered, never divert packages to your neighbors house or your place of work, never lose track of where your packages are.</p>
 
         <p>We hope you join us on our journey and participate in our pre-sales campaign. </p>
-      </Section>
+      </section>
 
       <Timeline/>
 

@@ -34,6 +34,9 @@ a:hover {
   opacity: .7;
 }
 
+h3 {
+  font-size: 1.5em;
+}
 
 /* -----Menu_Bar ----- */
 
@@ -109,6 +112,8 @@ a:hover {
 
 .introTitle {
   margin: 0px;
+  text-align: right;
+  font-size: 2em;
 }
 
 .introTextC8R {
@@ -121,6 +126,13 @@ a:hover {
 .padding {
   flex: 0;
 }
+
+.bannerH2
+{
+  text-align: center;
+  font-size: 1.2em;
+}
+
 @media only screen and (min-width: 800px) {
   .bannerMainC8R {
     /* background-image: url('https://shipmate-images.s3.us-west-2.amazonaws.com/frontdoor.png'); */
@@ -374,6 +386,7 @@ a:hover {
   margin: 0px;
   font-size: 20px;
   border-bottom: 3px solid var(--theme-main-blue);
+  font-weight: bold;
 }
 
 .securityImage {
@@ -467,6 +480,14 @@ a:hover {
   background: linear-gradient(120deg, rgba(40,44,52,1) 0%, rgba(51,56,61,1) 100%);
 }
 
+.sectionNote {
+  font-weight: bold;
+  font-size: 1em;
+}
+.sectionH2 {
+  font-size: calc(14px + 3vmin);
+  padding-bottom: 0px;
+}
 /* ---------features----------- */
 .featureItem {
   margin: 0.5vh 0vw;
