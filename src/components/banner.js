@@ -30,18 +30,6 @@ function Banner(props) {
               <p>Place it anywhere on your property, control it with your phone, receive warnings and notifications.</p>
             </div>
         </div>
-        <h2 className="bannerH2">See preorder purchase options.</h2>
-        <div style={{
-          display: 'flex',
-          flexDirection: 'row',
-          marginTop: '0em'}}>
-          <div style={{flex: 1, minWidth: '8em'}}>
-            <PreorderButton/>
-          </div>
-          <div style={{flex: 1, minWidth: '8em'}}>
-            <R9ENFTButton/>
-          </div>
-        </div>
         <h2 className="bannerH2"> Stay connected by submitting your email. </h2>
         <EmailForm />
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCHo5t1XcAwKOD100VgOYMxSBo6fNEJjjG9LsvqCGSyqYC2A/viewform?usp=sf_link">
