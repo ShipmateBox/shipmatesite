@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import ReactGA from 'react-ga';
 
 import {
-  FundraiseOverview,
   FundraisePreOrder,
   FundraiseNFT,
   FundraiseDonate,
@@ -68,112 +67,26 @@ export default function Fundraise() {
         <link rel="canonical" href="/fundraise"/>
       </Helmet>
 
-      <section><h1 style={{textAlign: 'center'}}>Purchase Your Lockbox Today</h1></section>
+      <section><h1 style={{textAlign: 'center'}}>Purchase Your Lockbox</h1></section>
 
-      {saleItem===1 &&
-        <div>
-          <FundraiseSupportNFT setAction={setCheckout} action={true}/>
-          { checkout &&
-          <CheckoutForm title="Non Redeemable NFT">
-            <div style={{display: 'none'}}>
-              <p>For ease and customer peace of mind we process all NFT sales through Opensea or FTX</p>
-              <p>If you ever have questions, Shipmate is always available. Feel free to contact us.</p>
-              <p>Thank You :)</p>
-            </div>
-            <ModalPlaceholder/>
-            <div className="checkoutButtonHolder">
-              <CheckoutButton title="Cancel" setAction={setCheckout} action={false}/>
-              <CheckoutButton style={{display: 'none'}} title="Opensea" />
-              <CheckoutButton style={{display: 'none'}} title="FTX" />
-            </div>
-          </CheckoutForm>
-          }
+
+      <FundraisePreOrder  setAction={setCheckout} action={true}/>
+      { checkout &&
+      <CheckoutForm title="Preorders - Coming Soon">
+        <div style={{display: 'none'}}>
+          <p>We will keep your information on file and notify you when your lockbox is ready.</p>
+          <p>Only after you recieve the physical product will the monthly subscriptin cost start.</p>
+          <p>If you ever have questions, Shipmate is always available. Feel free to contact us.</p>
+          <p>Thank You :)</p>
         </div>
-      }
-      {saleItem===2 &&
-        <>
-          <FundraiseNFT  action={setCheckout}/>
-          { checkout &&
-          <CheckoutForm title="Redeemable NFT">
-            <div style={{display: 'none'}}>
-              <p>Hold your NFT as proof of your preorder purchase.
-              When we are ready to ship the prodcut we will announce it on the site.
-              Redeeming your NFT will be as simple as proving you hold the NFT in
-              your wallet.</p>
-              <p>Only after you recieve the physical product will the monthly subscription cost start.</p>
-              <p>For ease and customer peace of mind we process all NFT sales through Opensea or FTX</p>
-              <p>If you ever have questions, Shipmate is always available. Feel free to contact us.</p>
-              <p>Thank You :)</p>
-            </div>
-            <ModalPlaceholder/>
-            <div className="checkoutButtonHolder">
-              <CheckoutButton title="Cancel" setAction={setCheckout} action={false}/>
-              <CheckoutButton style={{display: 'none'}} title="Opensea" />
-              <CheckoutButton style={{display: 'none'}} title="FTX" />
-            </div>
-          </CheckoutForm>
-          }
-        </>
-      }
-      {saleItem===3 &&
-        <>
-          <FundraisePreOrder  setAction={setCheckout} action={true}/>
-          { checkout &&
-          <CheckoutForm title="Traditional Preorder">
-            <div style={{display: 'none'}}>
-              <p>We will keep your information on file and notify you when your lockbox is ready.</p>
-              <p>Only after you recieve the physical product will the monthly subscriptin cost start.</p>
-              <p>If you ever have questions, Shipmate is always available. Feel free to contact us.</p>
-              <p>Thank You :)</p>
-            </div>
-            <ModalPlaceholder/>
-            <div className="checkoutButtonHolder">
-              <CheckoutButton title="Cancel" setAction={setCheckout} action={false}/>
-              <CheckoutButton style={{display: 'none'}} title="Submit" />
-            </div>
-          </CheckoutForm>
-          }
-        </>
+        <ModalPlaceholder/>
+        <div className="checkoutButtonHolder">
+          <CheckoutButton title="Cancel" setAction={setCheckout} action={false}/>
+          <CheckoutButton style={{display: 'none'}} title="Submit" />
+        </div>
+      </CheckoutForm>
       }
 
-    <div
-      style={{
-        margin: '2vh 2vw 10vh 2em',
-        padding: '0vh 5vw'
-      }}>
-      <div style={{
-        display: 'flex',
-        flexDirection: 'row',
-        width: '100%',
-        alignItems: 'center',
-      }}>
-        <div style={{
-          flex: 1,
-        }}
-          onClick={() => setSaleItem(1)}>
-          <NonRedeemableCard active={saleItem}/>
-        </div>
-        <div style={{flex: 1}}
-          onClick={() => setSaleItem(2)}>
-          <RedeemableCard active={saleItem}/>
-        </div>
-        <div style={{flex: 1}}
-          onClick={() => setSaleItem(3)}>
-          <TraditionalPreorderCard active={saleItem}/>
-        </div>
-      </div>
-    </div>
-
-      <Section
-        theme="light"
-        title="Other Options"
-        image={`url(${map})`}>
-        {window.innerWidth > SCREENSIZE.SCREENSIZE.SMALL ?
-          <SalesTable/>
-        :
-        <SmallSalesTable/>
-      }
-      </Section>
     </div>
   )
 }

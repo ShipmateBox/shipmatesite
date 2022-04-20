@@ -478,22 +478,6 @@ function TraditionalPreorderCard(props) {
   )
 }
 
-function FundraiseOverview() {
-  return (
-    <div style={{
-      display: 'flex',
-      flexDirection: 'row',
-      justifycontent: 'center'
-    }}>
-      <RedeemableCard/>
-      <NonRedeemableCard/>
-      <TraditionalPreorderCard/>
-    </div>
-  )
-}
-
-
-
 function FundraisePreOrder(props) {
   const info = () => {
     return (
@@ -523,7 +507,7 @@ function FundraisePreOrder(props) {
     <div>
       <SalesSectionTemplate
         theme='light'
-        title="Traditional Preorder Campaign">
+        title="Preorders - Coming Soon">
           <div style={{paddingTop: '2em'}}>
           {window.innerWidth > smallScreenSize?
             <SideBySide
@@ -710,7 +694,6 @@ export {
   SalesTable,
   SmallSalesTable,
   SalesTableButtons,
-  FundraiseOverview,
   FundraisePreOrder,
   FundraiseNFT,
   FundraiseSupportNFT,
