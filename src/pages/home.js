@@ -87,26 +87,6 @@ export default function Home() {
             <SubmitButton title="Take The Survey"/></a>
         </div>
       </Section>
-      {/*<Section
-        theme="light"
-        title="Ready To Get Started"
-        image={`url(${map})`}>
-        <div style={{
-          display: 'flex',
-          flexDirection: 'column'}}
-        >
-        {window.innerWidth > SCREENSIZE.SCREENSIZE.SMALL?
-          <>
-            <SalesTable/>
-            <SalesTableButtons/>
-          </>
-          :
-          <SmallSalesTable
-            showButton={true}/>
-
-
-        </div>
-      </Section>*/}
     </div>
 
   )
