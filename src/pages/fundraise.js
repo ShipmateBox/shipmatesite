@@ -3,18 +3,11 @@ import ReactGA from 'react-ga';
 
 import {
   FundraisePreOrder,
-  FundraiseNFT,
-  FundraiseDonate,
   FundraiseSupportNFT,
-  SalesTable,
-  SmallSalesTable,
-  RedeemableCard,
-  NonRedeemableCard,
   TraditionalPreorderCard
 } from '../components/funding';
 import {useLocation} from 'react-router-dom';
-import {HalfSection, Section} from '../components/sections';
-import {PreorderButton, R9ENFTButton, SupportButton, CheckoutButton, SubmitButton} from '../components/buttons';
+import {PreorderButton, CheckoutButton, SubmitButton} from '../components/buttons';
 import {CheckoutForm, EmailForm} from '../components/forms';
 import SCREENSIZE from '../constants/screenSize';
 import {Helmet} from 'react-helmet-async';
